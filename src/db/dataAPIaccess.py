@@ -18,7 +18,9 @@ headers = {
     'api-key': '',
     'Accept': 'application/json'
     }
-GreenMobility = requests.post(url, headers=headers, data=payload)
-GreenMobility = GreenMobility.text
-GreenMobility = json.loads(GreenMobility)
-GreenMobility = GreenMobility["documents"]
+Query = requests.post(url, headers=headers, data=payload)
+# aqui debemos controlar la conexión e implementar control de errores (try, except y finally)
+Query = Query.text(json.loads(Query["documents"]))
+
+createJson = open("GreenMobility.json", "w+", encoding="UTF-8")
+createJson.write(Query)
