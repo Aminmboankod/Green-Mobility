@@ -1,0 +1,83 @@
+/* Import de la fuente del banner */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+/* ----- Primera imagen central ----- */
+
+/* Se le añade características para que la imagen sea responsive */
+img {
+    width: 100%;
+    height: auto;
+}
+
+.imageContainer {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+    
+    
+.text {
+    position: absolute;
+    font-size: 3vw;
+    font-weight: bold;
+    font-family: Poppins;
+    color: rgb(97, 112, 82);
+    top: 25%;
+    left: 6%; 
+}
+
+/* ----- END IMAGEN CENTRAL */
+
+
+/* ----- QUIÉNES SOMOS ----- */
+
+.QuienesSomos h2 {
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-family: Poppins;
+    font-weight: bold;
+}
+
+.QuienesSomos p {
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 20px;
+    font-family: Poppins;
+}
+/* ----- FIN QUIENES SOMOS ----- } */
+
+/* ----- DÓNDE ESTAMOS -----  */
+
+.DondeEstamos h3 {
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-family: Poppins;
+    font-weight: bold;
+
+}
+
+.DondeEstamos h3 {
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 20px;
+    font-family: Poppins;
+}
+
+.DondeEstamos p {
+    font-family: Poppins;
+    text-align: center;
+}
+
+.DondeEstamos ol li {
+    font-family: Poppins;
+    text-align: center;
+    padding-bottom: 5px;
+}
+
+.DondeEstamos .Palma {
+    list-style-type: circle;
+}
+
+/* ----- FIN DÓNDE ESTAMOS -----  */

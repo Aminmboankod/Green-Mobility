@@ -36,7 +36,7 @@ nav {
     align-items: start;
     position: sticky;
     top: 0;
-/*z-index: 99; /*Para que al bajar no pasen las cosas por encima */
+    z-index: 99; /*Para que al bajar no pasen las cosas por encima */
 }
   
 nav a {
