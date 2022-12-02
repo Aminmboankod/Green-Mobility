@@ -18,5 +18,7 @@ headers = {
     'api-key': '',
     'Accept': 'application/json'
     }
-Querie = requests.post(url, headers=headers, data=payload)
-Querie = Querie.text
+GreenMobility = requests.post(url, headers=headers, data=payload)
+GreenMobility = GreenMobility.text
+GreenMobility = json.loads(GreenMobility)
+GreenMobility = GreenMobility["documents"]
