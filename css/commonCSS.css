@@ -1,0 +1,181 @@
+/* Import de la fuente del banner */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+/* Estilo aplicado a toda la hoja */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ----- Header ----- */
+
+header {
+    width:100%; 
+    overflow:hidden; 
+    background: rgb(97, 112, 82);
+    margin-bottom:0px;
+}
+  
+header img {
+    display: block;
+    margin: auto;
+    width: 50%;
+    height: 50%;
+}
+
+/* ----- END HEADER ----- */
+
+/* ----- NAV ----- */
+
+/* Fondo del Nav, que esté centrado y que sea Sticky */
+nav {
+    display:flex;
+    background-color: rgb(97, 112, 82);
+    justify-content: center;
+    align-items: start;
+    position: sticky;
+    top: 0;
+/*z-index: 99; /*Para que al bajar no pasen las cosas por encima */
+}
+  
+nav a {
+    text-decoration: none;
+}
+  
+/* Coloca el Nav en una línea recta */
+nav ul li {
+    display: inline-block;
+    position: relative;
+    font-family: Poppins;
+    font-weight: bold;
+}
+  
+/* Pone color a las letras del nav, le añade un padding y le quita el decorado (subrayado) */
+nav ul li a {
+    color: rgb(255, 252, 252);
+    font-size: 20px;
+    display: block;
+    padding: 20px 60px;
+}
+  
+/* Hace que las categorias de bicis electricas no salgan */
+nav ul li ul {
+    display: none;
+}
+  
+/* Hace que las categorias de bicis eléctricas aparezcan en forma de columna y le pone fondo al submenú */
+nav ul li:hover ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color: rgb(97, 112, 82);
+    text-align: center;
+}
+  
+  
+/* Transición al pasar el cursor por encima de un elemento del nav */
+nav li:after,
+nav li:before {
+    content: "";
+    position: absolute;
+    display: block;
+    border: 0px solid transparent;
+    width: 0%;
+    height: 0%;
+    transition: all 0.3s ease;
+}
+  
+nav li:after {
+    width: 0%;
+    height: 0%;
+    top: 0;
+    left: 0;
+    border-top: 2px solid transparent;
+    border-left: 2px solid transparent;
+}
+  
+nav li:before {
+    width: 0%;
+    height: 0%;
+    right: 0;
+    bottom: 0;
+    border-bottom: 2px solid transparent;
+    border-right: 2px solid transparent;
+}
+  
+nav li:hover::before,
+nav li:hover::after {
+    width: 10px;
+    height: 10px;
+    border-color: #fff;
+}
+
+/* ----- END NAV ----- */
+
+
+/* ----- FOOTER ----- */
+
+.footer-basic {
+  padding:20px 0;
+  background-color:rgb(97, 112, 82);
+  color:#ffffff;
+  position: relative;
+  font-family: Poppins;
+  font-weight: bold;
+  bottom: 0;
+  width: 100%;
+}
+  
+.footer-basic ul {
+  padding:0;
+  text-align:center;
+  font-size:18px;
+  line-height:1.6;
+  margin-bottom:0;
+}
+  
+.footer-basic li {
+  padding:0 10px;
+}
+
+.footer-basic ul li {
+  display: inline;
+  position: relative;
+}
+  
+.footer-basic ul a {
+  color:inherit;
+  text-decoration:none;
+  opacity:0.8;
+}
+  
+.footer-basic ul a:hover {
+  opacity:1;
+  }
+  
+.footer-basic .social {
+  text-align:center;
+  padding-bottom:20px;
+  }
+  
+.footer-basic .social > a {
+  font-size:24px;
+  width:40px;
+  height:40px;
+  line-height:40px;
+  display:inline-block;
+  text-align:center;
+  margin:0 8px;
+}
+  
+.footer-basic .copyright {
+  margin-top:10px;
+  text-align:center;
+  font-size:13px;
+  color:#aaa;
+  margin-bottom:0;
+}
+
+/* ----- END FOOTER -----  */
+  
