@@ -1,5 +1,3 @@
-
-
 def createIndexHTML():
 
     contentOfIndex = '''
@@ -44,7 +42,7 @@ def createIndexHTML():
                 </li>
             </ul>
         </nav>
-                -------------------------------------------------------------------------
+
         
         <div class="imageContainer">
             
@@ -120,8 +118,13 @@ def createIndexHTML():
     # El W+ sirve para que: Si no existe el documento lo crea y escribe.
     # Si existe pero esta vacío escribe dentro
     # Y si existe y está escrito dentro lo sobreescribe
-    htmlFile = open("docs/" + "index" + ".html", "w+")
-    htmlFile.write(contentOfIndex)
-    print("docs/" + ".html" + "has been created")
+
+    path = "docs/"
+    file = "index"
+    extension = ".html"
+
+    with open(path + file + extension, "w+") as htmlFile:
+        htmlFile.write(contentOfIndex)
+    print(path + file + extension + " has been created")
 
 createIndexHTML()
