@@ -119,7 +119,7 @@ def createContentIndex():
 
     
     directory = "docs/"
-    file =1
+    file = "index"
     extension = ".html"
     path =  directory + file + extension
 
