@@ -1,54 +1,10 @@
-import json
-import requests
-import os
-
-key = os.environ["APIKEY"]
-
-def dataBikes():
-    
-    url = os.environ["URL"]
-
-    payload = json.dumps(
-        {
-        "collection": "bikes",
-        "database": "GreenMobility",
-        "dataSource": "Cluster0",
-        "filter": {}})
-
-    headers = {
-        'Content-Type': 'application/json',
-        'Access-Control-Request-Headers': '*',
-        'api-key': key,
-        'Accept': 'application/json'
-        }
-    query = requests.post(url, headers=headers, data=payload)
-    status = query.status_code
-    
-    if status == 401:
-        print("Unauthorized user tries to connect!")
-         
-    if status == 400:
-        print("The query isn't correct")
-    else:
-        if status == 200:
-            print("Successful connection!")
-        GreenMobility = requests.post(url, headers=headers, data=payload)
-        GreenMobility = GreenMobility.text
-        jsonDocument = json.loads(GreenMobility)
-        Bikelist = jsonDocument.get('documents')
-    return Bikelist
 
 
+def createIndexHTML():
 
-if __name__=="__main__":
-
-    listOfbikes = dataBikes()
-
-    #ContentOfIndexPage es el contenido de lo que va a ser el index.html, 
-    # lo vamos a usar en este módulo para hacer pruebas de funcionamiento iniciales.
-
-    ContentOfIndexPage = f'''
+    contentOfIndex = '''
 <!DOCTYPE html>
+
 <html lang="en">
 
     <head>
@@ -75,32 +31,22 @@ if __name__=="__main__":
         </header>
 
         <nav>
-            <ul>'''
-    # Tratamos de printar en el menú superior del index.html los diferentes tipos de categorías que hay en la base de datos
-    listOfCategory = []
-    for bike in listOfbikes:
-        for key in bike:
-            if key == 'category':
-                if bike['category'] not in listOfCategory:
-                    ContentOfIndexPage += '''
-                <li><a href="/docs/pages/list.html">{category}</a></li>'''.format( category = bike['category'])
-                    listOfCategory.append(bike['category'])
-                    break
-                else:
-                    break
-
-        #         <li><a href="/docs/pages/list.html">{Eléctricas}</a>
-        #             <ul>
-        #                 <li><a href="/pages/list.html">Carretera</a></li>
-        #                 <li><a href="/pages/list.html">Ciudad</a></li>
-        #                 <li><a href="/pages/list.html">MTB</a></li>
-        #             </ul>
-        #         </li>
-        #     </ul>
-        # </nav>
-
+            <ul>
+                <li><a href="/docs/pages/list.html">Carretera</a></li>
+                <li><a href="/docs/pages/list.html">Ciudad</a></li>
+                <li><a href="/docs/pages/list.html">MTB</a></li>
+                <li><a href="/docs/pages/list.html">Eléctricas</a>
+                    <ul>
+                        <li><a href="/pages/list.html">Carretera</a></li>
+                        <li><a href="/pages/list.html">Ciudad</a></li>
+                        <li><a href="/pages/list.html">MTB</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+                -------------------------------------------------------------------------
         
-    ContentOfIndexPage += f'''<div class="imageContainer">
+        <div class="imageContainer">
             
         <h1 class="text">¡El primer buscador <br>
         de bicicletas de alquiler <br>
@@ -167,6 +113,15 @@ if __name__=="__main__":
         </div>  
 
     </body>
-</html>'''
+</html>
 
-print(ContentOfIndexPage)
+    '''
+
+    # El W+ sirve para que: Si no existe el documento lo crea y escribe.
+    # Si existe pero esta vacío escribe dentro
+    # Y si existe y está escrito dentro lo sobreescribe
+    htmlFile = open("docs/" + "index" + ".html", "w+")
+    htmlFile.write(contentOfIndex)
+    print("docs/" + ".html" + "has been created")
+
+createIndexHTML()
