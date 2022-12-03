@@ -18,7 +18,7 @@ img {
     
 .text {
     position: absolute;
-    font-size: 3vw;
+    font-size: 4vw;
     font-weight: bold;
     font-family: Poppins;
     color: rgb(97, 112, 82);
@@ -40,10 +40,20 @@ img {
 }
 
 .QuienesSomos p {
-    padding-left: 25px;
-    padding-right: 25px;
-    padding-bottom: 20px;
+    display: block;
+    background-color: rgb(115, 203, 52);
+    border-style:groove;
+    border-color: rgb(115, 203, 52);
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-left: 50px;
+    padding-right: 100px;
+    padding-bottom: 100px;
     font-family: Poppins;
+    font-size: 2vw;
+    
+    padding: 4%;
 }
 /* ----- FIN QUIENES SOMOS ----- } */
 

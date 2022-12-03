@@ -15,6 +15,7 @@ header {
     overflow:hidden; 
     background: rgb(97, 112, 82);
     margin-bottom:0px;
+    padding-bottom: 30px;
 }
   
 header img {
@@ -31,7 +32,7 @@ header img {
 /* Fondo del Nav, que esté centrado y que sea Sticky */
 nav {
     display:flex;
-    background-color: rgb(97, 112, 82);
+    background-color: rgb(115, 203, 52);
     justify-content: center;
     align-items: start;
     position: sticky;
@@ -179,3 +180,56 @@ nav li:hover::after {
 
 /* ----- END FOOTER -----  */
   
+
+
+.menu_bar {
+  display:none;
+}
+
+
+@media screen and (max-width: 800px) {
+  header nav {
+    width: 80%;
+    height: 100%;
+    margin:0;
+    position: fixed;
+  }
+  header nav ul li {
+    display:block;
+    float:none;
+    border-bottom:1px;
+  }
+  .menu_bar {
+    display:block;
+    width:100%;
+    background:rgb(115, 203, 52);
+    top: 0;
+  
+  }
+  .menu_bar .botton-menu {
+    display:block;
+    padding:50px;
+    background:rgb(115, 203, 52);
+    color:#fff;
+    text-decoration: none;
+    font-size: 25px;
+  }
+  .menu_bar span {
+    display: block;
+    position:relative;
+    float:right;
+    font-size:40px;
+  }
+  nav ul li {
+    display:none;
+  }
+  
+  .nav:hover nav ul li {
+    display:flex;
+    position:sticky;
+    flex-direction:column;
+    padding:20px;
+    float:right;
+
+  }
+} 
