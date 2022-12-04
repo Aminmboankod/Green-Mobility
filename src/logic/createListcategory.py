@@ -1,10 +1,9 @@
-
 #función que crea contenido de la lista de bicis en función de los datos 
 # que encuentra de la base de datos añadidos al parametro.
-#Importamos módulo para después de haber generado el contenido crear el archivo
-from createHTML import createFile
 
-def listofBikes(dictionaryBikes):
+from createHTML import createFile               #Importamos módulo para después de haber generado el contenido crear el archivo
+
+def listofBikesForCategory(dictionaryBikes, category):
 
     contentList = '''
 <!DOCTYPE html>
@@ -52,12 +51,12 @@ def listofBikes(dictionaryBikes):
             
             <h1 id="title">Listado de bicicletas</h1>
             <hr>'''
-    listOfCategory = []
     for bike in dictionaryBikes:
         for property in bike:
-            if property == 'category':
-                if bike['category'] not in listOfCategory:
-                    contentList +='''<div id="articles">
+            if property['category'] == category:
+                
+                    contentList +='''
+            <div id="articles">
                 <button>
                     <span id="topbutton">
                         {name}
@@ -71,15 +70,13 @@ def listofBikes(dictionaryBikes):
                         <span class="namecompany"></span>
                         <span class="categoryorbrand">{brand}</span>
                     </span>
-                    <span class="price">PRICE€/day</span>
+                    <span class="price">{price}€/day</span>
                 </button>
-                '''.format( name = bike['name'], image = bike['image'], brand = bike['brand'])
-                    listOfCategory.append(bike['category'])
-                    break
-                else:
-                    break
+                '''.format( name = bike['name'], image = bike['image'], brand = bike['brand'], price = bike['price'])    #Añadimos los valores que necesitamos a nuestra plantilla HTML
+                
 
-    contentList +='''</div>
+                    contentList +='''
+            </div>
         </section>
         <div class="footer-basic">
             <footer>
@@ -100,7 +97,11 @@ def listofBikes(dictionaryBikes):
 
             </footer> 
         </div>  
-
 </html>'''
+                            
+                    directory = "docs/pages/"          #variable asigna directorio donde crear el archivo
+                    file = category + "list"           #variable asigna nombre de archivo
+                    extension = ".html"                #variable asigna extensión de archivo
+                    path =  directory + file + extension
 
-    createFile()
+                    createFile(file + extension, contentList, directory, path)    
