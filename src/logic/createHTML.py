@@ -5,7 +5,7 @@ import os
 # Función que crea archivos en un directorio seleccioado según el parametro "directory"
 
 
-def createHTML(filename, content, directory, path):
+def createFile(filename, content, directory, path):
 
     if os.path.isdir(directory) == True: #consulta si el directorio solicitado existe en el sistema 
 

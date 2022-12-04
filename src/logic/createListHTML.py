@@ -2,6 +2,8 @@
 #función que crea contenido de la lista de bicis en función de los datos 
 # que encuentra de la base de datos añadidos al parametro.
 
+from createHTML import createFile  #Importamos módulo para después de haber generado el contenido crear el archivo
+
 def listofBikes(dictionaryBikes):
 
     contentList = '''
@@ -49,9 +51,14 @@ def listofBikes(dictionaryBikes):
         <section>
             
             <h1 id="title">Listado de bicicletas</h1>
-            <hr>
+            <hr>'''
+    
+    # Espacio para añadir bucle que seleccione datos y los añada al contenido.
 
-            <div id="articles">
+
+
+
+    contentList +='''<div id="articles">
                 <button>
                     <span id="topbutton">
                         Name of bike
@@ -66,8 +73,9 @@ def listofBikes(dictionaryBikes):
                         <span class="categoryorbrand">Category</span>
                     </span>
                     <span class="price">PRICE€/day</span>
-                </button> 
-            </div>
+                </button> '''
+
+    contentList +='''</div>
         </section>
         <div class="footer-basic">
             <footer>
@@ -90,4 +98,5 @@ def listofBikes(dictionaryBikes):
         </div>  
 
 </html>'''
-    
+
+    createFile()

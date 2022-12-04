@@ -1,4 +1,4 @@
-from createHTML import createHTML
+from createHTML import createFile
 
 def createContentIndex():
 
@@ -123,6 +123,6 @@ def createContentIndex():
     extension = ".html"                         #variable asigna extensión de archivo
     path =  directory + file + extension
 
-    createHTML(file + extension, contentOfIndex, directory, path) 
+    createFile(file + extension, contentOfIndex, directory, path) 
 
 createContentIndex()
