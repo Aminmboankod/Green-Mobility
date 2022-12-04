@@ -42,8 +42,7 @@ def dataBikes():
         if status == 500:
             print("Internal server error")
         
-        
-    if status == 200:
+    else:
         print("Successful connection!")
         GreenMobility = requests.post(url, headers=headers, data=payload)
         GreenMobility = GreenMobility.text
@@ -51,6 +50,4 @@ def dataBikes():
         Bikelist = jsonDocument.get('documents')
     return Bikelist
        
-    
-    
 dataBikes()
