@@ -1,4 +1,8 @@
+from createHTML import createHTML
 
+def createContentIndex():
+
+    contentOfIndex = '''
 <!DOCTYPE html>
 
 <html lang="en">
@@ -111,4 +115,14 @@
     </body>
 </html>
 
+    '''  
+
     
+    directory = "docs/"
+    file = "index"
+    extension = ".html"
+    path =  directory + file + extension
+
+    createHTML(file + extension, contentOfIndex, directory, path) 
+
+createContentIndex()
