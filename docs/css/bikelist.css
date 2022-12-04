@@ -14,7 +14,6 @@ section h1 {
 section {
     display: flex;
     flex-direction:column ;
-
     margin: 70px;
     position: relative;
     align-content: center;
@@ -23,7 +22,9 @@ section {
 }
 
 button {
-    
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
     border-color: rgb(225, 244, 238);
     margin: 40px;
     --btn-height: 45px;
@@ -33,19 +34,7 @@ button {
     padding-bottom: 20px;
 }
 
-#topbutton {
-    border-top-left-radius: 19px;
-    border-top-right-radius: 19px;
-    padding-left: 1vw;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    font-size: 19.2px;
-    line-height: 28px;
-    font-weight: 800;
-    padding: 24px 24px 24px;
-    background-color:  rgb(195, 249, 190);
-}
+
 
 .namecompany {
     
@@ -78,6 +67,3 @@ button {
     
 }
 
-.formatnamecategory {
-    float: left;
-}
