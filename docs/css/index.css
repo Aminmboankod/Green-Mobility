@@ -18,12 +18,45 @@ img {
     
 .text {
     position: absolute;
-    font-size: 3vw;
+    font-size: 4vw;
     font-weight: bold;
     font-family: Poppins;
     color: rgb(97, 112, 82);
     top: 25%;
     left: 6%; 
+}
+
+.button {
+    position: absolute;
+    background-color: rgb(115, 203, 52) ;
+    color: rgb(255, 255, 255);
+    top: 70%;
+    left: 15%;
+    padding: 30px;
+    border-radius: 30%;
+
+} 
+button {
+    display:block;
+    background-color: rgb(169, 208, 129);
+    box-shadow: 0 4px 12px 0 rgba(32, 219, 88, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+    border-color:rgb(128, 241, 173);
+}
+
+
+
+ article button {
+    display: inline-table;
+    justify-content:space-between;
+    margin-block-end: 100px;
+    margin-top: 50px;
+    
+}
+article {
+    display:flex;
+    justify-content:space-around ;
+
 }
 
 /* ----- END IMAGEN CENTRAL */
@@ -40,16 +73,37 @@ img {
 }
 
 .QuienesSomos p {
-    padding-left: 25px;
-    padding-right: 25px;
-    padding-bottom: 20px;
+    display: block;
+    background-color: rgb(115, 203, 52);
+    border-style:groove;
+    border-color: rgb(115, 203, 52);
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-left: 50px;
+    padding-right: 100px;
+    padding-bottom: 100px;
     font-family: Poppins;
+    font-size: 2vw;
+    padding: 4%;
+}
+
+.QuienesSomos img {
+    width: 300px;
+    position:relative;
+    display:inline-block;
+    justify-content:space-between;
+    
+    margin: 30px;
+    
 }
 /* ----- FIN QUIENES SOMOS ----- } */
 
+
+
 /* ----- DÓNDE ESTAMOS -----  */
 
-.DondeEstamos h3 {
+/*.DondeEstamos h3 {
     text-align: center;
     padding-top: 15px;
     padding-bottom: 15px;
@@ -78,6 +132,16 @@ img {
 
 .DondeEstamos .Palma {
     list-style-type: circle;
+}*/
+.DondeEstamos .map {
+    position:relative;
+    margin:10;
+    padding: 0;
+    z-index: 2;
 }
-
+.DondeEstamos .listatiendas {
+    position:relative;
+    z-index: 1;
+    
+}
 /* ----- FIN DÓNDE ESTAMOS -----  */
