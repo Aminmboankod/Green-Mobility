@@ -1,8 +1,8 @@
 
 #función que crea contenido de la lista de bicis en función de los datos 
 # que encuentra de la base de datos añadidos al parametro.
-
-from createHTML import createFile  #Importamos módulo para después de haber generado el contenido crear el archivo
+#Importamos módulo para después de haber generado el contenido crear el archivo
+from createHTML import createFile
 
 def listofBikes(dictionaryBikes):
 
@@ -53,26 +53,31 @@ def listofBikes(dictionaryBikes):
             <h1 id="title">Listado de bicicletas</h1>
             <hr>'''
     listOfCategory = []
-    for bike in listofBikes:
+    for bike in dictionaryBikes:
         for property in bike:
             if property == 'category':
                 if bike['category'] not in listOfCategory:
                     contentList +='''<div id="articles">
                 <button>
                     <span id="topbutton">
-                        Name of bike
+                        {name}
                     </span>
                     <span>
                         <picture>
-                            <img src="/docs/images/montañabici.png" alt="bicicleta">
+                            <img src="{image}" alt="bicicleta">
                         </picture>
                     </span>
                     <span class="formatnamecategory">
-                        <span class="namecompany">namecompany</span>
-                        <span class="categoryorbrand">Category</span>
+                        <span class="namecompany"></span>
+                        <span class="categoryorbrand">{brand}</span>
                     </span>
                     <span class="price">PRICE€/day</span>
-                </button> '''.format()
+                </button>
+                '''.format( name = bike['name'], image = bike['image'], brand = bike['brand'])
+                    listOfCategory.append(bike['category'])
+                    break
+                else:
+                    break
 
     contentList +='''</div>
         </section>

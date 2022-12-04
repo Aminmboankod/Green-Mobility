@@ -49,5 +49,3 @@ def dataBikes():
         jsonDocument = json.loads(GreenMobility)
         Bikelist = jsonDocument.get('documents')
     return Bikelist
-       
-dataBikes()
