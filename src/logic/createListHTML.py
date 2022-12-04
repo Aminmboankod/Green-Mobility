@@ -52,13 +52,12 @@ def listofBikes(dictionaryBikes):
             
             <h1 id="title">Listado de bicicletas</h1>
             <hr>'''
-    
-    # Espacio para añadir bucle que seleccione datos y los añada al contenido.
-
-
-
-
-    contentList +='''<div id="articles">
+    listOfCategory = []
+    for bike in listofBikes:
+        for property in bike:
+            if property == 'category':
+                if bike['category'] not in listOfCategory:
+                    contentList +='''<div id="articles">
                 <button>
                     <span id="topbutton">
                         Name of bike
@@ -73,7 +72,7 @@ def listofBikes(dictionaryBikes):
                         <span class="categoryorbrand">Category</span>
                     </span>
                     <span class="price">PRICE€/day</span>
-                </button> '''
+                </button> '''.format()
 
     contentList +='''</div>
         </section>
