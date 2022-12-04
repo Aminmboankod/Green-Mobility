@@ -6,8 +6,11 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    
 }
-
+body {
+  background-color: rgb(231, 251, 216);
+}
 /* ----- Header ----- */
 
 header {
@@ -186,7 +189,7 @@ nav li:hover::after {
   display:none;
 }
 
-
+/* media query para tablets y móviles
 @media screen and (max-width: 800px) {
   header nav {
     width: 80%;
@@ -233,3 +236,4 @@ nav li:hover::after {
 
   }
 } 
+*/
