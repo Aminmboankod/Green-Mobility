@@ -118,9 +118,9 @@ def createContentIndex():
     '''  
 
     
-    directory = "docs/"
-    file = "index"
-    extension = ".html"
+    directory = "docs/"                         #variable asigna directorio donde crear el archivo
+    file = "index"                              #variable asigna nombre de archivo
+    extension = ".html"                         #variable asigna extensión de archivo
     path =  directory + file + extension
 
     createHTML(file + extension, contentOfIndex, directory, path) 

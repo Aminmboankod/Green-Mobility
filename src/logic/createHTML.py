@@ -1,8 +1,13 @@
 import os
 
+
+
+# Función que crea archivos en un directorio seleccioado según el parametro "directory"
+
+
 def createHTML(filename, content, directory, path):
 
-    if os.path.isdir(directory) == True:
+    if os.path.isdir(directory) == True: #consulta si el directorio solicitado existe en el sistema 
 
         with open(path, "w+") as htmlFile:
             htmlFile.write(content)
@@ -11,5 +16,5 @@ def createHTML(filename, content, directory, path):
         return status
 
     else:
-        print("directory doesn't exist")
+        print("Directory doesn't exist")
         
