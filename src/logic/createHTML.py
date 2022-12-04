@@ -12,4 +12,3 @@ def createHTML(filename, content, directory, path):
 
     else:
         print("directory doesn't exist")
-        
