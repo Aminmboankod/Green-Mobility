@@ -186,9 +186,9 @@ nav li:hover::after {
   
 
 
-.menu_bar {
+/* .menu_bar {
   display:none;
-}
+} */
 
 /* media query para tablets y móviles
 @media screen and (max-width: 800px) {
