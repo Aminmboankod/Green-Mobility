@@ -32,14 +32,14 @@ def createContentIndex():
 
         <nav>
             <ul>
-                <li><a href="/docs/pages/list.html">Carretera</a></li>
-                <li><a href="/docs/pages/list.html">Ciudad</a></li>
-                <li><a href="/docs/pages/list.html">MTB</a></li>
-                <li><a href="/docs/pages/list.html">Eléctricas</a>
+                <li><a href="pages/BikeList.html">Carretera</a></li>
+                <li><a href="pages/BikeList.html">Ciudad</a></li>
+                <li><a href="pages/BikeList.html">MTB</a></li>
+                <li><a href="pages/BikeList.html">Eléctricas</a>
                     <ul>
-                        <li><a href="/pages/list.html">Carretera</a></li>
-                        <li><a href="/pages/list.html">Ciudad</a></li>
-                        <li><a href="/pages/list.html">MTB</a></li>
+                        <li><a href="pages/BikeList.html">Carretera</a></li>
+                        <li><a href="pages/BikeList.html">Ciudad</a></li>
+                        <li><a href="pages/BikeList.html">MTB</a></li>
                     </ul>
                 </li>
             </ul>
@@ -111,7 +111,6 @@ def createContentIndex():
 
             </footer> 
         </div>  
-
     </body>
 </html>
 
