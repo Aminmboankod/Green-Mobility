@@ -37,7 +37,7 @@ if __name__=="__main__":
     #     listofBikesForBrand(listOfDictionaryBikes, brand['_id'])
 
     # Ejecuta la función createShowBike para crear todas las paginas de las bicicletas
-    createShowBike()
+    createShowBike(listOfDictionaryBikes)
 
 
 

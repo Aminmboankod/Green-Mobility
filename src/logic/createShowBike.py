@@ -61,7 +61,7 @@ def createShowBike(listOfDictionaryBikes):
 
             <div class="imagen">
         
-                <img class="imagenBicicleta" src="../images/montañabici.png"  alt="bicicleta" id="Bicicleta">
+                <img class="imagenBicicleta" src="{image}"  alt="bicicleta" id="Bicicleta">
 
             </div>
 
@@ -96,7 +96,7 @@ def createShowBike(listOfDictionaryBikes):
 
                     <tr>
                         <th>Tienda</th>
-                        <td>{Location}</td>
+                        <td>{location}</td>
                     </tr>
 
                     <tr>
@@ -115,7 +115,7 @@ def createShowBike(listOfDictionaryBikes):
             
         </section>
 
-        '''.format(name = bike["name"], category = bike["category"], brand = bike["brand"],material = bike["material"], frame_size = bike["frame_size"], weight = bike["weight"], location = bike["company"]["company_name"], available = bike["available"], price = bike["price"] )
+        '''.format(name = bike["name"], category = bike["category"], brand = bike["brand"],material = bike["material"], frame_size = bike["frame_size"], weight = bike["weight"], location = bike["company"]["company_name"], available = bike["available"], price = bike["price"], image = bike["image"])
 
         
     HTMLshowbikes += '''
