@@ -1,9 +1,9 @@
 from logic.createHTML import createFile
 
-def createShowBike(items):
+def createShowBike(listOfDictionaryBikes):
 
     #falta lógica para saber que bici seleccionar.
-    for value in items:
+    for bike in listOfDictionaryBikes:
         HTMLshowbikes = '''
 <!DOCTYPE html>
 
@@ -143,6 +143,7 @@ def createShowBike(items):
     </body>
 </html>'''
 
+    name = bike["name"]                #Variable asigna el nombre de la bici
     directory = "docs/pages/"          #variable asigna directorio donde crear el archivo
     file = name                        #variable asigna nombre de archivo
     extension = ".html"                #variable asigna extensión de archivo

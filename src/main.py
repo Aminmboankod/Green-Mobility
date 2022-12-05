@@ -10,6 +10,7 @@ from logic.createIndexHTML import createContentIndex
 from logic.createListcategory import listofBikesForCategory
 from logic.createListBrand import listofBikesForBrand
 from db.QueryList import querylistcategory, querylistbrand
+from logic.createShowBike import createShowBike
 
 
 if __name__=="__main__":
@@ -24,16 +25,19 @@ if __name__=="__main__":
     
     # de una consulta que devuelve una lista de diccionarios con las categorías existentes
     # ejecuta la función que crea el contenido de la página de lista de bicis por cada categoría
-    listadiccionariosGroup = querylistcategory()
-    for category in listadiccionariosGroup:
-        listofBikesForCategory(listOfDictionaryBikes, category['_id'])
+    # listadiccionariosGroup = querylistcategory()
+    # for category in listadiccionariosGroup:
+    #     listofBikesForCategory(listOfDictionaryBikes, category['_id'])
 
 
     # de una consulta que devuelve una lista de diccionarios con las marcas existentes
     # ejecuta la función que crea el contenido de la página de lista de bicis por cada marca 
-    listadiccionariosGroup = querylistbrand()
-    for brand in listadiccionariosGroup:
-        listofBikesForBrand(listOfDictionaryBikes, brand['_id'])
+    # listadiccionariosGroup = querylistbrand()
+    # for brand in listadiccionariosGroup:
+    #     listofBikesForBrand(listOfDictionaryBikes, brand['_id'])
+
+    # Ejecuta la función createShowBike para crear todas las paginas de las bicicletas
+    createShowBike()
 
 
 
