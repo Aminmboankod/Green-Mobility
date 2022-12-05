@@ -26,14 +26,14 @@ if __name__=="__main__":
     # ejecuta la función que crea el contenido de la página de lista de bicis por cada categoría
     listadiccionariosGroup = querylistcategory()
     for category in listadiccionariosGroup:
-        listofBikesForCategory(listadiccionariosGroup, category['_id'])
+        listofBikesForCategory(listOfDictionaryBikes, category['_id'])
 
 
     # de una consulta que devuelve una lista de diccionarios con las marcas existentes
     # ejecuta la función que crea el contenido de la página de lista de bicis por cada marca 
     listadiccionariosGroup = querylistbrand()
     for brand in listadiccionariosGroup:
-        listofBikesForBrand(listadiccionariosGroup, brand['_id'])
+        listofBikesForBrand(listOfDictionaryBikes, brand['_id'])
 
 
 

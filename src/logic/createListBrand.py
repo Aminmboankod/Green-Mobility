@@ -44,17 +44,16 @@ def listofBikesForBrand(listOfDictionaryBikes, brand):
             </ul>
         </nav>
         
-        <section>
-            
-            <h1 id="title">Listado de bicicletas</h1>
-            <hr>'''
+        <section>'''
     for bike in listOfDictionaryBikes:
         for property in bike:
             if property == 'brand':
-                if bike['brand'] != brand:
-                    break
-                else:
+                if bike['brand'] == brand:
+            
                     contentList +='''
+            
+            <h1 id="title">Listado de bicicletas {brand}</h1>
+            <hr>                    
             <div id="articles">
                 <button>
                     <span id="topbutton">
@@ -66,13 +65,14 @@ def listofBikesForBrand(listOfDictionaryBikes, brand):
                         </picture>
                     </span>
                     <span class="formatnamecategory">
-                        <span class="namecompany"></span>
+                        <span class="namecompany">{company}</span>
                         <span class="categoryorbrand">{category}</span>
                     </span>
                     <span class="price">{price}€/day</span>
                 </button>
-                '''.format( name = bike['name'], image = bike['image'], category = bike['category'], price = bike['price'])    #Añadimos los valores que necesitamos a nuestra plantilla HTML
-                
+                '''.format( name = bike['name'], image = bike['image'], category = bike['category'], price = bike['price'], brand= bike['brand'], company= bike['company']['company_name'])    #Añadimos los valores que necesitamos a nuestra plantilla HTML
+                else:
+                    break
 
     contentList +='''
             </div>
