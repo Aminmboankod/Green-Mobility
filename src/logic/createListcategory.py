@@ -47,61 +47,57 @@ def listofBikesForCategory(listOfDictionaryBikes, category):
                 </li>
             </ul>
         </nav>
-        
-        <section>'''
+        <h1 id="title">Listado de bicicletas</h1>
+        <section class="flex-container">'''
     for bike in listOfDictionaryBikes:
         for property in bike:
             if property == 'category':
                 if bike['category'] == category:
                     
                     contentList +='''
-            
-            <h1 id="title">Listado de bicicletas {category}</h1>
-            <hr>                    
-            <div id="articles">
+            <div class="caja">                  
                 <button>
-                    <span id="topbutton">
-                        {name}
-                    </span>
-                    <span>
-                        <picture>
-                            <img src="{image}" alt="bicicleta">
-                        </picture>
-                    </span>
-                    <span class="formatnamecategory">
-                        <span class="namecompany">{company}</span>
-                        <span class="categoryorbrand">{brand}</span>
-                    </span>
-                    <span class="price">{price}€/day</span>
-                </button>
+
+                    <span class="top">{name}</span><br>
+                    
+                    <img class="img" src="{image}" alt="bicicleta"><br>
+
+                    <span class="category">{brand}</span><br>
+                    <span class="company">{company}</span><br>
+                    <span class="price">{price} €/day</span>
+
+                </button> 
+            </div>
                 '''.format( name = bike['name'], image = bike['image'], brand = bike['brand'], price = bike['price'], category = bike['category'], company= bike['company']['company_name'])    
                 #Añadimos los valores que necesitamos a nuestra plantilla HTML
                 else:
                     break
 
     contentList +='''
-            </div>
         </section>
-            <div class="footer-basic">
-        <footer>
+        
+        <div class="footer-basic">
+            <footer>
 
-            <div class="social">
-                <a href="https://www.instagram.com/green_mobility_/ " target="_blank"><img src="../images/instagram.png" alt="Instagram Logo"></a>
-                <a href="https://github.com/Aminmboankod/Green-Mobility" target="_blank"><img src="../images/github.png" alt="GitHub Logo"></a>
-                <a href="#" target="_blank"><img src="../images/twitter.png" alt="twitter Logo"></a>
-            </div>
+                <div class="social">
+                    <a href="https://www.instagram.com/green_mobility_/ " target="_blank"><img src="../images/instagram.png" alt="Instagram Logo"></a>
+                    <a href="https://github.com/Aminmboankod/Green-Mobility" target="_blank"><img src="../images/github.png" alt="GitHub Logo"></a>
+                    <a href="#" target="_blank"><img src="../images/twitter.png" alt="twitter Logo"></a>
+                </div>
 
-            <ul class="list-inline">
-                <li class="list-inline-item"><a href="#">Términos y condiciones</a></li>
-                <li class="list-inline-item"><a href="#">Aviso Legal</a></li>
-                <li class="list-inline-item"><a href="#">Política de privacidad</a></li>
-            </ul>
+                <ul class="list-inline">
+                    <li class="list-inline-item"><a href="#">Términos y condiciones</a></li>
+                    <li class="list-inline-item"><a href="#">Aviso Legal</a></li>
+                    <li class="list-inline-item"><a href="#">Política de privacidad</a></li>
+                </ul>
 
             <p class="copyright">Green Mobility 2022</p>
 
-        </footer> 
-    </div>  
-</html>'''
+            </footer> 
+        </div>  
+
+</html>
+'''
                 
     directory = "docs/pages/"          #variable asigna directorio donde crear el archivo
     file = category + "list"           #variable asigna nombre de archivo
