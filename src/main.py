@@ -1,12 +1,16 @@
-## EN ESTE FICHERO INCLUIREMOS LAS FUNCIONES QUE YA ESTÉN TERMINADAS PARA EL ORDEN DE EJECUCIÓN ##
 
 
 
+####### MÓDULO DE EJECUCIÓ DEL PROGRAMA PRINCIPAL #######
 
-from db.dataAPIaccess import dataBikes     # importamos módulo que consulta extrae datos de mongodb
+
+# Importamos todos los módulos y sus funciones
+from db.dataAPIaccess import dataBikes     
 from logic.createIndexHTML import createContentIndex
 from logic.createListcategory import listofBikesForCategory
 from logic.createListBrand import listofBikesForBrand
+from db.QueryList import querylistcategory, querylistbrand
+
 
 if __name__=="__main__":
 
@@ -16,26 +20,20 @@ if __name__=="__main__":
 
 
     # Ejecutamos la fución que crea la página principal de acceso "Index.html"
-    # createContentIndex()
-
-    # Llamamos a la fución que crea listas de bici y le mandamos parámetros de la categoría a filtrar
-    listofBikesForCategory(listOfDictionaryBikes, 'MTB')
-    listofBikesForCategory(listOfDictionaryBikes, 'Road')
-    listofBikesForCategory(listOfDictionaryBikes, 'City')
-    listofBikesForCategory(listOfDictionaryBikes, 'E-Road')
-    listofBikesForCategory(listOfDictionaryBikes, 'E-MTB')
-    listofBikesForCategory(listOfDictionaryBikes, 'E-City')
+    createContentIndex()
+    
+    # de una consulta que devuelve una lista de diccionarios con las categorías existentes
+    # ejecuta la función que crea el contenido de la página de lista de bicis por cada categoría
+    listadiccionariosGroup = querylistcategory()
+    for category in listadiccionariosGroup:
+        listofBikesForCategory(listadiccionariosGroup, category['_id'])
 
 
-
-    # Llamamos a la función que crea listas de bici y le madamos parámetros de la marca a filtrar
-    listofBikesForBrand(listOfDictionaryBikes, 'Canyon')
-    listofBikesForBrand(listOfDictionaryBikes, 'BH')
-    listofBikesForBrand(listOfDictionaryBikes, 'Giant')
-    listofBikesForBrand(listOfDictionaryBikes, 'Bianchi')
-    listofBikesForBrand(listOfDictionaryBikes, 'Cannondale')
-    listofBikesForBrand(listOfDictionaryBikes, 'Cube')
-
+    # de una consulta que devuelve una lista de diccionarios con las marcas existentes
+    # ejecuta la función que crea el contenido de la página de lista de bicis por cada marca 
+    listadiccionariosGroup = querylistbrand()
+    for brand in listadiccionariosGroup:
+        listofBikesForBrand(listadiccionariosGroup, brand['_id'])
 
 
 
