@@ -1,4 +1,4 @@
-from createHTML import createFile
+from logic.createHTML import createFile
 
 def createContentIndex():
 
@@ -124,5 +124,3 @@ def createContentIndex():
     path =  directory + file + extension
 
     createFile(file + extension, contentOfIndex, directory, path) 
-
-createContentIndex()

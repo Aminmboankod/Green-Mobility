@@ -4,7 +4,7 @@
 
 
 from db.dataAPIaccess import dataBikes     # importamos módulo que consulta extrae datos de mongodb
-from logic.createIndexHTML import createFile
+from logic.createIndexHTML import createContentIndex
 from logic.createListcategory import listofBikesForCategory
 from logic.createListBrand import listofBikesForBrand
 
@@ -16,7 +16,7 @@ if __name__=="__main__":
 
 
     # Ejecutamos la fución que crea la página principal de acceso "Index.html"
-    createFile()
+    # createContentIndex()
 
     # Llamamos a la fución que crea listas de bici y le mandamos parámetros de la categoría a filtrar
     listofBikesForCategory(listOfDictionaryBikes, 'MTB')

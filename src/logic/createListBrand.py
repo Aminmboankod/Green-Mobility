@@ -1,4 +1,4 @@
-from createHTML import createFile  #Importamos módulo para después de haber generado el contenido crear el archivo
+from logic.createHTML import createFile  #Importamos módulo para después de haber generado el contenido crear el archivo
 
 def listofBikesForBrand(listOfDictionaryBikes, brand):
 
@@ -50,8 +50,10 @@ def listofBikesForBrand(listOfDictionaryBikes, brand):
             <hr>'''
     for bike in listOfDictionaryBikes:
         for property in bike:
-            if property['brand'] == brand :
-                
+            if property == 'brand':
+                if bike['brand'] != brand:
+                    break
+                else:
                     contentList +='''
             <div id="articles">
                 <button>
@@ -72,33 +74,33 @@ def listofBikesForBrand(listOfDictionaryBikes, brand):
                 '''.format( name = bike['name'], image = bike['image'], category = bike['category'], price = bike['price'])    #Añadimos los valores que necesitamos a nuestra plantilla HTML
                 
 
-                    contentList +='''
+    contentList +='''
             </div>
         </section>
-        <div class="footer-basic">
-            <footer>
+            <div class="footer-basic">
+        <footer>
 
-                <div class="social">
-                    <a href="https://www.instagram.com/green_mobility_/ " target="_blank"><img src="../images/instagram.png" alt="Instagram Logo"></a>
-                    <a href="https://github.com/Aminmboankod/Green-Mobility" target="_blank"><img src="../images/github.png" alt="GitHub Logo"></a>
-                    <a href="#" target="_blank"><img src="../images/twitter.png" alt="twitter Logo"></a>
-                </div>
+            <div class="social">
+                <a href="https://www.instagram.com/green_mobility_/ " target="_blank"><img src="../images/instagram.png" alt="Instagram Logo"></a>
+                <a href="https://github.com/Aminmboankod/Green-Mobility" target="_blank"><img src="../images/github.png" alt="GitHub Logo"></a>
+                <a href="#" target="_blank"><img src="../images/twitter.png" alt="twitter Logo"></a>
+            </div>
 
-                <ul class="list-inline">
-                    <li class="list-inline-item"><a href="#">Términos y condiciones</a></li>
-                    <li class="list-inline-item"><a href="#">Aviso Legal</a></li>
-                    <li class="list-inline-item"><a href="#">Política de privacidad</a></li>
-                </ul>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="#">Términos y condiciones</a></li>
+                <li class="list-inline-item"><a href="#">Aviso Legal</a></li>
+                <li class="list-inline-item"><a href="#">Política de privacidad</a></li>
+            </ul>
 
             <p class="copyright">Green Mobility 2022</p>
 
-            </footer> 
-        </div>  
+        </footer> 
+    </div>  
 </html>'''
-                            
-                    directory = "docs/pages/"          #variable asigna directorio donde crear el archivo
-                    file = brand +"list"               #variable asigna nombre de archivo
-                    extension = ".html"                #variable asigna extensión de archivo
-                    path =  directory + file + extension
+            
+    directory = "docs/pages/"          #variable asigna directorio donde crear el archivo
+    file = brand +"list"               #variable asigna nombre de archivo
+    extension = ".html"                #variable asigna extensión de archivo
+    path =  directory + file + extension
 
-                    createFile(file + extension, contentList, directory, path) 
+    createFile(file + extension, contentList, directory, path) 
