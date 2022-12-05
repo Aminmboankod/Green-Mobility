@@ -16,5 +16,9 @@ def createFile(filename, content, directory, path):
             return status
 
     else:
+<<<<<<< HEAD
         print("Directory doesn't exist")
         
+=======
+        print("directory doesn't exist")
+>>>>>>> feature/showBike

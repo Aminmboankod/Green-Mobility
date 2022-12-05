@@ -15,7 +15,6 @@ img {
     height: auto;
 }
     
-    
 .text {
     position: absolute;
     font-size: 4vw;
@@ -46,13 +45,14 @@ button {
 
 
 
- article button {
+article button {
     display: inline-table;
     justify-content:space-between;
     margin-block-end: 100px;
     margin-top: 50px;
     
 }
+
 article {
     display:flex;
     justify-content:space-around ;
@@ -103,28 +103,70 @@ article {
 
 /* ----- DÓNDE ESTAMOS -----  */
 
+.DondeEstamos {
+    text-align: center;
+    padding: 40px;
+    font-family: Poppins;
+    font-size: 25px;
+}
+
+.flex-container {
+    display: flex;
+    flex-flow: wrap row;
+    /* border: 1px solid black; */
+    margin: 0 auto;
+    justify-content: space-around;
+    text-align: center;
+    padding: 50px;
+}
+
+.caja  {
+    flex-flow: column;
+    /* border: 2px solid black; */
+    width: 300px;
+    height: 200px;
+    font-size: 18px;
+}
+
+.Palma .Manacor .Alcudia {
+    font-weight: bold;
+    text-decoration: underline;
+} 
+
+
+
+
+
+
+
+
 /*.DondeEstamos h3 {
     text-align: center;
     padding-top: 15px;
     padding-bottom: 15px;
     font-family: Poppins;
     font-weight: bold;
+
 }
+
 .DondeEstamos h3 {
     padding-left: 25px;
     padding-right: 25px;
     padding-bottom: 20px;
     font-family: Poppins;
 }
+
 .DondeEstamos p {
     font-family: Poppins;
     text-align: center;
 }
+
 .DondeEstamos ol li {
     font-family: Poppins;
     text-align: center;
     padding-bottom: 5px;
 }
+
 .DondeEstamos .Palma {
     list-style-type: circle;
 }*/

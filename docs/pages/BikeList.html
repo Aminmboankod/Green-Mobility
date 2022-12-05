@@ -1,8 +1,3 @@
-from logic.createHTML import createFile  #Importamos módulo para después de haber generado el contenido crear el archivo
-
-def listofBikesForBrand(listOfDictionaryBikes, brand):
-
-    contentList = '''
 <!DOCTYPE html>
 <html lang="en">
 
@@ -43,35 +38,6 @@ def listofBikesForBrand(listOfDictionaryBikes, brand):
                 </li>
             </ul>
         </nav>
-<<<<<<< HEAD:src/logic/createListBrand.py
-        <h1 id="title">Listado de bicicletas</h1>
-        <section class="flex-container">'''
-    for bike in listOfDictionaryBikes:
-        for property in bike:
-            if property == 'brand':
-                if bike['brand'] == brand:
-            
-                    contentList +='''
-            
-            <div class="caja">                  
-                <button>
-
-                    <span class="top">{name}</span><br>
-                    
-                    <img class="img" src="{image}" alt="bicicleta"><br>
-
-                    <span class="category">{brand}</span><br>
-                    <span class="company">{company}</span><br>
-                    <span class="price">{price} €/day</span>
-
-                </button>
-            </div> 
-                '''.format( name = bike['name'], image = bike['image'], category = bike['category'], price = bike['price'], brand= bike['brand'], company= bike['company']['company_name'])    #Añadimos los valores que necesitamos a nuestra plantilla HTML
-                else:
-                    break
-
-    contentList +='''
-=======
 
         <h1>Listado de bicicletas</h1>
         
@@ -91,7 +57,6 @@ def listofBikesForBrand(listOfDictionaryBikes, brand):
                 </button> 
             </div>
         
->>>>>>> feature/showBike:docs/pages/BikeList.html
         </section>
         
         <div class="footer-basic">
@@ -114,11 +79,4 @@ def listofBikesForBrand(listOfDictionaryBikes, brand):
             </footer> 
         </div>  
 
-</html>'''
-            
-    directory = "docs/pages/"          #variable asigna directorio donde crear el archivo
-    file = brand +"list"               #variable asigna nombre de archivo
-    extension = ".html"                #variable asigna extensión de archivo
-    path =  directory + file + extension
-
-    createFile(file + extension, contentList, directory, path) 
+</html>
