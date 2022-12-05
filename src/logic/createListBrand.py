@@ -43,7 +43,6 @@ def listofBikesForBrand(listOfDictionaryBikes, brand):
                 </li>
             </ul>
         </nav>
-<<<<<<< HEAD:src/logic/createListBrand.py
         <h1 id="title">Listado de bicicletas</h1>
         <section class="flex-container">'''
     for bike in listOfDictionaryBikes:
@@ -71,27 +70,6 @@ def listofBikesForBrand(listOfDictionaryBikes, brand):
                     break
 
     contentList +='''
-=======
-
-        <h1>Listado de bicicletas</h1>
-        
-        <section class="flex-container">
-            
-            <div class="caja">
-                <button>
-
-                    <span class="top"> Name of bike </span><br>
-                    
-                    <img class="img" src="/docs/images/montañabici.png" alt="bicicleta"><br>
-
-                    <span class="category">Category</span><br>
-                    <span class="company">Company</span><br>
-                    <span class="price">Price</span>
-
-                </button> 
-            </div>
-        
->>>>>>> feature/showBike:docs/pages/BikeList.html
         </section>
         
         <div class="footer-basic">
