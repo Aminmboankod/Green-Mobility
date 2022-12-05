@@ -6,11 +6,12 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    
 }
+
 body {
   background-color: rgb(231, 251, 216);
 }
+
 /* ----- Header ----- */
 
 header {
@@ -24,8 +25,8 @@ header {
 header img {
     display: block;
     margin: auto;
-    width: 50%;
-    height: 50%;
+    width: 35%;
+    height: 35%;
 }
 
 /* ----- END HEADER ----- */
@@ -35,7 +36,7 @@ header img {
 /* Fondo del Nav, que esté centrado y que sea Sticky */
 nav {
     display:flex;
-    background-color: rgb(115, 203, 52);
+    background: rgb(122, 209, 35);
     justify-content: center;
     align-items: start;
     position: sticky;
@@ -233,7 +234,6 @@ nav li:hover::after {
     flex-direction:column;
     padding:20px;
     float:right;
-
   }
 } 
 */

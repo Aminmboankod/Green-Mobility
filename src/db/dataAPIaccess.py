@@ -2,11 +2,11 @@ import json
 import requests
 import os
 
-key = os.environ["APIKEY"]
-
+KEY = os.environ["APIKEY"]
+URL = os.environ["URL"]
 def dataBikes():
     
-    url = os.environ["URL"]
+    url = URL
 
     payload = json.dumps(
         {
@@ -19,7 +19,7 @@ def dataBikes():
     headers = {
         'Content-Type': 'application/json',
         'Access-Control-Request-Headers': '*',
-        'api-key': key,
+        'api-key': KEY,
         'Accept': 'application/json'
         }
 
@@ -49,5 +49,3 @@ def dataBikes():
         jsonDocument = json.loads(GreenMobility)
         Bikelist = jsonDocument.get('documents')
     return Bikelist
-       
-dataBikes()

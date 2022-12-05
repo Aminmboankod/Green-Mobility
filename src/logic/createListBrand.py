@@ -1,3 +1,8 @@
+from logic.createHTML import createFile  #Importamos módulo para después de haber generado el contenido crear el archivo
+
+def listofBikesForBrand(listOfDictionaryBikes, brand):
+
+    contentList = '''
 <!DOCTYPE html>
 <html lang="en">
 
@@ -38,30 +43,35 @@
                 </li>
             </ul>
         </nav>
-        
-        <section>
+        <h1 id="title">Listado de bicicletas</h1>
+        <section class="flex-container">'''
+    for bike in listOfDictionaryBikes:
+        for property in bike:
+            if property == 'brand':
+                if bike['brand'] == brand:
             
-            <h1 id="title">Listado de bicicletas</h1>
-            <hr>
-
-            <div id="articles">
+                    contentList +='''
+            
+            <div class="caja">                  
                 <button>
-                    <span id="topbutton">
-                        Name of bike
-                    </span>
-                    <span>
-                        <picture>
-                            <img src="/docs/images/montañabici.png" alt="bicicleta">
-                        </picture>
-                    </span>
-                    <span class="formatnamecategory">
-                        <span class="namecompany">namecompany</span>
-                        <span class="categoryorbrand">Category</span>
-                    </span>
-                    <span class="price">PRICE€/day</span>
-                </button> 
-            </div>
+
+                    <span class="top">{name}</span><br>
+                    
+                    <img class="img" src="{image}" alt="bicicleta"><br>
+
+                    <span class="category">{brand}</span><br>
+                    <span class="company">{company}</span><br>
+                    <span class="price">{price} €/day</span>
+
+                </button>
+            </div> 
+                '''.format( name = bike['name'], image = bike['image'], category = bike['category'], price = bike['price'], brand= bike['brand'], company= bike['company']['company_name'])    #Añadimos los valores que necesitamos a nuestra plantilla HTML
+                else:
+                    break
+
+    contentList +='''
         </section>
+        
         <div class="footer-basic">
             <footer>
 
@@ -82,4 +92,11 @@
             </footer> 
         </div>  
 
-</html>
+</html>'''
+            
+    directory = "docs/pages/"          #variable asigna directorio donde crear el archivo
+    file = brand +"list"               #variable asigna nombre de archivo
+    extension = ".html"                #variable asigna extensión de archivo
+    path =  directory + file + extension
+
+    createFile(file + extension, contentList, directory, path) 

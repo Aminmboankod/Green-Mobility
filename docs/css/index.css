@@ -109,27 +109,22 @@ article {
     padding-bottom: 15px;
     font-family: Poppins;
     font-weight: bold;
-
 }
-
 .DondeEstamos h3 {
     padding-left: 25px;
     padding-right: 25px;
     padding-bottom: 20px;
     font-family: Poppins;
 }
-
 .DondeEstamos p {
     font-family: Poppins;
     text-align: center;
 }
-
 .DondeEstamos ol li {
     font-family: Poppins;
     text-align: center;
     padding-bottom: 5px;
 }
-
 .DondeEstamos .Palma {
     list-style-type: circle;
 }*/
