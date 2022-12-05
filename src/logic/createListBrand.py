@@ -1,6 +1,6 @@
-from createHTML import createFile               #Importamos módulo para después de haber generado el contenido crear el archivo
+from createHTML import createFile  #Importamos módulo para después de haber generado el contenido crear el archivo
 
-def listofBikesForBrand(dictionaryBikes, brand):
+def listofBikesForBrand(listOfDictionaryBikes, brand):
 
     contentList = '''
 <!DOCTYPE html>
@@ -48,9 +48,9 @@ def listofBikesForBrand(dictionaryBikes, brand):
             
             <h1 id="title">Listado de bicicletas</h1>
             <hr>'''
-    for bike in dictionaryBikes:
+    for bike in listOfDictionaryBikes:
         for property in bike:
-            if property['category'] == brand :
+            if property['brand'] == brand :
                 
                     contentList +='''
             <div id="articles">
@@ -65,11 +65,11 @@ def listofBikesForBrand(dictionaryBikes, brand):
                     </span>
                     <span class="formatnamecategory">
                         <span class="namecompany"></span>
-                        <span class="categoryorbrand">{brand}</span>
+                        <span class="categoryorbrand">{category}</span>
                     </span>
                     <span class="price">{price}€/day</span>
                 </button>
-                '''.format( name = bike['name'], image = bike['image'], brand = bike['brand'], price = bike['price'])    #Añadimos los valores que necesitamos a nuestra plantilla HTML
+                '''.format( name = bike['name'], image = bike['image'], category = bike['category'], price = bike['price'])    #Añadimos los valores que necesitamos a nuestra plantilla HTML
                 
 
                     contentList +='''
@@ -97,7 +97,7 @@ def listofBikesForBrand(dictionaryBikes, brand):
 </html>'''
                             
                     directory = "docs/pages/"          #variable asigna directorio donde crear el archivo
-                    file = brand +"list"                   #variable asigna nombre de archivo
+                    file = brand +"list"               #variable asigna nombre de archivo
                     extension = ".html"                #variable asigna extensión de archivo
                     path =  directory + file + extension
 

@@ -1,9 +1,10 @@
 #función que crea contenido de la lista de bicis en función de los datos 
 # que encuentra de la base de datos añadidos al parametro.
 
-from createHTML import createFile               #Importamos módulo para después de haber generado el contenido crear el archivo
+from createHTML import createFile     
+#Importamos módulo para después de haber generado el contenido crear el archivo
 
-def listofBikesForCategory(dictionaryBikes, category):
+def listofBikesForCategory(listOfDictionaryBikes, category):
 
     contentList = '''
 <!DOCTYPE html>
@@ -51,7 +52,7 @@ def listofBikesForCategory(dictionaryBikes, category):
             
             <h1 id="title">Listado de bicicletas</h1>
             <hr>'''
-    for bike in dictionaryBikes:
+    for bike in listOfDictionaryBikes:
         for property in bike:
             if property['category'] == category:
                 
@@ -72,7 +73,8 @@ def listofBikesForCategory(dictionaryBikes, category):
                     </span>
                     <span class="price">{price}€/day</span>
                 </button>
-                '''.format( name = bike['name'], image = bike['image'], brand = bike['brand'], price = bike['price'])    #Añadimos los valores que necesitamos a nuestra plantilla HTML
+                '''.format( name = bike['name'], image = bike['image'], brand = bike['brand'], price = bike['price'])    
+                #Añadimos los valores que necesitamos a nuestra plantilla HTML
                 
 
                     contentList +='''
