@@ -62,10 +62,14 @@ def listofBikesForBrand(listOfDictionaryBikes, brand):
                     <span class="category">{brand}</span><br>
                     <span class="company">{company}</span><br>
                     <span class="price">{price} €/day</span>
-
+                    <span class="price">
+                        <a href="{nameHTML}.html">
+                        <input type="submit" value="Ver más" />
+                        </a>
+                    </span>
                 </button>
             </div> 
-                '''.format( name = bike['name'], image = bike['image'], category = bike['category'], price = bike['price'], brand= bike['brand'], company= bike['company']['company_name'])    #Añadimos los valores que necesitamos a nuestra plantilla HTML
+                '''.format(nameHTML= bike['name'].replace(" ",""), name = bike['name'], image = bike['image'], category = bike['category'], price = bike['price'], brand= bike['brand'], company= bike['company']['company_name'])    #Añadimos los valores que necesitamos a nuestra plantilla HTML
                 else:
                     break
 
@@ -91,7 +95,6 @@ def listofBikesForBrand(listOfDictionaryBikes, brand):
 
             </footer> 
         </div>  
-
 </html>'''
             
     directory = "docs/pages/"          #variable asigna directorio donde crear el archivo

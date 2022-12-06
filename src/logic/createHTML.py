@@ -1,7 +1,5 @@
 import os
 
-
-
 # Función que crea archivos en un directorio seleccioado según el parametro "directory"
 
 
