@@ -1,12 +1,11 @@
-import json
-import requests
-import os
 from mainCRUD import CRUD
+import json
+import os
+
+KEY = os.environ["APIKEY"]
+URL_DELETE = os.environ["URL_DELETE"]
 
 def deleteCRUD():
-
-    KEY = os.environ["APIKEY"]
-    URL_DELETE = os.environ["URL_DELETE"]
 
     url = URL_DELETE
 
@@ -16,11 +15,10 @@ def deleteCRUD():
         "database": "GreenMobility",
         "dataSource": "Cluster0",
         "filter": {
-            "name": "Prueba",
+            "name": "PruebaDeLaMuerte",
         }
         })
 
     CRUD(url, payload)
-    print("Bike has been deleted successfully")
 
 deleteCRUD()

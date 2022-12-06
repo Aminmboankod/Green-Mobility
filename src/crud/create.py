@@ -1,11 +1,11 @@
+from mainCRUD import CRUD
 import json
-import requests
 import os
 
 KEY = os.environ["APIKEY"]
 URL_INSERT = os.environ["URL_INSERT"]
 
-def insertBikes():
+def insertCRUD():
     
     url = URL_INSERT
 
@@ -24,35 +24,8 @@ def insertBikes():
         }
         })
 
-    headers = {
-        'Content-Type': 'application/json',
-        'Access-Control-Request-Headers': '*',
-        'api-key': KEY,
-        'Accept': 'application/json'
-        }
+    CRUD(url, payload)
     
-    try:
-        query = requests.post(url, headers=headers, data=payload)
-        status = query.status_code
-        query.raise_for_status()
-        
-    except requests.exceptions.HTTPError:
+insertCRUD()
 
-        if status == 400:
-            print("The query isn't correct")
 
-        if status == 401:
-            print("Unauthorized user tries to connect!")
-        
-        if status == 404:
-            print("HTTP not found!")
-
-        if status == 500:
-            print("Internal server error")
-
-    else:
-
-        print("Successful connection!") 
-        print("Bike has been created successfully")
-
-insertBikes()
