@@ -5,7 +5,7 @@ import subprocess
 os.chdir('Escritorio/Reto/Green-Mobility')
 
 #funcion para hacer un commit
-def commit(message):
+def commit(message):                               
     #hacer add de los archivos
     subprocess.call('git add .', shell=True)
 
@@ -17,7 +17,3 @@ def push():
     #hacer push
     subprocess.call('git push', shell=True)
 
-
-#ejecutar funciones
-commit('Los cambios han sido guardados y están en GitHub')
-push()

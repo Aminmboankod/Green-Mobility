@@ -25,7 +25,7 @@ if __name__=="__main__":
     # Ejecutamos la fución que crea la página principal de acceso "Index.html"
     createContentIndex()
 
-    commit() # Hacemos un commit para guardar los cambios
+    commit("Se ha añadido la página principal") # Hacemos un commit para guardar los cambios
     push() # Los subimos al repositorio remoto
 
 
@@ -42,13 +42,13 @@ if __name__=="__main__":
     for brand in listadiccionariosGroup:
         listofBikesForBrand(listOfDictionaryBikes, brand['_id'])
 
-    commit() # Hacemos un commit para guardar los cambios
+    commit("Se ha añadido las páginas con las listas de bicis") # Hacemos un commit para guardar los cambios
     push() # Los subimos al repositorio remoto
 
     # Ejecuta la función createShowBike para crear todas las paginas de las bicicletas
     createShowBike(listOfDictionaryBikes)
 
-    commit() # Hacemos un commit para guardar los cambios
+    commit("Se ha añadido la página con datos detallados de cada bici") # Hacemos un commit para guardar los cambios
     push() # Los subimos al repositorio remoto
 
     print("Todos las páginas han sido creadas correctamente.")    
