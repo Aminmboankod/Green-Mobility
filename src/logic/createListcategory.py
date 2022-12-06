@@ -5,6 +5,9 @@ from logic.createHTML import createFile
 #Importamos módulo para después de haber generado el contenido crear el archivo
 
 def listofBikesForCategory(listOfDictionaryBikes, category):
+    
+    assert isinstance(listOfDictionaryBikes, list), "el parámetro no es una lista"
+    assert isinstance(category, str), "el parámetro category no es el dato que necesita"
 
     contentList = '''
 <!DOCTYPE html>

@@ -1,6 +1,8 @@
 
 
 
+
+
 ####### MÓDULO DE EJECUCIÓ DEL PROGRAMA PRINCIPAL #######
 
 
@@ -11,7 +13,7 @@ from logic.createListcategory import listofBikesForCategory
 from logic.createListBrand import listofBikesForBrand
 from db.QueryList import querylistcategory, querylistbrand
 from logic.createShowBike import createShowBike
-
+from autoGit import commit, push
 
 if __name__=="__main__":
 
@@ -22,7 +24,11 @@ if __name__=="__main__":
 
     # Ejecutamos la fución que crea la página principal de acceso "Index.html"
     createContentIndex()
-    
+
+    commit() # Hacemos un commit para guardar los cambios
+    push() # Los subimos al repositorio remoto
+
+
     # de una consulta que devuelve una lista de diccionarios con las categorías existentes
     # ejecuta la función que crea el contenido de la página de lista de bicis por cada categoría
     # listadiccionariosGroup = querylistcategory()
@@ -39,5 +45,8 @@ if __name__=="__main__":
     # Ejecuta la función createShowBike para crear todas las paginas de las bicicletas
     createShowBike(listOfDictionaryBikes)
 
+    commit() # Hacemos un commit para guardar los cambios
+    push() # Los subimos al repositorio remoto
 
+    print("Todos las páginas han sido creadas correctamente.")    
 

@@ -2,6 +2,6 @@ from src.logic.createHTML import createFile
 import pytest
 
 def test_createHTML():
-    assert createFile(filename="prueba.html", content="prueba", directory="docs/", path="docs/prueba.html") == "prueba.html has been created in docs/"
-    assert createFile(filename="prueba2.html", content=1, directory="docs/", path="docs/prueba.html") == None
+    assert createFile("prueba.html", "prueba", "docs/", "docs/prueba.html") == "prueba.html has been created in docs/"
+    assert createFile("prueba2.html", 1, "docs/", "docs/prueba.html") == None
 
