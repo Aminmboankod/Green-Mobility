@@ -91,7 +91,6 @@ def listofBikesForBrand(listOfDictionaryBikes, brand):
 
             </footer> 
         </div>  
-
 </html>'''
             
     directory = "docs/pages/"          #variable asigna directorio donde crear el archivo
