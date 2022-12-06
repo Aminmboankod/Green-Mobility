@@ -62,7 +62,14 @@ def createShowBike(listOfDictionaryBikes):
         
                 <img class="imagenBicicleta" src="{image}"  alt="bicicleta" id="Bicicleta">
 
-            </div>
+            </div> '''.format(name = bike["name"], image = bike["image"])
+
+        if bike["available"] == True:
+            bike.update({"available":"Disponible"})
+        else:
+            bike.update({"available":"No disponible"})
+
+        HTMLshowbikes += '''
 
             <div class="tabla">
 
@@ -136,8 +143,6 @@ def createShowBike(listOfDictionaryBikes):
 
     </body>
 </html>'''.format(name = bike["name"], category = bike["category"], brand = bike["brand"],material = bike["material"], frame_size = bike["frame_size"], weight = bike["weight"], location = bike["company"]["company_name"], available = bike["available"], price = bike["price"], image = bike["image"])
-
-
 
         name = bike["name"]                #Variable asigna el nombre de la bici
         directory = "docs/pages/"          #variable asigna directorio donde crear el archivo
