@@ -7,11 +7,11 @@
 
 
 # Importamos todos los módulos y sus funciones
-from db.dataAPIaccess import dataBikes     
-from logic.createIndexHTML import createContentIndex
+from db.QueryList import querylistcategory, querylistbrand  
+from db.dataAPIaccess import dataBikes
 from logic.createListcategory import listofBikesForCategory
 from logic.createListBrand import listofBikesForBrand
-from db.QueryList import querylistcategory, querylistbrand
+from logic.createIndexHTML import createContentIndex
 from logic.createShowBike import createShowBike
 from autoGit import commit, push
 

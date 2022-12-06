@@ -3,18 +3,20 @@ import requests
 import os
 
 KEY = os.environ["APIKEY"]
-URL = os.environ["URL"]
+URL_FIND = os.environ["URL_FIND"]
 
-def dataBikes():
+def findBikes():
     
-    url = URL
+    url = URL_FIND
 
     payload = json.dumps(
         {
         "collection": "bikes",
         "database": "GreenMobility",
         "dataSource": "Cluster0",
-        "filter": {}
+        "filter": {
+            "name": "Prueba"
+        }
         })
 
     headers = {
@@ -23,7 +25,7 @@ def dataBikes():
         'api-key': KEY,
         'Accept': 'application/json'
         }
-
+    
     try:
         query = requests.post(url, headers=headers, data=payload)
         status = query.status_code
@@ -42,11 +44,17 @@ def dataBikes():
 
         if status == 500:
             print("Internal server error")
-        
+    
     else:
-        print("Successful connection!")
-        GreenMobility = requests.post(url, headers=headers, data=payload)
-        GreenMobility = GreenMobility.text
+
+        print("Successful connection!") 
+        print("Bike has been found successfully")
+        GreenMobility = query.text
         jsonDocument = json.loads(GreenMobility)
-        Bikelist = jsonDocument.get('documents')
-    return Bikelist
+        print(jsonDocument)
+        Bike = jsonDocument.get('documents')
+        print(Bike)
+       
+        
+
+findBikes()

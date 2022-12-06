@@ -3,18 +3,25 @@ import requests
 import os
 
 KEY = os.environ["APIKEY"]
-URL = os.environ["URL"]
+URL_INSERT = os.environ["URL_INSERT"]
 
-def dataBikes():
+def insertBikes():
     
-    url = URL
+    url = URL_INSERT
 
     payload = json.dumps(
         {
         "collection": "bikes",
         "database": "GreenMobility",
         "dataSource": "Cluster0",
-        "filter": {}
+        "document": {
+
+            "name": "Prueba",
+            "category": "Road",
+            "brand": "Canyon",
+            "material": "Carbon",
+            "frame_size": "M"
+        }
         })
 
     headers = {
@@ -23,7 +30,7 @@ def dataBikes():
         'api-key': KEY,
         'Accept': 'application/json'
         }
-
+    
     try:
         query = requests.post(url, headers=headers, data=payload)
         status = query.status_code
@@ -42,11 +49,10 @@ def dataBikes():
 
         if status == 500:
             print("Internal server error")
-        
+
     else:
-        print("Successful connection!")
-        GreenMobility = requests.post(url, headers=headers, data=payload)
-        GreenMobility = GreenMobility.text
-        jsonDocument = json.loads(GreenMobility)
-        Bikelist = jsonDocument.get('documents')
-    return Bikelist
+
+        print("Successful connection!") 
+        print("Bike has been created successfully")
+
+insertBikes()
