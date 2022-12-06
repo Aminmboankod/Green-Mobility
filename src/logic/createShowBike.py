@@ -117,7 +117,7 @@ def createShowBike(listOfDictionaryBikes):
 
         name = bike["name"]                #Variable asigna el nombre de la bici
         directory = "docs/pages/"          #variable asigna directorio donde crear el archivo
-        file = name                        #variable asigna nombre de archivo
+        file = name.replace(" ","")                        #variable asigna nombre de archivo
         extension = ".html"                #variable asigna extensión de archivo
         path =  directory + file + extension
 
