@@ -15,7 +15,7 @@ def deleteBikes():
         "database": "GreenMobility",
         "dataSource": "Cluster0",
         "filter": {
-            "name": "Prueba",
+            "name": "PruebaDeLaMuerte",
         }
         })
 

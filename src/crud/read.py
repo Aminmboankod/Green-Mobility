@@ -14,9 +14,7 @@ def findBikes():
         "collection": "bikes",
         "database": "GreenMobility",
         "dataSource": "Cluster0",
-        "filter": {
-            "name": "Prueba"
-        }
+        "filter": {"name": "Prueba"}
         })
 
     headers = {
@@ -51,10 +49,7 @@ def findBikes():
         print("Bike has been found successfully")
         GreenMobility = query.text
         jsonDocument = json.loads(GreenMobility)
-        print(jsonDocument)
-        Bike = jsonDocument.get('documents')
+        Bike = jsonDocument.get('document')
         print(Bike)
        
-        
-
 findBikes()

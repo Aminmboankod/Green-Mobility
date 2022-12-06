@@ -3,21 +3,19 @@ import requests
 import os
 
 KEY = os.environ["APIKEY"]
-URL_DELETE = os.environ["URL_DELETE"]
+URL_UPDATE = os.environ["URL_UPDATE"]
 
-def deleteBikes():
+def updateBikes():
     
-    url = URL_DELETE
+    url = URL_UPDATE
 
     payload = json.dumps(
         {
         "collection": "bikes",
         "database": "GreenMobility",
         "dataSource": "Cluster0",
-        "filter": {
-            "name": "Prueba",
-        }
-        })
+        "filter": {"name":"Prueba"},
+        "update": { "$set": { "name": "PruebaDeLaMuerte" } } })
 
     headers = {
         'Content-Type': 'application/json',
@@ -48,6 +46,6 @@ def deleteBikes():
     else:
 
         print("Successful connection!") 
-        print("Bike has been deleted successfully")
+        print("Bike has been updated successfully")
 
-deleteBikes()
+updateBikes()
