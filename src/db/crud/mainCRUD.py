@@ -3,7 +3,8 @@ import requests
 import os
 
 KEY = os.environ["APIKEY"]
-URL_INSERT = os.environ["URL_FIND"]
+URL = os.environ["URL"]
+URL_INSERT = os.environ["URL_INSERT"]
 URL_FIND = os.environ["URL_FIND"]
 URL_UPDATE = os.environ["URL_UPDATE"]
 URL_DELETE = os.environ["URL_DELETE"]
@@ -44,11 +45,20 @@ def CRUD(url, payload):
 
         print("Successful connection!")
 
-        if url == URL_INSERT:
+        if url == URL:
+
+            print("Successful connection!")
+            GreenMobility = requests.post(url, headers=headers, data=payload)
+            GreenMobility = GreenMobility.text
+            jsonDocument = json.loads(GreenMobility)
+            Bikelist = jsonDocument.get('documents')
+            return Bikelist
+
+        elif url == URL_INSERT:
 
             print("Bike has been created successfully")
 
-        if url == URL_FIND:
+        elif url == URL_FIND:
 
             print("Bike has been found successfully")
             GreenMobility = query.text
@@ -56,11 +66,11 @@ def CRUD(url, payload):
             Bike = jsonDocument.get('document')
             print(Bike)
 
-        if url == URL_UPDATE:
+        elif url == URL_UPDATE:
 
             print("Bike has been updated successfully")
         
-        if url == URL_DELETE:
+        elif url == URL_DELETE:
 
             print("Bike has been deleted successfully")
         

@@ -14,7 +14,7 @@ def findCRUD():
         "collection": "bikes",
         "database": "GreenMobility",
         "dataSource": "Cluster0",
-        "filter": {"name": "Prueba"}
+        "filter": {"name": "Prurgsgreba"}
         })
     
     CRUD(url, payload)
