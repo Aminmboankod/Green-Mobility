@@ -31,16 +31,19 @@ if __name__=="__main__":
 
     # de una consulta que devuelve una lista de diccionarios con las categorías existentes
     # ejecuta la función que crea el contenido de la página de lista de bicis por cada categoría
-    # listadiccionariosGroup = querylistcategory()
-    # for category in listadiccionariosGroup:
-    #     listofBikesForCategory(listOfDictionaryBikes, category['_id'])
+    listadiccionariosGroup = querylistcategory()
+    for category in listadiccionariosGroup:
+        listofBikesForCategory(listOfDictionaryBikes, category['_id'])
 
 
     # de una consulta que devuelve una lista de diccionarios con las marcas existentes
     # ejecuta la función que crea el contenido de la página de lista de bicis por cada marca 
-    # listadiccionariosGroup = querylistbrand()
-    # for brand in listadiccionariosGroup:
-    #     listofBikesForBrand(listOfDictionaryBikes, brand['_id'])
+    listadiccionariosGroup = querylistbrand()
+    for brand in listadiccionariosGroup:
+        listofBikesForBrand(listOfDictionaryBikes, brand['_id'])
+
+    commit() # Hacemos un commit para guardar los cambios
+    push() # Los subimos al repositorio remoto
 
     # Ejecuta la función createShowBike para crear todas las paginas de las bicicletas
     createShowBike(listOfDictionaryBikes)
