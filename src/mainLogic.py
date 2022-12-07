@@ -4,6 +4,7 @@ from db.crud.listCategory import querylistcategory
 from db.crud.listBrand import querylistbrand 
 from db.crud.allBikes import dataBikes
 from logic.createListcategory import listofBikesForCategory
+from logic.createContactHTML import createContentContact
 from logic.createListBrand import listofBikesForBrand
 from logic.createIndexHTML import createContentIndex
 from logic.createShowBike import createShowBike
@@ -20,10 +21,11 @@ if __name__=="__main__":
     listOfDictionaryBikes = dataBikes()  
 
  
-    # Ejecutamos la fución que crea la página principal de acceso "Index.html"
+    # Ejecutamos la fución que crea la página principal de acceso "Index.html y la función que crea la página de contacto"
     createContentIndex()
+    createContentContact()
 
-    #commit("Se ha añadido la página principal") # Hacemos un commit para guardar los cambios
+    #commit("Se ha añadido la página principal y la de contacto") # Hacemos un commit para guardar los cambios
     #push() # Los subimos al repositorio remoto
 
     print("\n" + "Puedes ver la página pulsando aquí: https://aminmboankod.github.io/Green-Mobility/ ")
