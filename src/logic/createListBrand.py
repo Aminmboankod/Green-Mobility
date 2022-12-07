@@ -19,14 +19,14 @@ def listofBikesForBrand(listOfDictionaryBikes, brand):
         <!-- Logo de la pestaña del navegador -->
         <link rel="shorcut icon" type="image/x-icon" href="/docs/images/logoPestaña.png" >
         <!-- Hojas CSS -->
-        <link rel="stylesheet" type="text/css" href="../css/commonCSS.css"> 
+        <link rel="stylesheet" type="text/css" href="../../css/commonCSS.css"> 
         <link rel="stylesheet" type="text/css" href="../../css/bikelist.css">
     </head>
 
     <body>
 
         <header>
-            <img src="../images/banner.png" alt="Green Mobility banner">
+            <a src="../../index.html"><img src="../../images/banner.png" alt="Green Mobility banner"></a>
         </header>
 
         <nav>

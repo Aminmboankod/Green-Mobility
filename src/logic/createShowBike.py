@@ -19,14 +19,14 @@ def createShowBike(listOfDictionaryBikes):
         <!-- Logo de la pestaña del navegador -->
         <link rel="shorcut icon" type="image/x-icon" href="../images/logoPestaña.png" >
         <!-- Hojas de estilos CSS -->
-        <link rel="stylesheet" type="text/css" href="../css/commonCSS.css"> 
+        <link rel="stylesheet" type="text/css" href="../../css/commonCSS.css"> 
         <link rel="stylesheet" type="text/css" href="../../css/showBike.css">
     </head>
     
     <body>
         
         <header>
-            <a href="../index.html"><img src="../images/banner.png" alt="Green Mobility logo"></a>
+           <a src="../../index.html"><img src="../../images/banner.png" alt="Green Mobility banner"></a>
         </header>
         <nav>
             <ul>
