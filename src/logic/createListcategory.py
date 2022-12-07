@@ -89,7 +89,7 @@ def listofBikesForCategory(listOfDictionaryBikes, category):
                 <div class="social">
                     <a href="https://www.instagram.com/green_mobility_/ " target="_blank"><img src="../../images/instagram.png" alt="Instagram Logo"></a>
                     <a href="https://github.com/Aminmboankod/Green-Mobility" target="_blank"><img src="../../images/github.png" alt="GitHub Logo"></a>
-                    <a href="#" target="_blank"><img src="../images/twitter.png" alt="twitter Logo"></a>
+                    <a href="#" target="_blank"><img src="../../images/twitter.png" alt="twitter Logo"></a>
                 </div>
 
                 <ul class="list-inline">
