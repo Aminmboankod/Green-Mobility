@@ -96,8 +96,8 @@ def listofBikesForBrand(listOfDictionaryBikes, brand):
 </html>'''
             
     directory = "docs/pages/listBikeBrand/"          #variable asigna directorio donde crear el archivo
-    file = brand +"list"               #variable asigna nombre de archivo
-    extension = ".html"                #variable asigna extensión de archivo
+    file = brand +"list"                             #variable asigna nombre de archivo
+    extension = ".html"                              #variable asigna extensión de archivo
     path =  directory + file + extension
 
     createFile(file + extension, contentList, directory, path) 

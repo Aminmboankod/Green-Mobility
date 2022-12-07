@@ -108,7 +108,7 @@ def createContentContact():
 </body>
 </html>'''
 
-    directory = "docs/pages"                    #variable asigna directorio donde crear el archivo
+    directory = "docs/pages/"                   #variable asigna directorio donde crear el archivo
     file = "contact"                            #variable asigna nombre de archivo
     extension = ".html"                         #variable asigna extensión de archivo
     path =  directory + file + extension
