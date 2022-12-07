@@ -1,4 +1,4 @@
-from src.db.dataAPIaccess import dataBikes
+from src.db.crud.allBikes import dataBikes
 import pytest
 
 #Test para comprobar si se devuelve una lista de diccionarios.

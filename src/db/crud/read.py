@@ -1,4 +1,4 @@
-from mainCRUD import CRUD
+
 import json
 import os
 
@@ -6,7 +6,7 @@ KEY = os.environ["APIKEY"]
 URL_FIND = os.environ["URL_FIND"]
 
 def findCRUD():
-    
+    from db.mainCRUD import CRUD
     url = URL_FIND
 
     payload = json.dumps(
@@ -14,9 +14,8 @@ def findCRUD():
         "collection": "bikes",
         "database": "GreenMobility",
         "dataSource": "Cluster0",
-        "filter": {"name": "Prurgsgreba"}
+        "filter": {"name": "PruebaDeLaMuerte"}
         })
     
-    CRUD(url, payload)
+    return CRUD(url, payload)
 
-findCRUD()
