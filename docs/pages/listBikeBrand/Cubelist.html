@@ -1,8 +1,4 @@
-from logic.createHTML import createFile  #Importamos módulo para después de haber generado el contenido crear el archivo
 
-def listofBikesForBrand(listOfDictionaryBikes, brand):
-
-    contentList = '''
 <!DOCTYPE html>
 <html lang="en">
 
@@ -44,36 +40,45 @@ def listofBikesForBrand(listOfDictionaryBikes, brand):
             </ul>
         </nav>
         <h1 id="title">Listado de bicicletas</h1>
-        <section class="flex-container">'''
-    for bike in listOfDictionaryBikes:
-        for property in bike:
-            if property == 'brand':
-                if bike['brand'] == brand:
-            
-                    contentList +='''
+        <section class="flex-container">
             
             <div class="caja">                  
                 <button>
 
-                    <span class="top">{name}</span><br>
+                    <span class="top">ATTENTION SLX</span><br>
                     
-                    <img class="img" src="{image}" alt="bicicleta"><br>
+                    <img class="img" src="https://live.staticflickr.com/65535/52534201703_9f61c0f3dc_n.jpg" alt="bicicleta"><br>
 
-                    <span class="category">{brand}</span><br>
-                    <span class="company">{company}</span><br>
-                    <span class="price">{price} €/day</span>
+                    <span class="category">Cube</span><br>
+                    <span class="company">Bike Palma</span><br>
+                    <span class="price">31 €/day</span>
                     <span class="price">
-                        <a href="{nameHTML}.html">
+                        <a href="ATTENTIONSLX.html">
                         <input type="submit" value="Ver más" />
                         </a>
                     </span>
                 </button>
             </div> 
-                '''.format(nameHTML= bike['name'].replace(" ",""), name = bike['name'], image = bike['image'], category = bike['category'], price = bike['price'], brand= bike['brand'], company= bike['company']['company_name'])    #Añadimos los valores que necesitamos a nuestra plantilla HTML
-                else:
-                    break
+                
+            
+            <div class="caja">                  
+                <button>
 
-    contentList +='''
+                    <span class="top">ACID</span><br>
+                    
+                    <img class="img" src="https://live.staticflickr.com/65535/52534201753_863863ae5e_n.jpg" alt="bicicleta"><br>
+
+                    <span class="category">Cube</span><br>
+                    <span class="company">Bike Palma</span><br>
+                    <span class="price">38 €/day</span>
+                    <span class="price">
+                        <a href="ACID.html">
+                        <input type="submit" value="Ver más" />
+                        </a>
+                    </span>
+                </button>
+            </div> 
+                
         </section>
         
         <div class="footer-basic">
@@ -95,11 +100,4 @@ def listofBikesForBrand(listOfDictionaryBikes, brand):
 
             </footer> 
         </div>  
-</html>'''
-            
-    directory = "docs/pages/listBikeBrand/"          #variable asigna directorio donde crear el archivo
-    file = brand +"list"               #variable asigna nombre de archivo
-    extension = ".html"                #variable asigna extensión de archivo
-    path =  directory + file + extension
-
-    createFile(file + extension, contentList, directory, path) 
+</html>

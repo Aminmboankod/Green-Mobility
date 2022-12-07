@@ -38,14 +38,14 @@ def listofBikesForCategory(listOfDictionaryBikes, category):
 
         <nav>
             <ul>
-                <li><a href="/docs/pages/list.html">Carretera</a></li>
-                <li><a href="/docs/pages/list.html">Ciudad</a></li>
-                <li><a href="/docs/pages/list.html">MTB</a></li>
-                <li><a href="/docs/pages/list.html">Eléctricas</a>
+                <li><a href="../listBikeCategory/Roadlist.html">Carretera</a></li>
+                <li><a href="../listBikeCategory/Citylist.html">Ciudad</a></li>
+                <li><a href="../listBikeCategory/MTBlist.html">MTB</a></li>
+                <li>Eléctrica
                     <ul>
-                        <li><a href="/pages/list.html">Carretera</a></li>
-                        <li><a href="/pages/list.html">Ciudad</a></li>
-                        <li><a href="/pages/list.html">MTB</a></li>
+                        <li><a href="../listBikeCategory/E-Roadlist.html">Carretera</a></li>
+                        <li><a href="../listBikeCategory/E-Citylist.html">Ciudad</a></li>
+                        <li><a href="../listBikeCategory/E-MTBlist.html">MTB</a></li>
                     </ul>
                 </li>
             </ul>
@@ -102,7 +102,7 @@ def listofBikesForCategory(listOfDictionaryBikes, category):
 </html>
 '''
                 
-    directory = "docs/pages/"          #variable asigna directorio donde crear el archivo
+    directory = "docs/pages/listBikeCategory/"          #variable asigna directorio donde crear el archivo
     file = category + "list"           #variable asigna nombre de archivo
     extension = ".html"                #variable asigna extensión de archivo
     path =  directory + file + extension

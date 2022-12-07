@@ -1,4 +1,4 @@
-from mainCRUD import CRUD
+
 import json
 import os
 
@@ -6,7 +6,7 @@ KEY = os.environ["APIKEY"]
 URL_INSERT = os.environ["URL_INSERT"]
 
 def insertCRUD():
-    
+    from db.mainCRUD import CRUD
     url = URL_INSERT
 
     payload = json.dumps(
@@ -20,12 +20,13 @@ def insertCRUD():
             "category": "Road",
             "brand": "Canyon",
             "material": "Carbon",
-            "frame_size": "M"
+            "frame_size": "M",
+            "image": "PRUEBA"
         }
         })
 
-    CRUD(url, payload)
+    return CRUD(url, payload)
     
-insertCRUD()
+
 
 

@@ -1,20 +1,22 @@
-
 import json
 import os
 
-KEY = os.environ["APIKEY"]
-URL_UPDATE = os.environ["URL_UPDATE"]
 
-def updateCRUD():
+KEY = os.environ["APIKEY"]
+URL_AGGREGATE = os.environ["URL_AGGREGATE"]
+
+def querylistcategory():
+
     from db.mainCRUD import CRUD
-    url = URL_UPDATE
+    
+    url = URL_AGGREGATE
 
     payload = json.dumps(
         {
         "collection": "bikes",
         "database": "GreenMobility",
         "dataSource": "Cluster0",
-        "filter": {"name":"Prueba"},
-        "update": { "$set": { "name": "PruebaDeLaMuerte" } } })
-
+        "pipeline": [{"$group": {"_id": "$category"}}]
+        })
+    
     return CRUD(url, payload)
