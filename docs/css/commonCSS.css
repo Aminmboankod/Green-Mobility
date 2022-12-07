@@ -9,7 +9,7 @@
 }
 
 body {
-  background-color: rgb(231, 251, 216);
+  background-color: rgb(255, 255, 255);
 }
 
 /* ----- Header ----- */
@@ -36,7 +36,7 @@ header img {
 /* Fondo del Nav, que esté centrado y que sea Sticky */
 nav {
     display:flex;
-    background: rgb(122, 209, 35);
+    background: rgb(159, 160, 158);
     justify-content: center;
     align-items: start;
     position: sticky;
