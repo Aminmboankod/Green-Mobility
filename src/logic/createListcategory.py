@@ -33,7 +33,7 @@ def listofBikesForCategory(listOfDictionaryBikes, category):
     <body>
 
         <header>
-            <a src="../../index.html"><img src="../../images/banner.png" alt="Green Mobility banner"></a>
+            <a href="../../index.html"><img src="../../images/banner.png" alt="Green Mobility banner"></a>
         </header>
 
         <nav>
@@ -69,7 +69,7 @@ def listofBikesForCategory(listOfDictionaryBikes, category):
                     <span class="company">{company}</span><br>
                     <span class="price">{price} €/day</span>
                     <span class="price">
-                        <a href="{nameHTML}.html">
+                        <a href="../detailedBike/{nameHTML}.html">
                         <input type="submit" value="Ver más" />
                         </a>
                     </span>

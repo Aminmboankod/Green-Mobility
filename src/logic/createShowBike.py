@@ -26,7 +26,7 @@ def createShowBike(listOfDictionaryBikes):
     <body>
         
         <header>
-           <a src="../../index.html"><img src="../../images/banner.png" alt="Green Mobility banner"></a>
+           <a href="../../index.html"><img src="../../images/banner.png" alt="Green Mobility banner"></a>
         </header>
         <nav>
             <ul>
