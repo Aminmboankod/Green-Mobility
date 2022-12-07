@@ -1,4 +1,4 @@
-from mainCRUD import CRUD
+
 import json
 import os
 
@@ -6,7 +6,7 @@ KEY = os.environ["APIKEY"]
 URL_DELETE = os.environ["URL_DELETE"]
 
 def deleteCRUD():
-
+    from db.mainCRUD import CRUD
     url = URL_DELETE
 
     payload = json.dumps(
@@ -19,6 +19,5 @@ def deleteCRUD():
         }
         })
 
-    CRUD(url, payload)
+    return CRUD(url, payload)
 
-deleteCRUD()

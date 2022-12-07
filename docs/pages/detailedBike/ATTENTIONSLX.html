@@ -1,9 +1,4 @@
-from logic.createHTML import createFile
 
-def createShowBike(listOfDictionaryBikes):
-
-    for bike in listOfDictionaryBikes:
-        HTMLshowbikes = '''
 <!DOCTYPE html>
 <html lang="es">
     <head>
@@ -44,54 +39,47 @@ def createShowBike(listOfDictionaryBikes):
         </nav>
         <section>
             <div class="one">
-                <h1>{name}</h1>
+                <h1>ATTENTION SLX</h1>
             </div>
         </section>
         <section class="flex-container">
             <div class="imagen">
         
-                <img class="imagenBicicleta" src="{image}"  alt="bicicleta" id="Bicicleta">
-            </div> '''.format(name = bike["name"], image = bike["image"])
-
-        if bike["available"] == True:
-            bike.update({"available":"Disponible"})
-        else:
-            bike.update({"available":"No disponible"})
-
-        HTMLshowbikes += '''
+                <img class="imagenBicicleta" src="https://live.staticflickr.com/65535/52534201703_9f61c0f3dc_n.jpg"  alt="bicicleta" id="Bicicleta">
+            </div> 
             <div class="tabla">
                 <table>
                     <tr>
                         <th>Categoria</th>
-                        <td>{category}</td>
+                        <td>MTB</td>
                     </tr>
                     <tr>
                         <th>Marca</th>
-                        <td>{brand}</td>
+                        <td>Cube</td>
                     </tr>
                     <tr>
                         <th>Material</th>
-                        <td>{material}</td>
+                        <td>Carbon</td>
                     </tr>
                     <tr>
                         <th>Talla</th>
-                        <td>{frame_size}</td>
+                        <td>XL</td>
                     </tr>
                     <tr>
                         <th>Peso</th>
-                        <td>{weight}</td>
+                        <td>15.04</td>
                     </tr>
                     <tr>
                         <th>Tienda</th>
-                        <td>{location}</td>
+                        <td>Bike Palma</td>
                     </tr>
                     <tr>
                         <th>Disponibilidad</th>
-                        <td>{available}</td>
+                        <td>Disponible</td>
                     </tr>
                     <tr>
                         <th>Precio</th>
-                        <td>{price}</td>
+                        <td>31</td>
                     </tr>
                 </table>
             </div>
@@ -113,12 +101,4 @@ def createShowBike(listOfDictionaryBikes):
             </footer> 
         </div>
     </body>
-</html>'''.format(name = bike["name"], category = bike["category"], brand = bike["brand"],material = bike["material"], frame_size = bike["frame_size"], weight = bike["weight"], location = bike["company"]["company_name"], available = bike["available"], price = bike["price"], image = bike["image"])
-
-        name = bike["name"]                #Variable asigna el nombre de la bici
-        directory = "docs/pages/detailedBike/"          #variable asigna directorio donde crear el archivo
-        file = name.replace(" ","")                        #variable asigna nombre de archivo
-        extension = ".html"                #variable asigna extensión de archivo
-        path =  directory + file + extension
-
-        createFile(file + extension, HTMLshowbikes, directory, path) 
+</html>

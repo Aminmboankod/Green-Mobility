@@ -8,6 +8,7 @@ URL_INSERT = os.environ["URL_INSERT"]
 URL_FIND = os.environ["URL_FIND"]
 URL_UPDATE = os.environ["URL_UPDATE"]
 URL_DELETE = os.environ["URL_DELETE"]
+URL_AGGREGATE = os.environ["URL_AGGREGATE"]
 
 def CRUD(url, payload):
     
@@ -41,38 +42,32 @@ def CRUD(url, payload):
         if status == 500:
             print("Internal server error")
     
-    else:
+    if url == URL_INSERT:
+        print("Bike has been created successfully")
+
+    elif url == URL_UPDATE:
+        print("Bike has been updated successfully")
+
+    elif url == URL_DELETE:
+        print("Bike has been deleted successfully")
+
+
+    elif url == URL_FIND:
+
+        print("Bike has been found successfully")
+        query = query.text
+        jsonDocument = json.loads(query)
+        Bike = jsonDocument.get('document')
+        print(Bike)
+
+    elif url == URL or URL_AGGREGATE:
 
         print("Successful connection!")
+        query = query.text
+        jsonDocument = json.loads(query)
+        Bikelist = jsonDocument.get('documents')
+        return Bikelist
 
-        if url == URL:
 
-            print("Successful connection!")
-            GreenMobility = requests.post(url, headers=headers, data=payload)
-            GreenMobility = GreenMobility.text
-            jsonDocument = json.loads(GreenMobility)
-            Bikelist = jsonDocument.get('documents')
-            return Bikelist
 
-        elif url == URL_INSERT:
-
-            print("Bike has been created successfully")
-
-        elif url == URL_FIND:
-
-            print("Bike has been found successfully")
-            GreenMobility = query.text
-            jsonDocument = json.loads(GreenMobility)
-            Bike = jsonDocument.get('document')
-            print(Bike)
-
-        elif url == URL_UPDATE:
-
-            print("Bike has been updated successfully")
-        
-        elif url == URL_DELETE:
-
-            print("Bike has been deleted successfully")
-        
-        
-        
+            
