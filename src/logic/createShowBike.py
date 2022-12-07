@@ -20,7 +20,7 @@ def createShowBike(listOfDictionaryBikes):
         <link rel="shorcut icon" type="image/x-icon" href="../images/logoPestaña.png" >
         <!-- Hojas de estilos CSS -->
         <link rel="stylesheet" type="text/css" href="../css/commonCSS.css"> 
-        <link rel="stylesheet" type="text/css" href="../css/showBike.css">
+        <link rel="stylesheet" type="text/css" href="../../css/showBike.css">
     </head>
     
     <body>

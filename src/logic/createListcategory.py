@@ -27,7 +27,7 @@ def listofBikesForCategory(listOfDictionaryBikes, category):
         <link rel="shorcut icon" type="image/x-icon" href="/docs/images/logoPestaña.png" >
         <!-- Hojas CSS -->
         <link rel="stylesheet" type="text/css" href="../css/commonCSS.css"> 
-        <link rel="stylesheet" type="text/css" href="../css/bikelist.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bikelist.css">
     </head>
 
     <body>
@@ -68,10 +68,14 @@ def listofBikesForCategory(listOfDictionaryBikes, category):
                     <span class="category">{brand}</span><br>
                     <span class="company">{company}</span><br>
                     <span class="price">{price} €/day</span>
-
+                    <span class="price">
+                        <a href="{nameHTML}.html">
+                        <input type="submit" value="Ver más" />
+                        </a>
+                    </span>
                 </button> 
             </div>
-                '''.format( name = bike['name'], image = bike['image'], brand = bike['brand'], price = bike['price'], category = bike['category'], company= bike['company']['company_name'])    
+                '''.format(nameHTML= bike['name'].replace(" ",""), name = bike['name'], image = bike['image'], brand = bike['brand'], price = bike['price'], category = bike['category'], company= bike['company']['company_name'])    
                 #Añadimos los valores que necesitamos a nuestra plantilla HTML
                 else:
                     break
