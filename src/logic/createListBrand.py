@@ -17,7 +17,7 @@ def listofBikesForBrand(listOfDictionaryBikes, brand):
         <meta name="keywords" content="Bikes, Bicis, Bicicletas, Alquiler, Mallorca, Rent" >
         <title> List - Mobility </title>
         <!-- Logo de la pestaña del navegador -->
-        <link rel="shorcut icon" type="image/x-icon" href="/docs/images/logoPestaña.png" >
+        <link rel="shorcut icon" type="image/x-icon" href="../../images/logoPestaña.png" >
         <!-- Hojas CSS -->
         <link rel="stylesheet" type="text/css" href="../../css/commonCSS.css"> 
         <link rel="stylesheet" type="text/css" href="../../css/bikelist.css">
@@ -80,9 +80,9 @@ def listofBikesForBrand(listOfDictionaryBikes, brand):
             <footer>
 
                 <div class="social">
-                    <a href="https://www.instagram.com/green_mobility_/ " target="_blank"><img src="../images/instagram.png" alt="Instagram Logo"></a>
-                    <a href="https://github.com/Aminmboankod/Green-Mobility" target="_blank"><img src="../images/github.png" alt="GitHub Logo"></a>
-                    <a href="#" target="_blank"><img src="../images/twitter.png" alt="twitter Logo"></a>
+                    <a href="https://www.instagram.com/green_mobility_/ " target="_blank"><img src="../../images/instagram.png" alt="Instagram Logo"></a>
+                    <a href="https://github.com/Aminmboankod/Green-Mobility" target="_blank"><img src="../../images/github.png" alt="GitHub Logo"></a>
+                    <a href="#" target="_blank"><img src="../../images/twitter.png" alt="twitter Logo"></a>
                 </div>
 
                 <ul class="list-inline">
