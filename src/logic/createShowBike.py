@@ -116,7 +116,7 @@ def createShowBike(listOfDictionaryBikes):
 </html>'''.format(name = bike["name"], category = bike["category"], brand = bike["brand"],material = bike["material"], frame_size = bike["frame_size"], weight = bike["weight"], location = bike["company"]["company_name"], available = bike["available"], price = bike["price"], image = bike["image"])
 
         name = bike["name"]                #Variable asigna el nombre de la bici
-        directory = "docs/pages/"          #variable asigna directorio donde crear el archivo
+        directory = "docs/pages/detailedBike/"          #variable asigna directorio donde crear el archivo
         file = name.replace(" ","")                        #variable asigna nombre de archivo
         extension = ".html"                #variable asigna extensión de archivo
         path =  directory + file + extension

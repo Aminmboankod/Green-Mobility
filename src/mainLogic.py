@@ -1,13 +1,12 @@
 
 # Importamos todos los módulos y sus funciones
-from db.listCategory import querylistcategory
+from db.crud.listCategory import querylistcategory
 from db.crud.listBrand import querylistbrand 
 from db.crud.allBikes import dataBikes
 from logic.createListcategory import listofBikesForCategory
 from logic.createListBrand import listofBikesForBrand
 from logic.createIndexHTML import createContentIndex
 from logic.createShowBike import createShowBike
-
 from adminProgram import adminProgram
 from deleteFilesInDocs import deleteFiles
 
@@ -63,8 +62,13 @@ if __name__=="__main__":
 
 
     ####### MÓDULO DE EJECUCIÓ PARA ADMINISTRADOR #######
+    print("\n" + "¿Quieres ejecutar el programa de administrador?")
+    respuesta = input().upper()
 
-    adminProgram()
+    if respuesta == "SI":
+        adminProgram()
+    else: 
+        print("\n" + "Final del programa")
        
 
     

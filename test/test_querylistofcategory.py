@@ -1,4 +1,4 @@
-from src.db.listCategory import querylistcategory
+from src.db.crud.listCategory import querylistcategory
 from src.db.crud.listBrand import querylistbrand
 import pytest
 # test para comprobar si la consulta a la base de datos devuelve la lista que esperamos
