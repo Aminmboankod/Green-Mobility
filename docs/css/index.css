@@ -25,95 +25,79 @@ img {
     left: 6%; 
 }
 
-.button {
-    position: absolute;
-    background-color: rgb(115, 203, 52) ;
-    color: rgb(255, 255, 255);
-    top: 70%;
-    left: 15%;
-    padding: 30px;
-    border-radius: 30%;
-
-} 
-button {
-    display:block;
-    background-color: rgb(169, 208, 129);
-    box-shadow: 0 4px 12px 0 rgba(32, 219, 88, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    text-align: center;
-    border-color:rgb(128, 241, 173);
-}
-
-
-
-article button {
-    display: inline-table;
-    justify-content:space-between;
-    margin-block-end: 100px;
-    margin-top: 50px;
-    
-}
-
-article {
-    display:flex;
-    justify-content:space-around ;
-
-}
-
 /* ----- END IMAGEN CENTRAL */
 
 
 /* ----- QUIÉNES SOMOS ----- */
 
-.QuienesSomos h2 {
-    text-align: center;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    font-family: Poppins;
-    font-weight: bold;
-}
-
-.QuienesSomos p {
+.QuienesSomos  {
     display: block;
-    background-color: rgb(115, 203, 52);
-    border-style:groove;
-    border-color: rgb(115, 203, 52);
+    background-color: rgb(255, 255, 255);
+    box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0.2), 4px 6px 20px 4px rgba(0, 0, 0, 0.19);
     border-radius: 10px;
-    margin-left: 20px;
-    margin-right: 20px;
-    padding-left: 50px;
-    padding-right: 100px;
-    padding-bottom: 100px;
+    margin: 120px;
     font-family: Poppins;
     font-size: 2vw;
     padding: 4%;
 }
 
-.QuienesSomos img {
-    width: 300px;
-    position:relative;
-    display:inline-block;
-    justify-content:space-between;
-    
-    margin: 30px;
-    
+.QuienesSomos h2 {
+    text-align: center;
+    padding-bottom: 20px;
+    color: rgb(97, 112, 82);
 }
-/* ----- FIN QUIENES SOMOS ----- } */
+
+video {
+    width: 100%;
+    height: auto;
+    box-shadow: 8px 8px 8px 4px rgba(0, 0, 0, 0.2), 8px 8px 8px 8px rgba(0, 0, 0, 0.19);
+}
+/* ----- FIN QUIENES SOMOS -----  */
 
 
 
 /* ----- DÓNDE ESTAMOS -----  */
 
 .DondeEstamos {
-    text-align: center;
-    padding: 40px;
+    display: block;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0.2), 4px 6px 20px 4px rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+    margin: 120px;
     font-family: Poppins;
-    font-size: 25px;
+    font-size: 2vw;
+    padding: 4%;
 }
 
-.flex-container {
+.DondeEstamos h2 {
+    text-align: center;
+    padding-bottom: 20px;
+    color: rgb(97, 112, 82);
+}
+
+.DondeEstamos ol li {
+    text-align: center;
+    list-style-type: none;
+}
+
+.DondeEstamos .Localidad {
+    color:rgb(97, 112, 82);
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.DondeEstamos ol li::marker {
+    text-decoration: none;
+}
+
+
+
+
+
+/* .flex-container {
     display: flex;
     flex-flow: wrap row;
-    /* border: 1px solid black; */
+    border: 1px solid black;
     margin: 0 auto;
     justify-content: space-around;
     text-align: center;
@@ -122,63 +106,10 @@ article {
 
 .caja  {
     flex-flow: column;
-    /* border: 2px solid black; */
+    border: 2px solid black;
     width: 300px;
     height: 200px;
     font-size: 18px;
-}
+} */
 
-.Palma .Manacor .Alcudia {
-    font-weight: bold;
-    text-decoration: underline;
-} 
-
-
-
-
-
-
-
-
-/*.DondeEstamos h3 {
-    text-align: center;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    font-family: Poppins;
-    font-weight: bold;
-
-}
-
-.DondeEstamos h3 {
-    padding-left: 25px;
-    padding-right: 25px;
-    padding-bottom: 20px;
-    font-family: Poppins;
-}
-
-.DondeEstamos p {
-    font-family: Poppins;
-    text-align: center;
-}
-
-.DondeEstamos ol li {
-    font-family: Poppins;
-    text-align: center;
-    padding-bottom: 5px;
-}
-
-.DondeEstamos .Palma {
-    list-style-type: circle;
-}*/
-.DondeEstamos .map {
-    position:relative;
-    margin:10;
-    padding: 0;
-    z-index: 2;
-}
-.DondeEstamos .listatiendas {
-    position:relative;
-    z-index: 1;
-    
-}
 /* ----- FIN DÓNDE ESTAMOS -----  */
