@@ -9,7 +9,9 @@
 }
 
 body {
-  background-color: rgb(231, 251, 216);
+  background-color: rgb(240, 241, 241);
+  display:flex;
+  flex-direction: column;
 }
 
 /* ----- Header ----- */
@@ -36,12 +38,12 @@ header img {
 /* Fondo del Nav, que esté centrado y que sea Sticky */
 nav {
     display:flex;
-    background: rgb(122, 209, 35);
+    background: rgb(174, 181, 167);
     justify-content: center;
     align-items: start;
     position: sticky;
     top: 0;
-    z-index: 99; /*Para que al bajar no pasen las cosas por encima */
+     /*Para que al bajar no pasen las cosas por encima */
 }
   
 nav a {
@@ -63,6 +65,7 @@ nav ul li a {
     display: block;
     padding: 20px 60px;
 }
+
   
 /* Hace que las categorias de bicis electricas no salgan */
 nav ul li ul {
@@ -74,7 +77,7 @@ nav ul li:hover ul {
     display: flex;
     flex-direction: column;
     position: absolute;
-    background-color: rgb(97, 112, 82);
+    background-color: rgb(174, 181, 167);
     text-align: center;
 }
   
@@ -122,10 +125,12 @@ nav li:hover::after {
 /* ----- FOOTER ----- */
 
 .footer-basic {
+  
+  margin-top: auto;
   padding:20px 0;
   background-color:rgb(97, 112, 82);
   color:#ffffff;
-  position: relative;
+  
   font-family: Poppins;
   font-weight: bold;
   bottom: 0;

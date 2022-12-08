@@ -24,16 +24,16 @@ def listofBikesForCategory(listOfDictionaryBikes, category):
         <meta name="keywords" content="Bikes, Bicis, Bicicletas, Alquiler, Mallorca, Rent" >
         <title> List - Mobility </title>
         <!-- Logo de la pestaña del navegador -->
-        <link rel="shorcut icon" type="image/x-icon" href="/docs/images/logoPestaña.png" >
+        <link rel="shorcut icon" type="image/x-icon" href="../../images/logoPestaña.png" >
         <!-- Hojas CSS -->
-        <link rel="stylesheet" type="text/css" href="../css/commonCSS.css"> 
-        <link rel="stylesheet" type="text/css" href="../css/bikelist.css">
+        <link rel="stylesheet" type="text/css" href="../../css/commonCSS.css"> 
+        <link rel="stylesheet" type="text/css" href="../../css/bikelist.css">
     </head>
 
     <body>
 
         <header>
-            <img src="../images/banner.png" alt="Green Mobility banner">
+            <a href="../../index.html"><img src="../../images/banner.png" alt="Green Mobility banner"></a>
         </header>
 
         <nav>
@@ -41,7 +41,7 @@ def listofBikesForCategory(listOfDictionaryBikes, category):
                 <li><a href="../listBikeCategory/Roadlist.html">Carretera</a></li>
                 <li><a href="../listBikeCategory/Citylist.html">Ciudad</a></li>
                 <li><a href="../listBikeCategory/MTBlist.html">MTB</a></li>
-                <li>Eléctrica
+                <li><a>Eléctrica</a>
                     <ul>
                         <li><a href="../listBikeCategory/E-Roadlist.html">Carretera</a></li>
                         <li><a href="../listBikeCategory/E-Citylist.html">Ciudad</a></li>
@@ -58,20 +58,18 @@ def listofBikesForCategory(listOfDictionaryBikes, category):
                 if bike['category'] == category:
                     
                     contentList +='''
-            <div class="caja">                  
-                <button>
-
-                    <span class="top">{name}</span><br>
-                    
-                    <img class="img" src="{image}" alt="bicicleta"><br>
-
-                    <span class="category">{brand}</span><br>
-                    <span class="company">{company}</span><br>
-                    <span class="price">{price} €/day</span>
-
-                </button> 
+            <div class="caja">
+                <a href="../detailedBike/{nameHTML}.html">                  
+                    <button>
+                        <img class="img" src="{image}" alt="bicicleta"><br>
+                        <span class="category">{brand}</span>
+                        <span class="name">{name}</span>
+                        <span class="company">{company}</span>
+                        <span class="price">{price}€/día</span>
+                    </button>
+                </a>
             </div>
-                '''.format( name = bike['name'], image = bike['image'], brand = bike['brand'], price = bike['price'], category = bike['category'], company= bike['company']['company_name'])    
+                '''.format(nameHTML= bike['name'].replace(" ",""), name = bike['name'], image = bike['image'], brand = bike['brand'], price = bike['price'], category = bike['category'], company= bike['company']['company_name'])    
                 #Añadimos los valores que necesitamos a nuestra plantilla HTML
                 else:
                     break
@@ -83,9 +81,9 @@ def listofBikesForCategory(listOfDictionaryBikes, category):
             <footer>
 
                 <div class="social">
-                    <a href="https://www.instagram.com/green_mobility_/ " target="_blank"><img src="images/instagram.png" alt="Instagram Logo"></a>
-                    <a href="https://github.com/Aminmboankod/Green-Mobility" target="_blank"><img src="images/github.png" alt="GitHub Logo"></a>
-                    <a href="https://twitter.com/GreenMobilityAS" target="_blank"><img src="images/twitter.png" alt="twitter Logo"></a>
+                    <a href="https://www.instagram.com/green_mobility_/ " target="_blank"><img src="../../images/instagram.png" alt="Instagram Logo"></a>
+                    <a href="https://github.com/Aminmboankod/Green-Mobility" target="_blank"><img src="../../images/github.png" alt="GitHub Logo"></a>
+                    <a href="https://twitter.com/GreenMobilityAS" target="_blank"><img src="../../images/twitter.png" alt="twitter Logo"></a>
                 </div>
 
                 <ul class="list-inline">

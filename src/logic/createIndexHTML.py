@@ -18,7 +18,7 @@ def createContentIndex():
         <meta name="keywords" content="Bikes, Bicis, Bicicletas, Alquiler, Mallorca, Rent" >
         <title>Green Mobility</title>
         <!-- Logo de la pestaña del navegador -->
-        <link rel="shorcut icon" type="image/x-icon" href="/docs/images/logoPestaña.png" >
+        <link rel="shorcut icon" type="image/x-icon" href="images/logoPestaña.png" >
         <!-- Hojas CSS -->
         <link rel="stylesheet" type="text/css" href="css/commonCSS.css"> 
         <link rel="stylesheet" type="text/css" href="css/index.css">
@@ -35,7 +35,7 @@ def createContentIndex():
                 <li><a href="pages/listBikeCategory/Roadlist.html">Carretera</a></li>
                 <li><a href="pages/listBikeCategory/Citylist.html">Ciudad</a></li>
                 <li><a href="pages/listBikeCategory/MTBlist.html">MTB</a></li>
-                <li>Eléctrica
+                <li><a>Eléctrica</a>
                     <ul>
                         <li><a href="pages/listBikeCategory/E-Roadlist.html">Carretera</a></li>
                         <li><a href="pages/listBikeCategory/E-Citylist.html">Ciudad</a></li>

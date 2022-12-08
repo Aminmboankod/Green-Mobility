@@ -17,39 +17,34 @@ def createShowBike(listOfDictionaryBikes):
         <meta name="keywords" content="Bikes, Bicis, Bicicletas, Alquiler, Mallorca, Rent" >
         <title>Bikes - Green Mobility</title>
         <!-- Logo de la pestaña del navegador -->
-        <link rel="shorcut icon" type="image/x-icon" href="../images/logoPestaña.png" >
+        <link rel="shorcut icon" type="image/x-icon" href="../../images/logoPestaña.png" >
         <!-- Hojas de estilos CSS -->
-        <link rel="stylesheet" type="text/css" href="../css/commonCSS.css"> 
-        <link rel="stylesheet" type="text/css" href="../css/showBike.css">
+        <link rel="stylesheet" type="text/css" href="../../css/commonCSS.css"> 
+        <link rel="stylesheet" type="text/css" href="../../css/showBike.css">
     </head>
     
     <body>
         
         <header>
-            <a href="../index.html"><img src="../images/banner.png" alt="Green Mobility logo"></a>
+           <a href="../../index.html"><img src="../../images/banner.png" alt="Green Mobility banner"></a>
         </header>
         <nav>
             <ul>
-                <li><a href="/docs/pages/list.html">Carretera</a></li>
-                <li><a href="/docs/pages/list.html">Ciudad</a></li>
-                <li><a href="/docs/pages/list.html">MTB</a></li>
-                <li><a href="/docs/pages/list.html">Eléctricas</a>
+                <li><a href="../listBikeCategory/Roadlist.html">Carretera</a></li>
+                <li><a href="../listBikeCategory/Citylist.html">Ciudad</a></li>
+                <li><a href="../listBikeCategory/MTBlist.html">MTB</a></li>
+                <li><a>Eléctrica</a>
                     <ul>
-                        <li><a href="/pages/list.html">Carretera</a></li>
-                        <li><a href="/pages/list.html">Ciudad</a></li>
-                        <li><a href="/pages/list.html">MTB</a></li>
+                        <li><a href="../listBikeCategory/E-Roadlist.html">Carretera</a></li>
+                        <li><a href="../listBikeCategory/E-Citylist.html">Ciudad</a></li>
+                        <li><a href="../listBikeCategory/E-MTBlist.html">MTB</a></li>
                     </ul>
                 </li>
             </ul>
         </nav>
-        <section>
-            <div class="one">
-                <h1>{name}</h1>
-            </div>
-        </section>
+        <h1 id="title">{name}</h1>
         <section class="flex-container">
             <div class="imagen">
-        
                 <img class="imagenBicicleta" src="{image}"  alt="bicicleta" id="Bicicleta">
             </div> '''.format(name = bike["name"], image = bike["image"])
 
@@ -91,19 +86,23 @@ def createShowBike(listOfDictionaryBikes):
                     </tr>
                     <tr>
                         <th>Precio</th>
-                        <td>{price}</td>
+                        <td>{price}€/día</td>
                     </tr>
                 </table>
             </div>
-            
+            <div class="rent">
+                <a href="#">
+                    <p>ALQUILAR</p>
+                </a>    
+            </div>
         </section>
         <div class="footer-basic">
             <footer>
 
                 <div class="social">
-                    <a href="https://www.instagram.com/green_mobility_/ " target="_blank"><img src="images/instagram.png" alt="Instagram Logo"></a>
-                    <a href="https://github.com/Aminmboankod/Green-Mobility" target="_blank"><img src="images/github.png" alt="GitHub Logo"></a>
-                    <a href="https://twitter.com/GreenMobilityAS" target="_blank"><img src="images/twitter.png" alt="twitter Logo"></a>
+                    <a href="https://www.instagram.com/green_mobility_/ " target="_blank"><img src="../../images/instagram.png" alt="Instagram Logo"></a>
+                    <a href="https://github.com/Aminmboankod/Green-Mobility" target="_blank"><img src="../../images/github.png" alt="GitHub Logo"></a>
+                    <a href="https://twitter.com/GreenMobilityAS" target="_blank"><img src="../../images/twitter.png" alt="twitter Logo"></a>
                 </div>
 
                 <ul class="list-inline">
