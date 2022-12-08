@@ -34,7 +34,7 @@ def listofBikesForBrand(listOfDictionaryBikes, brand):
                 <li><a href="../listBikeCategory/Roadlist.html">Carretera</a></li>
                 <li><a href="../listBikeCategory/Citylist.html">Ciudad</a></li>
                 <li><a href="../listBikeCategory/MTBlist.html">MTB</a></li>
-                <li>Eléctrica
+                <li><a>Eléctrica</a>
                     <ul>
                         <li><a href="../listBikeCategory/E-Roadlist.html">Carretera</a></li>
                         <li><a href="../listBikeCategory/E-Citylist.html">Ciudad</a></li>
@@ -51,22 +51,13 @@ def listofBikesForBrand(listOfDictionaryBikes, brand):
                 if bike['brand'] == brand:
             
                     contentList +='''
-            
-            <div class="caja">                  
-                <button>
-
-                    <span class="top">{name}</span><br>
-                    
+            <div class="caja">                
+                <button role="link" onclick="window.location='../detailedBike/{nameHTML}.html'">
                     <img class="img" src="{image}" alt="bicicleta"><br>
-
-                    <span class="category">{brand}</span><br>
-                    <span class="company">{company}</span><br>
-                    <span class="price">{price} €/day</span>
-                    <span class="price">
-                        <a href="../detailedBike/{nameHTML}.html">
-                        <input type="submit" value="Ver más" />
-                        </a>
-                    </span>
+                    <span class="category">{category}</span>
+                    <span class="name">{name}</span>
+                    <span class="company">{company}</span>
+                    <span class="price">{price}€/día</span>
                 </button>
             </div> 
                 '''.format(nameHTML= bike['name'].replace(" ",""), name = bike['name'], image = bike['image'], category = bike['category'], price = bike['price'], brand= bike['brand'], company= bike['company']['company_name'])    #Añadimos los valores que necesitamos a nuestra plantilla HTML
@@ -82,13 +73,11 @@ def listofBikesForBrand(listOfDictionaryBikes, brand):
                 <div class="social">
                     <a href="https://www.instagram.com/green_mobility_/ " target="_blank"><img src="../../images/instagram.png" alt="Instagram Logo"></a>
                     <a href="https://github.com/Aminmboankod/Green-Mobility" target="_blank"><img src="../../images/github.png" alt="GitHub Logo"></a>
-                    <a href="#" target="_blank"><img src="../../images/twitter.png" alt="twitter Logo"></a>
+                    <a href="https://twitter.com/GreenMobilityAS" target="_blank"><img src="../../images/twitter.png" alt="twitter Logo"></a>
                 </div>
 
                 <ul class="list-inline">
-                    <li class="list-inline-item"><a href="#">Términos y condiciones</a></li>
-                    <li class="list-inline-item"><a href="#">Aviso Legal</a></li>
-                    <li class="list-inline-item"><a href="#">Política de privacidad</a></li>
+                    <li class="list-inline-item"><a href="pages/contact.html">Contacto</a></li>
                 </ul>
 
             <p class="copyright">Green Mobility 2022</p>
@@ -98,8 +87,8 @@ def listofBikesForBrand(listOfDictionaryBikes, brand):
 </html>'''
             
     directory = "docs/pages/listBikeBrand/"          #variable asigna directorio donde crear el archivo
-    file = brand +"list"               #variable asigna nombre de archivo
-    extension = ".html"                #variable asigna extensión de archivo
+    file = brand +"list"                             #variable asigna nombre de archivo
+    extension = ".html"                              #variable asigna extensión de archivo
     path =  directory + file + extension
 
     createFile(file + extension, contentList, directory, path) 
