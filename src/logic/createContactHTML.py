@@ -4,7 +4,6 @@ from logic.createHTML import createFile
 def createContentContact():
 
     contentOfContact = '''
-
 <!DOCTYPE html>
 
 <html lang="en">
@@ -34,14 +33,14 @@ def createContentContact():
 
     <nav>
         <ul>
-            <li><a href="pages/BikeList.html">Carretera</a></li>
-            <li><a href="pages/BikeList.html">Ciudad</a></li>
-            <li><a href="pages/BikeList.html">MTB</a></li>
-            <li><a href="pages/BikeList.html">Eléctricas</a>
+            <li><a href="listBikeCategory/Roadlist.html">Carretera</a></li>
+            <li><a href="listBikeCategory/Citylist.html">Ciudad</a></li>
+            <li><a href="listBikeCategory/MTBlist.html">MTB</a></li>
+            <li><a>Eléctrica</a>
                 <ul>
-                    <li><a href="pages/BikeList.html">Carretera</a></li>
-                    <li><a href="pages/BikeList.html">Ciudad</a></li>
-                    <li><a href="pages/BikeList.html">MTB</a></li>
+                    <li><a href="listBikeCategory/E-Roadlist.html">Carretera</a></li>
+                    <li><a href="listBikeCategory/E-Citylist.html">Ciudad</a></li>
+                    <li><a href="listBikeCategory/E-MTBlist.html">MTB</a></li>
                 </ul>
             </li>
         </ul>
@@ -49,12 +48,12 @@ def createContentContact():
 
     <section class="flex-container">
 
-        <form action="" method="get">
-            
-            <fieldset class="formulario">
-                
-                <legend class="legend">Formulario de contacto</legend>
-                
+        <h2>Formulario de contacto</h2>
+
+        <form action="#" method="get">
+
+            <div class="formulario">
+                    
                 <fieldset class="DatosPersonales">
                     <legend>Datos personales </legend>
                     
@@ -62,7 +61,7 @@ def createContentContact():
                     <input type="text" name="Nombre y apellidos" id="NombreYApellidos" required> <br>
                 
                     <label for="direccion">Dirección:</label>
-                    <input type="text" name="Direccion" id="direccion" value="C/De la abundacia, 1." required> <br>
+                    <input type="text" name="Direccion" id="direccion" required> <br>
                 
                     <label for="email">Email:</label>
                     <input type="tel" name="Email" id="email" required> <br>
@@ -74,14 +73,15 @@ def createContentContact():
                     <legend class="legend">Información</legend>      
                 
                 <label for="descripcion"> Descripción </label> <br>
-                <textarea id="descripcion" name="Descripción" maxlength="200"> Escribe aquí más detalles </textarea>
-               
+                <textarea id="descripcion" name="Descripción" maxlength="200"> Escribe aquí </textarea>
+                
                 </fieldset>
                 <div class="botones">
                     <input type="submit" value="Enviar formulario">
                     <input type="reset" value="Restablecer formulario">
                 </div>
-            </fieldset>
+            </div>
+        
         </form>
 
     </section>
@@ -106,7 +106,8 @@ def createContentContact():
     </div> 
     
 </body>
-</html>'''
+</html>
+'''
 
     directory = "docs/pages/"                   #variable asigna directorio donde crear el archivo
     file = "contact"                            #variable asigna nombre de archivo
