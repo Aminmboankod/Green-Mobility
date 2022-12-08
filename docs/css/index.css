@@ -122,6 +122,7 @@ button {
 .DondeEstamos ol li {
     text-align: center;
     list-style-type: none;
+    text-decoration: none;
 }
 
 .DondeEstamos .Localidad {
@@ -129,4 +130,12 @@ button {
     text-decoration: underline;
     font-weight: bold;
 }
+
+.DondeEstamos ol li ul li {
+    text-align: center;
+    list-style-type: none;
+    text-decoration: none;
+    color: rgb(0, 0, 0)
+}
+
 /* ----- FIN DÓNDE ESTAMOS -----  */

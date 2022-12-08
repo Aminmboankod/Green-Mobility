@@ -4,7 +4,6 @@ from logic.createHTML import createFile
 def createContentContact():
 
     contentOfContact = '''
-
 <!DOCTYPE html>
 
 <html lang="en">

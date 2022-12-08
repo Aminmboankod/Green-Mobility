@@ -58,16 +58,14 @@ def listofBikesForCategory(listOfDictionaryBikes, category):
                 if bike['category'] == category:
                     
                     contentList +='''
-            <div class="caja">
-                <a href="../detailedBike/{nameHTML}.html">                  
-                    <button>
-                        <img class="img" src="{image}" alt="bicicleta"><br>
-                        <span class="category">{brand}</span>
-                        <span class="name">{name}</span>
-                        <span class="company">{company}</span>
-                        <span class="price">{price}€/día</span>
-                    </button>
-                </a>
+            <div class="caja">             
+                <button role="link" onclick="window.location='../detailedBike/{nameHTML}.html'">
+                    <img class="img" src="{image}" alt="bicicleta"><br>
+                    <span class="category">{brand}</span>
+                    <span class="name">{name}</span>
+                    <span class="company">{company}</span>
+                    <span class="price">{price}€/día</span>
+                </button>
             </div>
                 '''.format(nameHTML= bike['name'].replace(" ",""), name = bike['name'], image = bike['image'], brand = bike['brand'], price = bike['price'], category = bike['category'], company= bike['company']['company_name'])    
                 #Añadimos los valores que necesitamos a nuestra plantilla HTML

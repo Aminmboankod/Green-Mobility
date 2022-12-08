@@ -65,6 +65,40 @@ def createContentIndex():
         </section>
 
         <video src="videos/ciclismo_montaña.mp4" autoplay muted></video>
+
+        <section class="Marcas">
+
+            <h2>¿Tienes alguna marca preferida?</h2>
+
+            <div class="MarcasDeBicis">
+
+                <button role="link" onclick="window.location='pages/listBikeBrand/Bianchilist.html'">
+                    <span>Bianchi</span>
+                </button>
+
+                <button role="link" onclick="window.location='pages/listBikeBrand/BHlist.html'">
+                    <span>BH</span>
+                </button>
+
+                <button role="link" onclick="window.location='pages/listBikeBrand/Cannondalelist.html'">
+                    <span>Cannondale</span>
+                </button>
+
+                <button role="link" onclick="window.location='pages/listBikeBrand/Canyonlist.html'">
+                    <span>Canyon</span>
+                </button>
+
+                <button role="link" onclick="window.location='pages/listBikeBrand/Cubelist.html'">
+                    <span>Cube</span>
+                </button>
+
+                <button role="link" onclick="window.location='pages/listBikeBrand/Giantlist.html'">
+                    <span>Giant</span>
+                </button>
+
+            </div>
+            
+        </section>
         
         <section class="DondeEstamos">
 
@@ -73,20 +107,23 @@ def createContentIndex():
             <p>Nuestras bicicletas están en diferentes puntos de Mallorca:</p>
 
             <ol>
-                <li class="Localidad">Palma </li>
+                <li class="Localidad">Palma 
                     <ul>
                         <li>Mallorca Mobility</li>
                         <li>Ride Mallorca</li>
                         <li>Bike Palma</li>
                     </ul>
-                <li class="Localidad">Manacor</li>
+                </li>
+                <li class="Localidad">Manacor
                     <ul>
                         <li>First Bike</li>
                     </ul>
-                <li class="Localidad">Alcúdia</li>
+                </li>
+                <li class="Localidad">Alcúdia
                     <ul>
                         <li>Haste Mobility</li>
                     </ul>
+                </li>
             </ol>
 
         </section>
@@ -109,7 +146,7 @@ def createContentIndex():
             </footer> 
         </div>  
     </body>
-</html>
+</html>     
 '''  
 
     
