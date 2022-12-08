@@ -55,6 +55,46 @@ video {
 /* ----- FIN QUIENES SOMOS -----  */
 
 
+/* ----- MARCAS ----- */
+
+.Marcas  {
+    display: flex;
+    flex-flow: column wrap;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0.2), 4px 6px 20px 4px rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+    margin: 120px;
+    font-family: Poppins;
+    font-size: 2vw;
+    padding: 4%;
+}
+
+.Marcas h2 {
+    text-align: center;
+    padding-bottom: 20px;
+    color: rgb(97, 112, 82);
+}
+
+.MarcasDeBicis  {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+button {
+    margin: 100px auto;
+    font-family: Poppins;
+    color: white;
+    font-size: 25px;
+    background-color:rgb(97, 112, 82);
+    width: 175px;
+    height: 100px;
+    border-radius: 5%;
+    border-color:azure;
+    box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0.2), 4px 6px 20px 4px rgba(0, 0, 0, 0.19);
+}
+
+/* ----- FIN MARCAS ----- */
 
 /* ----- DÓNDE ESTAMOS -----  */
 
@@ -75,6 +115,10 @@ video {
     color: rgb(97, 112, 82);
 }
 
+.DondeEstamos p {
+    text-align: center;
+}
+
 .DondeEstamos ol li {
     text-align: center;
     list-style-type: none;
@@ -85,31 +129,4 @@ video {
     text-decoration: underline;
     font-weight: bold;
 }
-
-.DondeEstamos ol li::marker {
-    text-decoration: none;
-}
-
-
-
-
-
-/* .flex-container {
-    display: flex;
-    flex-flow: wrap row;
-    border: 1px solid black;
-    margin: 0 auto;
-    justify-content: space-around;
-    text-align: center;
-    padding: 50px;
-}
-
-.caja  {
-    flex-flow: column;
-    border: 2px solid black;
-    width: 300px;
-    height: 200px;
-    font-size: 18px;
-} */
-
 /* ----- FIN DÓNDE ESTAMOS -----  */
