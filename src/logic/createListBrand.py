@@ -34,7 +34,7 @@ def listofBikesForBrand(listOfDictionaryBikes, brand):
                 <li><a href="../listBikeCategory/Roadlist.html">Carretera</a></li>
                 <li><a href="../listBikeCategory/Citylist.html">Ciudad</a></li>
                 <li><a href="../listBikeCategory/MTBlist.html">MTB</a></li>
-                <li>Eléctrica
+                <li><a>Eléctrica</a>
                     <ul>
                         <li><a href="../listBikeCategory/E-Roadlist.html">Carretera</a></li>
                         <li><a href="../listBikeCategory/E-Citylist.html">Ciudad</a></li>
@@ -51,23 +51,16 @@ def listofBikesForBrand(listOfDictionaryBikes, brand):
                 if bike['brand'] == brand:
             
                     contentList +='''
-            
-            <div class="caja">                  
-                <button>
-
-                    <span class="top">{name}</span><br>
-                    
-                    <img class="img" src="{image}" alt="bicicleta"><br>
-
-                    <span class="category">{brand}</span><br>
-                    <span class="company">{company}</span><br>
-                    <span class="price">{price} €/day</span>
-                    <span class="price">
-                        <a href="../detailedBike/{nameHTML}.html">
-                        <input type="submit" value="Ver más" />
-                        </a>
-                    </span>
-                </button>
+            <div class="caja">
+                <a href="../detailedBike/{nameHTML}.html">                  
+                    <button>
+                        <img class="img" src="{image}" alt="bicicleta"><br>
+                        <span class="category">{category}</span>
+                        <span class="name">{name}</span>
+                        <span class="company">{company}</span>
+                        <span class="price">{price}€/día</span>
+                    </button>
+                </a>
             </div> 
                 '''.format(nameHTML= bike['name'].replace(" ",""), name = bike['name'], image = bike['image'], category = bike['category'], price = bike['price'], brand= bike['brand'], company= bike['company']['company_name'])    #Añadimos los valores que necesitamos a nuestra plantilla HTML
                 else:
@@ -98,8 +91,8 @@ def listofBikesForBrand(listOfDictionaryBikes, brand):
 </html>'''
             
     directory = "docs/pages/listBikeBrand/"          #variable asigna directorio donde crear el archivo
-    file = brand +"list"               #variable asigna nombre de archivo
-    extension = ".html"                #variable asigna extensión de archivo
+    file = brand +"list"                             #variable asigna nombre de archivo
+    extension = ".html"                              #variable asigna extensión de archivo
     path =  directory + file + extension
 
     createFile(file + extension, contentList, directory, path) 

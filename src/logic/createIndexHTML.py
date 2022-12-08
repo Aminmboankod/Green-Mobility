@@ -35,7 +35,7 @@ def createContentIndex():
                 <li><a href="pages/listBikeCategory/Roadlist.html">Carretera</a></li>
                 <li><a href="pages/listBikeCategory/Citylist.html">Ciudad</a></li>
                 <li><a href="pages/listBikeCategory/MTBlist.html">MTB</a></li>
-                <li>Eléctrica
+                <li><a>Eléctrica</a>
                     <ul>
                         <li><a href="pages/listBikeCategory/E-Roadlist.html">Carretera</a></li>
                         <li><a href="pages/listBikeCategory/E-Citylist.html">Ciudad</a></li>
