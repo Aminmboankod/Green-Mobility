@@ -2,15 +2,135 @@ from src.logic.createListBrand import listofBikesForBrand
 import pytest
 
 @pytest.mark.correctList
-def listofBikesForBrand(listOfDictionaryBikes):
+def test_listofBikesForBrand():
+    listOfDictionaryBikes = [{
+  "_id": {
+    "$oid": "637679dc5bcb87a948741730"
+  },
+  "category": "City",
+  "brand": "Canyon",
+  "material": "Aluminum",
+  "weight": {
+    "$numberDecimal": "11.31"
+  },
+  "set_group": {
+    "set_group_brand": "Shimano MT200",
+    "group_type": "Electronic",
+    "speed": 11
+  },
+  "location": {
+    "ZIP": "07001",
+    "street": "Calle Del Conquistador",
+    "number": 21
+  },
+  "company": {
+    "company_id": "C56317506",
+    "company_name": "Bike Palma"
+  },
+  "available": False,
+  "price": {
+    "$numberDecimal": "20"
+  },
+  "image": "https://live.staticflickr.com/65535/52533656786_81e5d845a9_n.jpg"
+},
+{
+  "_id": {
+    "$oid": "637679dc5bcb87a948741730"
+  },
+  "category": "City",
+  "brand": "Canyon",
+  "material": "Aluminum",
+  "weight": {
+    "$numberDecimal": "11.31"
+  },
+  "set_group": {
+    "set_group_brand": "Shimano MT200",
+    "group_type": "Electronic",
+    "speed": 11
+  },
+  "location": {
+    "ZIP": "07001",
+    "street": "Calle Del Conquistador",
+    "number": 21
+  },
+  "company": {
+    "company_id": "C56317506",
+    "company_name": "Bike Palma"
+  },
+  "available": False,
+  "price": {
+    "$numberDecimal": "20"
+  },
+  "image": "https://live.staticflickr.com/65535/52533656786_81e5d845a9_n.jpg"
+}]
 
-    listsOfBrands = [{"_id": "Cube", "_id": "Canyon", "_id": "Bianchi", "_id": "Cannodale", "_id":"Giant","_id":"BH"}]
+    Brand = "Canyon"
 
-    assert listofBikesForBrand(listOfDictionaryBikes, listsOfBrands) == True
+    assert listofBikesForBrand(listOfDictionaryBikes, Brand) == True
 
 @pytest.mark.incorrectList
-def listofBikesForBrand(listOfDictionaryBikes):
+def test_listofBikesForBrand():
+    listOfDictionaryBikes = [{
+  "_id": {
+    "$oid": "637679dc5bcb87a948741730"
+  },
+  "category": "City",
+  "brand": "Canyon",
+  "material": "Aluminum",
+  "weight": {
+    "$numberDecimal": "11.31"
+  },
+  "set_group": {
+    "set_group_brand": "Shimano MT200",
+    "group_type": "Electronic",
+    "speed": 11
+  },
+  "location": {
+    "ZIP": "07001",
+    "street": "Calle Del Conquistador",
+    "number": 21
+  },
+  "company": {
+    "company_id": "C56317506",
+    "company_name": "Bike Palma"
+  },
+  "available": False,
+  "price": {
+    "$numberDecimal": "20"
+  },
+  "image": "https://live.staticflickr.com/65535/52533656786_81e5d845a9_n.jpg"
+},
+{
+  "_id": {
+    "$oid": "637679dc5bcb87a948741730"
+  },
+  "category": "City",
+  "brand": "Canyon",
+  "material": "Aluminum",
+  "weight": {
+    "$numberDecimal": "11.31"
+  },
+  "set_group": {
+    "set_group_brand": "Shimano MT200",
+    "group_type": "Electronic",
+    "speed": 11
+  },
+  "location": {
+    "ZIP": "07001",
+    "street": "Calle Del Conquistador",
+    "number": 21
+  },
+  "company": {
+    "company_id": "C56317506",
+    "company_name": "Bike Palma"
+  },
+  "available": False,
+  "price": {
+    "$numberDecimal": "20"
+  },
+  "image": "https://live.staticflickr.com/65535/52533656786_81e5d845a9_n.jpg"
+}]
 
-    listsOfBrands = [{"_id": "Alpino", "_id": "Motorola", "_id": "Bianchi", "_id": "Hacendado", "_id":"Nvidia","_id":"123"}]
+    Brand = "Ferrari"
 
-    assert listofBikesForBrand(listOfDictionaryBikes, listsOfBrands) == False
+    assert listofBikesForBrand(listOfDictionaryBikes, Brand) == False
