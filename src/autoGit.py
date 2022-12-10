@@ -14,5 +14,3 @@ def commit(message):
 def push():
     #hacer push
     subprocess.call('git push', shell=True)
-
-commit("Commit de prueba para testear funcion Autogit")

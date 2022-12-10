@@ -11,6 +11,7 @@ from logic.createIndexHTML import createContentIndex
 from logic.createShowBike import createShowBike
 from adminProgram import adminProgram
 from autoGit import commit, push
+from time import sleep
 
 ####### MÓDULO DE EJECUCIÓ DEL PROGRAMA PRINCIPAL #######
 
@@ -26,7 +27,7 @@ if __name__=="__main__":
     commit("Se ha añadido la página principal y la de contacto")                          # Hacemos un commit para guardar los cambios
     push()                                                                                # Los subimos al repositorio remoto
 
-    print("\n" + "Puedes ver la página pulsando aquí: https://aminmboankod.github.io/Green-Mobility/ ")
+    print("\n" + "Puedes ver la página pulsando aquí: https://aminmboankod.github.io/Green-Mobility/ "), sleep(1.5)
 
 
 
@@ -43,7 +44,7 @@ if __name__=="__main__":
     commit("Se ha añadido las páginas con las listas de bicis")                           
     push()                                                                                
 
-    print("\n" + "Puedes ver la página pulsando aquí: https://aminmboankod.github.io/Green-Mobility/ ")
+    print("\n" + "Puedes ver la página pulsando aquí: https://aminmboankod.github.io/Green-Mobility/ "), sleep(1.5)
 
    
     createShowBike(listOfDictionaryBikes)                                                 # Ejecuta la función createShowBike para crear todas las paginas de las bicicletas
@@ -53,7 +54,7 @@ if __name__=="__main__":
 
     print("\n" + "Todos las páginas han sido creadas correctamente.")
 
-    print("\n" + "Puedes ver la página pulsando aquí: https://aminmboankod.github.io/Green-Mobility/ ")
+    print("\n" + "Puedes ver la página pulsando aquí: https://aminmboankod.github.io/Green-Mobility/ "), sleep(1.5)
 
     
 
@@ -68,6 +69,8 @@ if __name__=="__main__":
 
     if respuesta == "SI":
         adminProgram()
+        commit("Actualización después del adminCRUD")
+        push()
     else: 
         print("\n" + "Final del programa")
        
