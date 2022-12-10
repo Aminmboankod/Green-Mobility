@@ -2,7 +2,7 @@ import os
 import subprocess
 
 #cambiar al directorio del repositorio
-os.chdir('Escritorio/Reto/Green-Mobility/docs/')
+os.chdir('/Escritorio/Reto/Green-Mobility/')
 
 #funcion para hacer un commit
 def commit(message):                               
