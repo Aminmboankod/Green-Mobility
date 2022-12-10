@@ -1,12 +1,13 @@
-from src.db.crud.listCategory import querylistcategory
 from src.db.crud.listBrand import querylistbrand
+from src.db.crud.listCategory import querylistcategory
 import pytest
-# test para comprobar si la consulta a la base de datos devuelve la lista que esperamos
-@pytest.mark.data_Query_List
-def test_listBrand():
-    result = querylistcategory()
-    assert isinstance(result, list), 'La lista debe ser una instancia de la clase list'
 
-def test_listCategory():
+@pytest.mark.Query_List_Brand
+def test_listBrand():
     result = querylistbrand()
-    assert isinstance(result, list), 'La lista debe ser una instancia de la clase list'
+    assert type(result) == list
+
+@pytest.mark.Query_List_Category
+def test_listCategory():
+    result = querylistcategory()
+    assert type(result) == list

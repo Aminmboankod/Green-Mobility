@@ -12,7 +12,7 @@ def createFile(filename, content, directory, path):
                 status = filename + " has been created in " + directory
                 print(status)
             return status
-
     else:
-        print("Directory doesn't exist")
-        
+        status = "Directory doesn't exist"
+        print(status)
+        return status

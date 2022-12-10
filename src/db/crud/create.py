@@ -21,7 +21,6 @@ def insertCRUD():
             "brand": "Canyon",
             "material": "Carbon",
             "frame_size": "M",
-            "image": "PRUEBA"
         }
         })
 

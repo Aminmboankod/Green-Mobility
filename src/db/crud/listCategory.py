@@ -1,3 +1,5 @@
+from src.db.mainCRUD import CRUD
+# from db.mainCRUD import CRUD
 import json
 import os
 
@@ -6,8 +8,6 @@ KEY = os.environ["APIKEY"]
 URL_AGGREGATE = os.environ["URL_AGGREGATE"]
 
 def querylistcategory():
-
-    from db.mainCRUD import CRUD
     
     url = URL_AGGREGATE
 
