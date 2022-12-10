@@ -1,4 +1,5 @@
-from logic.createHTML import createFile
+from createHTML import createFile
+from validatorHTML import validatorHTML
 
 def createContentIndex():
 
@@ -149,10 +150,14 @@ def createContentIndex():
 </html>     
 '''  
 
-    
+  
     directory = "docs/"                         #variable asigna directorio donde crear el archivo
     file = "index"                              #variable asigna nombre de archivo
     extension = ".html"                         #variable asigna extensión de archivo
     path =  directory + file + extension
 
-    createFile(file + extension, contentOfIndex, directory, path) 
+    createFile(file + extension, contentOfIndex, directory, path)
+
+    validatorHTML(contentOfIndex)
+
+createContentIndex()

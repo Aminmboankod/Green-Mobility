@@ -1,3 +1,5 @@
+from src.db.mainCRUD import CRUD
+# from db.mainCRUD import CRUD
 import json
 import os
 
@@ -7,7 +9,7 @@ URL_AGGREGATE = os.environ["URL_AGGREGATE"]
 
 
 def querylistbrand():
-    from db.mainCRUD import CRUD
+
     url = URL_AGGREGATE
 
     payload = json.dumps(
