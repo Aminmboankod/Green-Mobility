@@ -1,12 +1,10 @@
-from bs4 import BeautifulSoup
-
 # Función que valida que el contenido de los archivos HTML sean una estructura HTML
 
 def validatorHTML(file):
 
-    try:
-        soup = BeautifulSoup(file, 'html.parser')
+    if file.startswith('<!DOCTYPE html>'):
+        print('La estructura del HTML es correcta')
         return True
-    except:
+    else:
+        print('La estructura HTML no es correcta>')
         return False
-

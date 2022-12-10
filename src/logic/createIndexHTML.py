@@ -1,5 +1,5 @@
-from createHTML import createFile
-from validatorHTML import validatorHTML
+from src.logic.createHTML import createFile
+from src.logic.validatorHTML import validatorHTML
 
 def createContentIndex():
 
@@ -161,3 +161,4 @@ def createContentIndex():
     validatorHTML(contentOfIndex)
 
 createContentIndex()
+
