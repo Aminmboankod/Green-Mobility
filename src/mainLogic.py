@@ -10,7 +10,6 @@ from logic.createListBrand import listofBikesForBrand
 from logic.createIndexHTML import createContentIndex
 from logic.createShowBike import createShowBike
 from adminProgram import adminProgram
-from deleteFilesInDocs import deleteFiles
 from autoGit import commit, push
 
 ####### MÓDULO DE EJECUCIÓ DEL PROGRAMA PRINCIPAL #######
@@ -56,7 +55,7 @@ if __name__=="__main__":
 
     print("\n" + "Puedes ver la página pulsando aquí: https://aminmboankod.github.io/Green-Mobility/ ")
 
-    #deleteFiles()
+    
 
 
 
