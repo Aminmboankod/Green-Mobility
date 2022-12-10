@@ -161,4 +161,3 @@ def createContentIndex():
     validatorHTML(contentOfIndex)
 
 createContentIndex()
-

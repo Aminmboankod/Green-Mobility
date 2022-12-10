@@ -2,9 +2,11 @@
 
 def validatorHTML(file):
 
-    if file.startswith('<!DOCTYPE html>'):
+    if file.startswith('\n<!DOCTYPE html>'):
         print('La estructura del HTML es correcta')
         return True
     else:
         print('La estructura HTML no es correcta>')
         return False
+
+
