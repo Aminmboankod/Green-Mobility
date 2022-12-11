@@ -1,7 +1,7 @@
 #función que crea contenido de la lista de bicis en función de los datos 
 # que encuentra de la base de datos añadidos al parametro.
 
-from logic.createHTML import createFile     
+from src.logic.createHTML import createFile     
 #Importamos módulo para después de haber generado el contenido crear el archivo
 
 def listofBikesForCategory(listOfDictionaryBikes, category):

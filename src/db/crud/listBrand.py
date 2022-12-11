@@ -1,4 +1,4 @@
-from db.mainCRUD import CRUD
+from src.db.mainCRUD import CRUD
 # from db.mainCRUD import CRUD
 import json
 import os
