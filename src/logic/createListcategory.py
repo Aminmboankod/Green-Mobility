@@ -73,9 +73,10 @@ def listofBikesForCategory(listOfDictionaryBikes, category):
                 </div>
                     '''.format(nameHTML= bike['name'].replace(" ",""), name = bike['name'], image = bike['image'], brand = bike['brand'], price = bike['price'], category = bike['category'], company= bike['company']['company_name'])    
                     #Añadimos los valores que necesitamos a nuestra plantilla HTML
+                    
                     else:
                         break
-            return True
+                    return True
             
         else:
             return False
