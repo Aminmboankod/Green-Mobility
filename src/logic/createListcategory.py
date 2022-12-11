@@ -76,6 +76,7 @@ def listofBikesForCategory(listOfDictionaryBikes, category):
                     else:
                         break
             return True
+            
         else:
             return False
     contentList +='''
