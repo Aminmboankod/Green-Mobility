@@ -121,7 +121,7 @@ EL último paso fue utilizar github pages para indexar nuestra página web y pue
 - **Service Layer:**
     - /docs es el directorio en el cual se encuentran los archcivos que ha generado Python automáticamente y organizados para tener un estructura para posteriormente poder indexar.
 
--**Presentation Layer:**
+- **Presentation Layer:**
     - Github pages es el servidor que usamos para alojar nuestra página web y donde el usuario interactua.
 
 ### Diseño 
