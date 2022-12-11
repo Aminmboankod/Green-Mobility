@@ -126,7 +126,4 @@ def createShowBike(listOfDictionaryBikes):
             path =  directory + file + extension
 
             createFile(file + extension, HTMLshowbikes, directory, path)
-            return True
-        else:
-            print("Faltan datos para poder crear la página") 
-            return False
+
