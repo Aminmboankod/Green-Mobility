@@ -11,8 +11,8 @@ def createFile(filename, content, directory, path):
                 htmlFile.write(content)
                 status = filename + " has been created in " + directory
                 print(status)
-            return status
+            return True
     else:
         status = "Directory doesn't exist"
         print(status)
-        return status
+        return False

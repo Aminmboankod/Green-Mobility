@@ -3,14 +3,18 @@ import subprocess
 
 
 #funcion para hacer un commit
-def commit(message):                               
+def commitPush(message):  
+    #hacer pull
+    subprocess.call('git pull', shell=True)
+
     #hacer add de los archivos
     subprocess.call('git add .', shell=True)
+    if message != "":
+        #hacer commit
+        subprocess.call('git commit -m "' + message + '"', shell=True)
 
-    #hacer commit
-    subprocess.call('git commit -m "' + message + '"', shell=True)
-
-#funcion para pushear al repositorio remoto
-def push():
-    #hacer push
-    subprocess.call('git push', shell=True)
+        #hacer push
+        subprocess.call('git push', shell=True)
+        return True
+    else:
+        return False

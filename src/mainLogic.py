@@ -10,7 +10,7 @@ from logic.createListBrand import listofBikesForBrand
 from logic.createIndexHTML import createContentIndex
 from logic.createShowBike import createShowBike
 from adminProgram import adminProgram
-from autoGit import commit, push
+from autoGit import commitPush
 from time import sleep
 
 ####### MÓDULO DE EJECUCIÓ DEL PROGRAMA PRINCIPAL #######
@@ -24,8 +24,8 @@ if __name__=="__main__":
     createContentIndex()                                                                  # Ejecutamos la fución que crea la página principal de acceso "Index.html
     createContentContact()                                                                # Ejecutamos la fución que crea la página de contacto
 
-    commit("Se ha añadido la página principal y la de contacto")                          # Hacemos un commit para guardar los cambios
-    push()                                                                                # Los subimos al repositorio remoto
+    commitPush("Se ha añadido la página principal y la de contacto")                      # Hacemos un commit para guardar los cambios y los subimos al repositorio
+                                                                               
 
     print("\n" + "Puedes ver la página pulsando aquí: https://aminmboankod.github.io/Green-Mobility/ "), sleep(1.5)
 
@@ -41,16 +41,16 @@ if __name__=="__main__":
     for brand in listadiccionariosGroup:                                                  # ejecuta la función que crea el contenido de la página de lista de bicis por cada marca
         listofBikesForBrand(listOfDictionaryBikes, brand['_id'])
 
-    commit("Se ha añadido las páginas con las listas de bicis")                           
-    push()                                                                                
+    commitPush("Se ha añadido las páginas con las listas de bicis")                           
+                                                                        
 
     print("\n" + "Puedes ver la página pulsando aquí: https://aminmboankod.github.io/Green-Mobility/ "), sleep(1.5)
 
    
     createShowBike(listOfDictionaryBikes)                                                 # Ejecuta la función createShowBike para crear todas las paginas de las bicicletas
 
-    commit("Se ha añadido la página con datos detallados de cada bici")                   
-    push()                                                                                
+    commitPush("Se ha añadido la página con datos detallados de cada bici")                   
+                                                                                
 
     print("\n" + "Todos las páginas han sido creadas correctamente.")
 
@@ -69,8 +69,8 @@ if __name__=="__main__":
 
     if respuesta == "SI":
         adminProgram()
-        commit("Actualización después del adminCRUD")
-        push()
+        commitPush("Actualización después del adminCRUD")
+
     else: 
         print("\n" + "Final del programa")
        
