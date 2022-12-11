@@ -1,13 +1,11 @@
 #función que crea contenido de la lista de bicis en función de los datos 
 # que encuentra de la base de datos añadidos al parametro.
 
-from logic.createHTML import createFile     
+from src.logic.createHTML import createFile     
 #Importamos módulo para después de haber generado el contenido crear el archivo
 
 def listofBikesForCategory(listOfDictionaryBikes, category):
     
-    assert isinstance(listOfDictionaryBikes, list), "el parámetro no es una lista"
-    assert isinstance(category, str), "el parámetro category no es el dato que necesita"
 
     contentList = '''
 <!DOCTYPE html>
@@ -52,26 +50,34 @@ def listofBikesForCategory(listOfDictionaryBikes, category):
         </nav>
         <h1 id="title">Listado de bicicletas</h1>
         <section class="flex-container">'''
-    for bike in listOfDictionaryBikes:
-        for property in bike:
-            if property == 'category':
-                if bike['category'] == category:
-                    
-                    contentList +='''
-            <div class="caja">             
-                <button role="link" onclick="window.location='../detailedBike/{nameHTML}.html'">
-                    <img class="img" src="{image}" alt="bicicleta"><br>
-                    <span class="category">{brand}</span>
-                    <span class="name">{name}</span>
-                    <span class="company">{company}</span>
-                    <span class="price">{price}€/día</span>
-                </button>
-            </div>
-                '''.format(nameHTML= bike['name'].replace(" ",""), name = bike['name'], image = bike['image'], brand = bike['brand'], price = bike['price'], category = bike['category'], company= bike['company']['company_name'])    
-                #Añadimos los valores que necesitamos a nuestra plantilla HTML
-                else:
-                    break
+    
+    keysNeeded = ["_id","name", "category", "brand", "material", "frame_size", "weight", "set_group", "location", "company", "available", "price", "image"]
 
+
+    for bike in listOfDictionaryBikes:
+        listaDeClaves = bike.keys()
+        if keysNeeded == list(listaDeClaves):
+            for property in bike:
+                if property == 'category':
+                    if bike['category'] == category:
+                        
+                        contentList +='''
+                <div class="caja">             
+                    <button role="link" onclick="window.location='../detailedBike/{nameHTML}.html'">
+                        <img class="img" src="{image}" alt="bicicleta"><br>
+                        <span class="category">{brand}</span>
+                        <span class="name">{name}</span>
+                        <span class="company">{company}</span>
+                        <span class="price">{price}€/día</span>
+                    </button>
+                </div>
+                    '''.format(nameHTML= bike['name'].replace(" ",""), name = bike['name'], image = bike['image'], brand = bike['brand'], price = bike['price'], category = bike['category'], company= bike['company']['company_name'])    
+                    #Añadimos los valores que necesitamos a nuestra plantilla HTML
+                    else:
+                        break
+            return True
+        else:
+            return False
     contentList +='''
         </section>
         

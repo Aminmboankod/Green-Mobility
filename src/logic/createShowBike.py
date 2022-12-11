@@ -1,9 +1,13 @@
-from logic.createHTML import createFile
+from src.logic.createHTML import createFile
 
 def createShowBike(listOfDictionaryBikes):
+    
+    keysNeeded = ["_id","name", "category", "brand", "material", "frame_size", "weight", "set_group", "location", "company", "available", "price", "image"]
 
     for bike in listOfDictionaryBikes:
-        HTMLshowbikes = '''
+        ListaDeClaves = bike.keys()
+        if keysNeeded == list(ListaDeClaves):
+            HTMLshowbikes = '''
 <!DOCTYPE html>
 <html lang="es">
     <head>
@@ -48,77 +52,81 @@ def createShowBike(listOfDictionaryBikes):
                 <img class="imagenBicicleta" src="{image}"  alt="bicicleta" id="Bicicleta">
             </div> '''.format(name = bike["name"], image = bike["image"])
 
-        if bike["available"] == True:
-            bike.update({"available":"Disponible"})
-        else:
-            bike.update({"available":"No disponible"})
+            if bike["available"] == True:
+                bike.update({"available":"Disponible"})
+            else:
+                bike.update({"available":"No disponible"})
 
-        HTMLshowbikes += '''
-            <div class="tabla">
-                <table>
-                    <tr>
-                        <th>Categoria</th>
-                        <td>{category}</td>
-                    </tr>
-                    <tr>
-                        <th>Marca</th>
-                        <td>{brand}</td>
-                    </tr>
-                    <tr>
-                        <th>Material</th>
-                        <td>{material}</td>
-                    </tr>
-                    <tr>
-                        <th>Talla</th>
-                        <td>{frame_size}</td>
-                    </tr>
-                    <tr>
-                        <th>Peso</th>
-                        <td>{weight}</td>
-                    </tr>
-                    <tr>
-                        <th>Tienda</th>
-                        <td>{location}</td>
-                    </tr>
-                    <tr>
-                        <th>Disponibilidad</th>
-                        <td>{available}</td>
-                    </tr>
-                    <tr>
-                        <th>Precio</th>
-                        <td>{price}€/día</td>
-                    </tr>
-                </table>
-            </div>
-            <div class="rent">
-                <a href="#">
-                    <p>ALQUILAR</p>
-                </a>    
-            </div>
-        </section>
-        <div class="footer-basic">
-            <footer>
-
-                <div class="social">
-                    <a href="https://www.instagram.com/green_mobility_/ " target="_blank"><img src="../../images/instagram.png" alt="Instagram Logo"></a>
-                    <a href="https://github.com/Aminmboankod/Green-Mobility" target="_blank"><img src="../../images/github.png" alt="GitHub Logo"></a>
-                    <a href="https://twitter.com/GreenMobilityAS" target="_blank"><img src="../../images/twitter.png" alt="twitter Logo"></a>
+            HTMLshowbikes += '''
+                <div class="tabla">
+                    <table>
+                        <tr>
+                            <th>Categoria</th>
+                            <td>{category}</td>
+                        </tr>
+                        <tr>
+                            <th>Marca</th>
+                            <td>{brand}</td>
+                        </tr>
+                        <tr>
+                            <th>Material</th>
+                            <td>{material}</td>
+                        </tr>
+                        <tr>
+                            <th>Talla</th>
+                            <td>{frame_size}</td>
+                        </tr>
+                        <tr>
+                            <th>Peso</th>
+                            <td>{weight}</td>
+                        </tr>
+                        <tr>
+                            <th>Tienda</th>
+                            <td>{location}</td>
+                        </tr>
+                        <tr>
+                            <th>Disponibilidad</th>
+                            <td>{available}</td>
+                        </tr>
+                        <tr>
+                            <th>Precio</th>
+                            <td>{price}€/día</td>
+                        </tr>
+                    </table>
                 </div>
+                <div class="rent">
+                    <a href="#">
+                        <p>ALQUILAR</p>
+                    </a>    
+                </div>
+            </section>
+            <div class="footer-basic">
+                <footer>
 
-                <ul class="list-inline">
-                    <li class="list-inline-item"><a href="pages/contact.html">Contacto</a></li>
-                </ul>
+                    <div class="social">
+                        <a href="https://www.instagram.com/green_mobility_/ " target="_blank"><img src="../../images/instagram.png" alt="Instagram Logo"></a>
+                        <a href="https://github.com/Aminmboankod/Green-Mobility" target="_blank"><img src="../../images/github.png" alt="GitHub Logo"></a>
+                        <a href="https://twitter.com/GreenMobilityAS" target="_blank"><img src="../../images/twitter.png" alt="twitter Logo"></a>
+                    </div>
 
-            <p class="copyright">Green Mobility 2022</p>
-            </footer> 
-        </div>
-    </body>
-</html>'''.format(name = bike["name"], category = bike["category"], brand = bike["brand"],material = bike["material"], frame_size = bike["frame_size"], weight = bike["weight"], location = bike["company"]["company_name"], available = bike["available"], price = bike["price"], image = bike["image"])
+                    <ul class="list-inline">
+                        <li class="list-inline-item"><a href="pages/contact.html">Contacto</a></li>
+                    </ul>
 
-        name = bike["name"]                #Variable asigna el nombre de la bici
-        directory = "docs/pages/detailedBike/"          #variable asigna directorio donde crear el archivo
-        file = name.replace(" ","")                        #variable asigna nombre de archivo
-        extension = ".html"                #variable asigna extensión de archivo
-        path =  directory + file + extension
+                <p class="copyright">Green Mobility 2022</p>
+                </footer> 
+            </div>
+        </body>
+    </html>'''.format(name = bike["name"], category = bike["category"], brand = bike["brand"],material = bike["material"], frame_size = bike["frame_size"], weight = bike["weight"], location = bike["company"]["company_name"], available = bike["available"], price = bike["price"], image = bike["image"])
 
-        createFile(file + extension, HTMLshowbikes, directory, path) 
+            name = bike["name"]                             #Variable asigna el nombre de la bici
+            directory = "docs/pages/detailedBike/"          #variable asigna directorio donde crear el archivo
+            file = name.replace(" ","")                     #variable asigna nombre de archivo
+            extension = ".html"                             #variable asigna extensión de archivo
+            path =  directory + file + extension
+
+            createFile(file + extension, HTMLshowbikes, directory, path)
+            return True
+        else:
+            print("Faltan datos para poder crear la página") 
+            return False

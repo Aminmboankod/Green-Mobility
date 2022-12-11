@@ -1,4 +1,4 @@
-from logic.createHTML import createFile  #Importamos módulo para después de haber generado el contenido crear el archivo
+from src.logic.createHTML import createFile  #Importamos módulo para después de haber generado el contenido crear el archivo
 
 def listofBikesForBrand(listOfDictionaryBikes, brand):
 
@@ -45,12 +45,17 @@ def listofBikesForBrand(listOfDictionaryBikes, brand):
         </nav>
         <h1 id="title">Listado de bicicletas</h1>
         <section class="flex-container">'''
+
+    keysNeeded = ["_id","name", "category", "brand", "material", "frame_size", "weight", "set_group", "location", "company", "available", "price", "image"]
+
     for bike in listOfDictionaryBikes:
-        for property in bike:
-            if property == 'brand':
-                if bike['brand'] == brand:
-            
-                    contentList +='''
+        listaDeClaves = bike.keys()
+        if keysNeeded == list(listaDeClaves):
+            for property in bike:
+                if property == 'brand':
+                    if bike['brand'] == brand:
+                
+                        contentList +='''
             <div class="caja">                
                 <button role="link" onclick="window.location='../detailedBike/{nameHTML}.html'">
                     <img class="img" src="{image}" alt="bicicleta"><br>
@@ -63,7 +68,9 @@ def listofBikesForBrand(listOfDictionaryBikes, brand):
                 '''.format(nameHTML= bike['name'].replace(" ",""), name = bike['name'], image = bike['image'], category = bike['category'], price = bike['price'], brand= bike['brand'], company= bike['company']['company_name'])    #Añadimos los valores que necesitamos a nuestra plantilla HTML
                 else:
                     break
-
+            return True
+        else:
+            return False
     contentList +='''
         </section>
         
@@ -91,4 +98,5 @@ def listofBikesForBrand(listOfDictionaryBikes, brand):
     extension = ".html"                              #variable asigna extensión de archivo
     path =  directory + file + extension
 
-    createFile(file + extension, contentList, directory, path) 
+    createFile(file + extension, contentList, directory, path)
+
