@@ -51,33 +51,27 @@ def listofBikesForCategory(listOfDictionaryBikes, category):
         <h1 id="title">Listado de bicicletas</h1>
         <section class="flex-container">'''
     
-    keysNeeded = ["_id","name", "category", "brand", "material", "frame_size", "weight", "set_group", "location", "company", "available", "price", "image"]
-
-
+    
     for bike in listOfDictionaryBikes:
-        listaDeClaves = bike.keys()
-        if keysNeeded == list(listaDeClaves):
-            for property in bike:
-                if property == 'category':
-                    if bike['category'] == category:
-                        
-                        contentList +='''
-                <div class="caja">             
-                    <button role="link" onclick="window.location='../detailedBike/{nameHTML}.html'">
-                        <img class="img" src="{image}" alt="bicicleta"><br>
-                        <span class="category">{brand}</span>
-                        <span class="name">{name}</span>
-                        <span class="company">{company}</span>
-                        <span class="price">{price}€/día</span>
-                    </button>
-                </div>
-                    '''.format(nameHTML= bike['name'].replace(" ",""), name = bike['name'], image = bike['image'], brand = bike['brand'], price = bike['price'], category = bike['category'], company= bike['company']['company_name'])    
-                    #Añadimos los valores que necesitamos a nuestra plantilla HTML
-                    else:
-                        break
-            return True
-        else:
-            return False
+        for property in bike:
+            if property == 'category':
+                if bike['category'] == category:
+                    
+                    contentList +='''
+            <div class="caja">             
+                <button role="link" onclick="window.location='../detailedBike/{nameHTML}.html'">
+                    <img class="img" src="{image}" alt="bicicleta"><br>
+                    <span class="category">{brand}</span>
+                    <span class="name">{name}</span>
+                    <span class="company">{company}</span>
+                    <span class="price">{price}€/día</span>
+                </button>
+            </div>
+                '''.format(nameHTML= bike['name'].replace(" ",""), name = bike['name'], image = bike['image'], brand = bike['brand'], price = bike['price'], category = bike['category'], company= bike['company']['company_name'])    
+                #Añadimos los valores que necesitamos a nuestra plantilla HTML
+                
+                else:
+                    break
     contentList +='''
         </section>
         
