@@ -90,19 +90,41 @@ pip3 list
 
 Para llevar a cabo el desarollo del programa hemos pasado por diferentes fases:
 
-1. MongoDB ![MongoDB](https://live.staticflickr.com/65535/52555759757_11176e49e6_t.jpg) 
+1. **MongoDB** 
 
 El primer paso de todos fue crear una base de datos no relacional mediante MongoDB. En la base de datos almacenamos los datos de las bicicletas, usuarios y los registros del alquiler de bicicletas.
 
-2. Python ![Python](https://live.staticflickr.com/65535/52556508044_fd89b8918a_t.jpg)
+2. **Python** 
 
 Una vez tenemos la base de datos con una buena cantidad de bicicletas almacenadas utilizamos python para diseñar el porgrama que se encarga de crear automáticamente los archivos HTML con los datos correspondientes para cada bicicleta.
 
-3. HTML/CSS ![CSS](https://live.staticflickr.com/65535/52556682875_8582201ba8_t.jpg) ![HTML](https://live.staticflickr.com/65535/52556209211_c6f0f42d4d_t.jpg)
+3. **HTML/CSS** 
 
 Cuando ya tenemos creados los archivos HTML que ha generado Python es hora de aplicar estilos mediante CSS.
 
-4. Github Pages ![Github](https://live.staticflickr.com/65535/52555771442_a084f909dd_t.jpg)
+4. **Github Pages** 
 
 EL último paso fue utilizar github pages para indexar nuestra página web y pueda ser visitada por todo el mundo.
+
+## Descripción técnica
+
+### Arquitectura de la aplicación
+
+![DiagramaArquitectura](poner enlace)
+
+- **Data Layer:** 
+    - /db es el directorio en el cual se encuentras todos los módulos que se encargan de hacer consultas especificas a la base de datos.
+
+- **Business Layer:**
+    - /logic es el directorio en el cual se encuentran todos los módulos que componen la lógica del programa y se encargan de transformar los achivos JSON que nos da la base de datos a archivos HTML.
+
+- **Service Layer:**
+    - /docs es el directorio en el cual se encuentran los archcivos que ha generado Python automáticamente y organizados para tener un estructura para posteriormente poder indexar.
+
+-**Presentation Layer:**
+    - Github pages es el servidor que usamos para alojar nuestra página web y donde el usuario interactua.
+
+### Diseño 
+
+![Diagrama](https://live.staticflickr.com/65535/52556747464_22f90d5ac2_t.jpg)
 
