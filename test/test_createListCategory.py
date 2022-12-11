@@ -1,7 +1,7 @@
 from src.logic.createListcategory import listofBikesForCategory
 import pytest
 
-@pytest.mark.correctList
+@pytest.mark.correctListCategory
 def test_listofBikesForCategory():
     listOfDictionaryBikes = [{
   "_id": {
@@ -72,7 +72,7 @@ def test_listofBikesForCategory():
 
     assert listofBikesForCategory(listOfDictionaryBikes, category) == True
 
-@pytest.mark.incorrectList
+@pytest.mark.incorrectListCategory
 def test_listofBikesForBrand():
     listOfDictionaryBikes = [{
   "_id": {

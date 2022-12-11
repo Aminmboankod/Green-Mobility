@@ -1,7 +1,7 @@
 from src.logic.createListBrand import listofBikesForBrand
 import pytest
 
-@pytest.mark.correctList
+@pytest.mark.correctListBrand
 def test_listofBikesForBrand():
     listOfDictionaryBikes = [{
   "_id": {
@@ -68,7 +68,7 @@ def test_listofBikesForBrand():
 
     assert listofBikesForBrand(listOfDictionaryBikes, Brand) == True
 
-@pytest.mark.incorrectList
+@pytest.mark.incorrectListBrand
 def test_listofBikesForBrand():
     listOfDictionaryBikes = [{
   "_id": {
