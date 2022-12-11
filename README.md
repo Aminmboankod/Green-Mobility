@@ -106,11 +106,13 @@ Cuando ya tenemos creados los archivos HTML que ha generado Python es hora de ap
 
 EL último paso fue utilizar github pages para indexar nuestra página web y pueda ser visitada por todo el mundo.
 
+---
+
 ## Descripción técnica
 
 ### Arquitectura de la aplicación
 
-![DiagramaArquitectura](poner enlace)
+![DiagramaArquitectura](/images/Arquitectura.png)
 
 - **Data Layer:** 
     - /db es el directorio en el cual se encuentras todos los módulos que se encargan de hacer consultas especificas a la base de datos.
@@ -124,7 +126,79 @@ EL último paso fue utilizar github pages para indexar nuestra página web y pue
 - **Presentation Layer:**
     - Github pages es el servidor que usamos para alojar nuestra página web y donde el usuario interactua.
 
-### Diseño 
+### Tecnologias usadas
 
-![Diagrama](https://live.staticflickr.com/65535/52556747464_22f90d5ac2_t.jpg)
+- **Python:** 
+    - Requests es una librería HTTP para Python usada para efectuar peticiones HTTP y hacerlas más amigables.
+    - Time es una libreria que nos permite establecer tiempos de espera entre cada mensaje que sale por pantalla.
+    - Subprocess es una libreria que nos permite generar nuevos procesos e interactuar con la consola.
+    - JSON es una libreria que nos tratar con archivos JSON.
+    - os es una libreria que nos permite interactuar con los directorios de nuestro sistema.
+
+- **MongoDB:**
+    - DataAPI Nos permite la comunicación entre dos aplicaciones, en nuestro caso Python y MongoDB.
+
+- **Git:**
+    - Realización de cambios y subida de versiones modificadas independientes, no sobrescribiendo en el archivo original.
+    - Github Pages servicio empleado para la creación de sitios webs estáticos.
+
+- **HTML/CSS:**
+    - Dar diseño a la página web.
+
+## Diseño 
+
+![Diagrama](/images/Diagrama.png)
+
+- **mainLogic:** Es el programa principal y se encarga de ejecutar la lógica de todos los módulos necesarios para el transcurso del programa. Se encuentra en el directorio raiz.
+
+- **db:** Es un paquete que cotiene el programa principal que realiza el CRUD a la base de datos. Además contiene la carpeta /CRUD en la que se encuentran todos los módulos que dependientes de mainCrud.
+
+- **logic:** Es un paquete que contiene todos los módulos que se encargan de la lógica que crea archivos HTML a partir de los datos obtenidos mediante mainCrud.
+
+- **adminProgram:** Es un módulo que permite al usuario añadir, borrar, actualizar, y ver datos de bicicletas.
+
+- **autoGit:** Es un módulo con la lógica para automatizar Git.
+
+---
+
+## Esquema de la Base de Datos
+
+~~~
+{
+  "_id": {
+    "$oid": "63765c8d5bcb87a948741718"
+  },
+  "name": "String",
+  "category": "String",
+  "brand": "String",
+  "material": "String",
+  "frame_size": "String",
+  "weight": {
+    "$numberDecimal": "Decimal"
+  },
+  "set_group": {
+    "set_group_brand": "String",
+    "group_type": "String",
+    "speed": Int
+  },
+  "location": {
+    "ZIP": "String",
+    "street": "String",
+    "number": Int
+  },
+  "company": {
+    "company_id": "String",
+    "company_name": "String"
+  },
+  "available": true,
+  "price": {
+    "$numberDecimal": "String"
+  },
+  "image": "String"
+}
+~~~
+
+
+
+
 
