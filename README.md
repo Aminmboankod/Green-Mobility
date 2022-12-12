@@ -9,11 +9,12 @@ Green Mobility es una propuesta desarrollada por Antonio Maroto y Amin Mustafa c
 - Manual
     - Requisitos
     - Instalación
-- Metodología
 - Desarollo
 - Descripción técnica
+  - Arquitectura
+  - Tecnologías
 - Diseño
-- Tecnologías
+- Metodología
 - Pruebas
     - pytest
     - Coverage
@@ -161,6 +162,18 @@ EL último paso fue utilizar github pages para indexar nuestra página web y pue
 
 ---
 
+## Metodología
+
+A la hora de realizar el proyecto utilizamos el Open Closed Principle (OCP) y Single Responsibility Principle (SRP).
+
+### OCP
+
+Todos los módulos del proyecto están diseñados pensando en la metodología OCP.Creemos que es una metodología más eficiente porque nos permite implementar más funciones sin tener que modificar el código. 
+
+### SRP
+
+Para garantizar una buena implementación OCP, control del código y encapsular las responsabilidades de cada módulo hemos desarollado el proyeccto teniendo siempre en cuenta el SRP por ello, los módulos están divididos por ficheros que están en directorios diseñados para una capa del programa, esto permite mayor control y conocimiento de las responsabilidades de cada módulo.
+
 ## Esquema de la Base de Datos
 
 ~~~
@@ -197,6 +210,23 @@ EL último paso fue utilizar github pages para indexar nuestra página web y pue
   "image": "String"
 }
 ~~~
+
+## Conclusiones
+
+### Mejoras
+
+En el apartado de mejoras nos gustaría:
+
+- Implementar [**Typer**] (https://typer.tiangolo.com/) para arrancar todo el programa desde la línea de comandos y poder realizar modificaciones.
+
+- Añadir opciones más complejas al CRUD.
+
+### Dificultades
+
+Nos hemos topado con diferentes problemas en el desarollo del proyecto.
+
+- Los casos test: Encontrar los casos test para cada función que cubra todo el código y puedan cubrir casos reales de los usuarios se nos ha complicado y hemos ido experimentando en este proyecto.
+
 
 
 
