@@ -23,25 +23,18 @@ if __name__=="__main__":
  
     createContentIndex()                                                                  # Ejecutamos la fución que crea la página principal de acceso "Index.html
     createContentContact()                                                                # Ejecutamos la fución que crea la página de contacto
-
-    commitPush("Se ha añadido la página principal y la de contacto")                      # Hacemos un commit para guardar los cambios y los subimos al repositorio
                                                                                
-
     print("\n" + "Puedes ver la página pulsando aquí: https://aminmboankod.github.io/Green-Mobility/ "), sleep(1.5)
-
 
 
     listadiccionariosGroup = querylistcategory()                                          # de una consulta que devuelve una lista de diccionarios con las categorías existentes         
     for category in listadiccionariosGroup:                                               # ejecuta la función que crea el contenido de la página de lista de bicis por cada categoría
         listofBikesForCategory(listOfDictionaryBikes, category['_id'])
 
-
  
     listadiccionariosGroup = querylistbrand()                                             # de una consulta que devuelve una lista de diccionarios con las marcas existentes 
     for brand in listadiccionariosGroup:                                                  # ejecuta la función que crea el contenido de la página de lista de bicis por cada marca
         listofBikesForBrand(listOfDictionaryBikes, brand['_id'])
-
-    commitPush("Se ha añadido las páginas con las listas de bicis")                           
                                                                         
 
     print("\n" + "Puedes ver la página pulsando aquí: https://aminmboankod.github.io/Green-Mobility/ "), sleep(1.5)
@@ -49,9 +42,8 @@ if __name__=="__main__":
    
     createShowBike(listOfDictionaryBikes)                                                 # Ejecuta la función createShowBike para crear todas las paginas de las bicicletas
 
-    commitPush("Se ha añadido la página con datos detallados de cada bici")                   
+    #commitPush("Se han añadido todas las paginas de bicicletas y listas de marcas y categorias")                   
                                                                                 
-
     print("\n" + "Todos las páginas han sido creadas correctamente.")
 
     print("\n" + "Puedes ver la página pulsando aquí: https://aminmboankod.github.io/Green-Mobility/ "), sleep(1.5)
@@ -69,7 +61,7 @@ if __name__=="__main__":
 
     if respuesta == "SI":
         adminProgram()
-        commitPush("Actualización después del adminCRUD")
+        #commitPush("Actualización después del adminCRUD")
 
     else: 
         print("\n" + "Final del programa")
