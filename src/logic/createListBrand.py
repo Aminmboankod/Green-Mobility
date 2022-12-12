@@ -63,8 +63,8 @@ def listofBikesForBrand(listOfDictionaryBikes, brand):
             </button>
         </div> 
             '''.format(nameHTML= bike['name'].replace(" ",""), name = bike['name'], image = bike['image'], category = bike['category'], price = bike['price'], brand= bike['brand'], company= bike['company']['company_name'])    #Añadimos los valores que necesitamos a nuestra plantilla HTML
-            else:
-                break
+                else:
+                    break
     contentList +='''
         </section>
         
