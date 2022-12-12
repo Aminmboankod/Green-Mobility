@@ -4,26 +4,34 @@ from db.crud.delete import deleteCRUD
 from db.crud.read import findCRUD
 from db.crud.update import updateCRUD
 import json
+import os 
  
  ####### MÓDULO DE EJECUCIÓ PARA ADMINISTRADOR #######
 
+
+
 def adminProgram():
 
+    os.system("clear")
+
     print("------------ADMIN CRUD PROGRAM ------------")
-    print("1: Insertar los datos de una bicicleta")
-    print("2: Actualizar los datos de una bicicleta")
-    print("3: Leer los datos de una bicicleta")
-    print("4: Borrar los datos de una bicicleta")
+    print("1: Insert the data of a bicycle")
+    print("2: Update the data of a bicycle")
+    print("3: Read data from a bicycle")
+    print("4: Delete the data of a bicycle")
+    print("5: Exit")
     print("-------------------------------------------")
 
-    opcion = input("Escribe el número de la operación que deseas realizar: ")
-    crudProgram(opcion)
+    option = input("Type the number of the operation you want to perform: ")
     
-def crudProgram(opcion):
+    if option == "5":
+        print("End of program")
+    else:
+        crudProgram(option)
+    
+def crudProgram(option):
 
-        
-
-    if opcion == "1":
+    if option == "1":
         nombre = input("Escribe el nombre de la bicicleta que quieres añadir: ")
         category = input("Escribe la categoría: ")
         brand = input("Escribe la marca de la bicicleta: ")
@@ -55,13 +63,13 @@ def crudProgram(opcion):
         }
         })
         insertCRUD(payload)
-        print("Se ha creado la bicicleta"); sleep(1.5)
+        print("Bike has been created"); sleep(1.5)
         
         adminProgram()
 
-    elif opcion == "2":
-        name = input("Escribe el nombre de la bici que quieres actualizar: ")
-        updatename = input("Escribe el nuevo nombre de la bicicleta: ")
+    elif option == "2":
+        name = input("Type the name of the bike you want to update: ")
+        updatename = input("Type the new bicycle name: ")
         payload = json.dumps(
         {
         "collection": "bikes",
@@ -70,26 +78,26 @@ def crudProgram(opcion):
         "filter": {"name": name },
         "update": { "$set": { "name": updatename } } })
         updateCRUD(payload)
-        print("Los datos de han actualizado correctamente"); sleep(1.5)
+        print("The data has been updated successfully"); sleep(1.5)
 
         adminProgram()
 
-    elif opcion == "3":
-        buscar = input("Escribe el nombre de la bicicleta que quieres ver: ")
-        print("Estos son los datos de la bicicleta actualizados"); sleep(1.5)
+    elif option == "3":
+        find = input("Type the name of the bicycle you want to see: ")
+        print("This is the updated bicycle data"); sleep(1.5)
         payload = json.dumps(
         {
         "collection": "bikes",
         "database": "GreenMobility",
         "dataSource": "Cluster0",
-        "filter": {"name": buscar}
+        "filter": {"name": find}
         })
         findCRUD(payload)
 
         adminProgram()
 
-    elif opcion == "4":
-        deletename = input("Escribe el nombre de la bici que quieres eliminar: ")
+    elif option == "4":
+        deletename = input("Type the name of the bike you want to delete: ")
         payload = json.dumps(
         {
         "collection": "bikes",
@@ -100,10 +108,12 @@ def crudProgram(opcion):
         }
         })
         deleteCRUD(payload)
-        print("Los datos han sido eliminados de la base de datos"); sleep(1.5)
-        print("\n" + "Puedes ver la página pulsando aquí: https://aminmboankod.github.io/Green-Mobility/ ")
+        print("The data has been deleted from the database"); sleep(1.5)
+        print("\n" + "You can view the page by clicking here https://aminmboankod.github.io/Green-Mobility/"), sleep(1.5)
 
         adminProgram()
 
     else:
-        print("El carácter introducido no es correcto.")
+        print("The entered character is not correct.")
+
+

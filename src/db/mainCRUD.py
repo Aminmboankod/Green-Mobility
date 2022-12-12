@@ -62,7 +62,7 @@ def CRUD(url, payload):
 
     elif url == URL or URL_AGGREGATE:
 
-        print("Successful connection!")
+        print("\n" + "Successful connection!")
         query = query.text
         jsonDocument = json.loads(query)
         Bikelist = jsonDocument.get('documents')

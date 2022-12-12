@@ -12,20 +12,19 @@ from logic.createShowBike import createShowBike
 from adminProgram import adminProgram
 from autoGit import commitPush
 from time import sleep
+import os
 
 ####### MÓDULO DE EJECUCIÓ DEL PROGRAMA PRINCIPAL #######
 
 if __name__=="__main__":
 
+    os.system("clear")
 
     listOfDictionaryBikes = dataBikes()                                                   # Usamos datos del módulo de conexión a mongodb y los añadimos a una variable que usaremos como parámetro.
 
- 
     createContentIndex()                                                                  # Ejecutamos la fución que crea la página principal de acceso "Index.html
     createContentContact()                                                                # Ejecutamos la fución que crea la página de contacto
                                                                                
-    print("\n" + "Puedes ver la página pulsando aquí: https://aminmboankod.github.io/Green-Mobility/ "), sleep(1.5)
-
 
     listadiccionariosGroup = querylistcategory()                                          # de una consulta que devuelve una lista de diccionarios con las categorías existentes         
     for category in listadiccionariosGroup:                                               # ejecuta la función que crea el contenido de la página de lista de bicis por cada categoría
@@ -37,16 +36,14 @@ if __name__=="__main__":
         listofBikesForBrand(listOfDictionaryBikes, brand['_id'])
                                                                         
 
-    print("\n" + "Puedes ver la página pulsando aquí: https://aminmboankod.github.io/Green-Mobility/ "), sleep(1.5)
-
    
     createShowBike(listOfDictionaryBikes)                                                 # Ejecuta la función createShowBike para crear todas las paginas de las bicicletas
 
     #commitPush("Se han añadido todas las paginas de bicicletas y listas de marcas y categorias")                   
                                                                                 
-    print("\n" + "Todos las páginas han sido creadas correctamente.")
+    print("\n" + "All pages have been created successfully")
 
-    print("\n" + "Puedes ver la página pulsando aquí: https://aminmboankod.github.io/Green-Mobility/ "), sleep(1.5)
+    print("\n" + "You can view the page by clicking here https://aminmboankod.github.io/Green-Mobility/"), sleep(1.5)
 
     
 
@@ -56,7 +53,7 @@ if __name__=="__main__":
     ####### MÓDULO DE EJECUCIÓ PARA ADMINISTRADOR #######
 
 
-    print("\n" + "¿Quieres ejecutar el programa de administrador?")
+    print("\n" + "You want to run the program as administrator?")
     respuesta = input().upper()
 
     if respuesta == "SI":
@@ -64,7 +61,7 @@ if __name__=="__main__":
         #commitPush("Actualización después del adminCRUD")
 
     else: 
-        print("\n" + "Final del programa")
+        print("\n" + "End of program")
        
 
     
