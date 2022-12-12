@@ -1,6 +1,6 @@
 ## GREEN MOBILITY 
 
-Green Mobility es una propuesta desarrollada por Antonio Maroto y Amin Mustafa como alumnos del Instituto Francesc de Borja Moll presentada para el proyecto de fin de trimestre de el Grado Superior de Desarrollo Web Intensivo. 
+Green Mobility es una propuesta desarrollada por Antonio Maroto y Amin Mustafa como alumnos del Instituto Francesc de Borja Moll presentada para el proyecto de fin de trimestre del Grado Superior de Desarrollo Web Intensivo.
 
 ---
 ### Índice 
@@ -27,9 +27,15 @@ Green Mobility es una propuesta desarrollada por Antonio Maroto y Amin Mustafa c
 
 ## Introducción
 
-Green Mobility surge de la necesidad del Gobierno de las Islas Baleares de hacer frente al problema de la saturación de coches, sobretodo en temporada alta. 
+Green Mobility surge como solución al problema que propone el "Product Owner" de la empresa. EL contexto simulado es cubrir la necesidad del Gobierno de las Islas Baleares de hacer frente al problema de la saturación de coches, sobretodo en temporada alta. 
 
-Para llevar a cabo este proyecto utilizaremos MongoDB como base de datos a través de un servicio llamado Mongo Atlas. La lógica del programa se desarolla mediante Python(3.8.10).
+Como solución al problema, se propone un agregador/buscador de bicicletas de toda las disponibles para alquiler. Dando opción a que cualquier empresa pueda agregar los datos de su bicicleta y aparezca disponible en una web pública. 
+
+De este modo, el usuario puede acceder a todo el stock de bicis disponibles desde una sola aplicación/web y alquilarlas de una forma muy sencilla.
+
+Para llevar a cabo este proyecto utilizaremos MongoDB como base de datos a través de un servicio llamado Mongo Atlas. 
+
+La lógica del programa se desarolla mediante Python(3.8.10).
 
 Para la conversión y creación del sitio web estático utilizaremos Github pages.
 
@@ -39,9 +45,13 @@ Para la conversión y creación del sitio web estático utilizaremos Github page
 
 ### Pre-requisitos
 
+Para poder comenzar a poner en funcionamiento el programa debes tener como requisitos mínimos los siguientes:
+
 + Python3
 + pip3
 + Git
++ Linux
++ Cluster en MongoDB (en su defecto, pedirnos los datos de acceso al cluster, APIKEY y URL de conexión)
 
 ---
 
@@ -93,11 +103,15 @@ Para llevar a cabo el desarollo del programa hemos pasado por diferentes fases:
 
 1. **MongoDB** 
 
-El primer paso de todos fue crear una base de datos no relacional mediante MongoDB. En la base de datos almacenamos los datos de las bicicletas, usuarios y los registros del alquiler de bicicletas.
+El primer paso fue crear una base de datos no relacional mediante MongoDB. En la base de datos almacenamos los datos de las bicicletas, usuarios y los registros del alquiler de bicicletas.
+
+Hemos usado MongoDB porque dado que los datos de cada bicicleta pueden variar según sus características, necesitabamos usar una base de datos no relacional. Para ello y teniendo en cuenta que usaremos Python para desarrollarlo, Mongo es la mejor opción.
 
 2. **Python** 
 
 Una vez tenemos la base de datos con una buena cantidad de bicicletas almacenadas utilizamos python para diseñar el porgrama que se encarga de crear automáticamente los archivos HTML con los datos correspondientes para cada bicicleta.
+
+Python es un lenguaje de programación de alto nivel que nos permite aprender a programar con más facilidad en esta fase inicial de aprendizaje.
 
 3. **HTML/CSS** 
 
@@ -105,7 +119,7 @@ Cuando ya tenemos creados los archivos HTML que ha generado Python es hora de ap
 
 4. **Github Pages** 
 
-EL último paso fue utilizar github pages para indexar nuestra página web y pueda ser visitada por todo el mundo.
+EL último paso ha sido utilizar github pages para indexar nuestra página web y pueda ser visitada por todo el mundo.
 
 ---
 
