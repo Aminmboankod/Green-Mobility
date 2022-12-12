@@ -5,23 +5,25 @@ Green Mobility es una propuesta desarrollada por Antonio Maroto y Amin Mustafa c
 ---
 ### Índice 
 
-- Introducción
-- Manual
-    - Requisitos
-    - Instalación
-- Desarollo
-- Descripción técnica
-  - Arquitectura
-  - Tecnologías
-- Diseño
-- Metodología
-- Pruebas
-    - pytest
-    - Coverage
-- Diagrama del tiempo invertido
-- Conclusiones
-    - Mejoras
-    - Dificultades
+- [Introducción](#introduccion)
+- [Manual](#manual)
+    - [Requisitos](#requisitos)
+    - [Instalación](#instalacion)
+- [Desarrollo](#desarrollo)
+- [Descripción técnica](#descripción-técnica)
+  - [Arquitectura](#arquitectura)
+  - [Tecnologías](#tecnlogías)
+- [Diseño](#diseño)
+- [Metodología](#metodología)
+  - [OCP](#ocp)
+  - [SRP](#srp)
+- [Pruebas](#pruebas)
+    - [Pytest](#pytest)
+    - [Coverage](#coverage)
+- [Diagrama del tiempo invertido](#diagrama-del-tiempo-invertido)
+- [Conclusiones](#conclusiones)
+    - [Mejoras](#mejoras)
+    - [Dificultades](#dificultades)
 
 ---
 
@@ -43,7 +45,7 @@ Para la conversión y creación del sitio web estático utilizaremos Github page
 
 ## Manual
 
-### Pre-requisitos
+### Requisitos
 
 Para poder comenzar a poner en funcionamiento el programa debes tener como requisitos mínimos los siguientes:
 
@@ -97,7 +99,7 @@ pip3 list
 
 ---
 
-## Desarollo
+## Desarrollo
 
 Para llevar a cabo el desarollo del programa hemos pasado por diferentes fases:
 
@@ -160,6 +162,8 @@ EL último paso ha sido utilizar github pages para indexar nuestra página web y
 - **HTML/CSS:**
     - Dar diseño a la página web.
 
+---
+
 ## Diseño 
 
 ![Diagrama](/images/Diagrama.png)
@@ -187,6 +191,24 @@ Todos los módulos del proyecto están diseñados pensando en la metodología OC
 ### SRP
 
 Para garantizar una buena implementación OCP, control del código y encapsular las responsabilidades de cada módulo hemos desarollado el proyeccto teniendo siempre en cuenta el SRP por ello, los módulos están divididos por ficheros que están en directorios diseñados para una capa del programa, esto permite mayor control y conocimiento de las responsabilidades de cada módulo.
+
+---
+
+## Pruebas
+
+### Pytest
+
+![pytest](/images/pytest.png)
+
+### Coverage
+
+![coverage](/images/coverage.png)
+
+
+
+
+
+---
 
 ## Esquema de la Base de Datos
 
@@ -231,7 +253,7 @@ Para garantizar una buena implementación OCP, control del código y encapsular 
 
 En el apartado de mejoras nos gustaría:
 
-- Implementar [**Typer**] (https://typer.tiangolo.com/) para arrancar todo el programa desde la línea de comandos y poder realizar modificaciones.
+- Implementar [**Typer**](https://typer.tiangolo.com/) para arrancar todo el programa desde la línea de comandos y poder realizar modificaciones.
 
 - Añadir opciones más complejas al CRUD.
 
