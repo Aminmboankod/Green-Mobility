@@ -78,7 +78,7 @@ def listofBikesForBrand(listOfDictionaryBikes, brand):
                 </div>
 
                 <ul class="list-inline">
-                    <li class="list-inline-item"><a href="pages/contact.html">Contacto</a></li>
+                    <li class="list-inline-item"><a href="../contact.html">Contacto</a></li>
                 </ul>
 
             <p class="copyright">Green Mobility 2022</p>
