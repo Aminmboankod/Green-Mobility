@@ -3,10 +3,10 @@
 def validatorHTML(file):
 
     if file.startswith('\n<!DOCTYPE html>'):
-        print('La estructura del HTML es correcta')
+        print("\n" + 'The HTML structure is correct')
         return True
     else:
-        print('La estructura HTML no es correcta>')
+        print("\n" + 'The HTML structure is not correct')
         return False
 
 
