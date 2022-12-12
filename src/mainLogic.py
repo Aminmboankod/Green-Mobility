@@ -42,7 +42,7 @@ if __name__=="__main__":
    
     createShowBike(listOfDictionaryBikes)                                                 # Ejecuta la función createShowBike para crear todas las paginas de las bicicletas
 
-    commitPush("Se han añadido todas las paginas de bicicletas y listas de marcas y categorias")                   
+    #commitPush("Se han añadido todas las paginas de bicicletas y listas de marcas y categorias")                   
                                                                                 
     print("\n" + "Todos las páginas han sido creadas correctamente.")
 
@@ -61,7 +61,7 @@ if __name__=="__main__":
 
     if respuesta == "SI":
         adminProgram()
-        commitPush("Actualización después del adminCRUD")
+        #commitPush("Actualización después del adminCRUD")
 
     else: 
         print("\n" + "Final del programa")
