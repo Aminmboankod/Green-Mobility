@@ -12,7 +12,7 @@ import os
 
 def adminProgram():
 
-    os.system("clear")
+    # os.system("clear")
 
     print("\n""------------PROGRAMA CRUD ADMINISTRADOR ------------""\n")
     print("1: Inserta los datos de una bicicleta")
@@ -102,13 +102,13 @@ def crudProgram(opcion):
                 "price": price,
             } } })
         updateCRUD(payload)
-        print("Los datos de han actualizado correctamente"); sleep(1.5)
+        print("Los datos se han actualizado correctamente"); sleep(1.5)
 
         adminProgram()
 
     elif opcion == "3":
         buscar = input("Escribe el nombre de la bicicleta que quieres ver: ")
-        print("Estos son los datos de la bicicleta actualizados"); sleep(1.5)
+        print("Estos son los datos de la bicicleta:"); sleep(1.5)
         payload = json.dumps(
         {
         "collection": "bikes",
