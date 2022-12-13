@@ -4,20 +4,24 @@
 /* Contenedor Flex que se aplica a todo el formulario */
 .flex-container {
     display: flex;
-    flex-flow: column wrap;
-    border: 2px solid black;
-    /* background-color: aqua; */
-    margin: 0 auto;
+    flex-flow: column ;
+    overflow: auto;
+    margin: auto;
     width: 60%;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     margin-top: 70px;
-    margin-bottom: 30px;
+    margin-bottom: 70px;
+    border-radius: 5%;
     box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0.2), 4px 6px 20px 4px rgba(0, 0, 0, 0.19);
 }
 
 h2 {
-    font-size: 55px;
+    display: flex;
+    text-align: center;
+    margin: auto;
+    font-size: 40px;
+    color: rgb(97, 112, 82);
     padding-bottom: 60px;
     font-family: Poppins;
     padding-top: 20px;
@@ -26,77 +30,48 @@ h2 {
 /* Estilos para el formulario en general */
 
 .formulario {
+    display:flex;
     width: 500px;
+    color:rgb(97, 112, 82);
     height: 500px;
+    padding: 10px;
     margin-top: -20px;
     margin-bottom: 100px;
     font-family: Poppins ;
     overflow-x:auto;
-    /* border: 3px solid black; */
-    font-family: Poppins;
     
-}
-
-/* Títulos de los apartados del formulario */
-
-.legend {
-    font-size: 1.4em;
-    text-transform: uppercase;
-    color: #000;
-}
-
-fieldset {
-    border-color: white;
 }
 
 /* Inputs del formulario  */
 
 .DatosPersonales {
-    padding-bottom: 15px;
-    padding-left: 10px;
-    margin-bottom: 55px;
-    margin-top: 10px;
-    margin-left: 25px;
-    margin-right: 25px;
-    width: 400px;
+    display:flex;
+    flex-flow: column;
+    margin: 0 auto;
 }
 
-/* Inputs del formulario  */
-
-.InformacionAdicional {
-    padding-bottom: 15px;
-    margin-bottom: 25px;
-    margin-top: 10px;
-    margin-left: 25px;
-    margin-right: 25px;
-    width: 400px;
-    height: 200px;
-}
 
 #descripcion {
-    margin: 0 auto;
-    width: 370px;
-    height: 110px;
-    margin-left: 10px;
+    margin-bottom: 30px;
+    width: 455px;
+    height: 150px;
+    padding:10px;
+    border:rgb(97, 112, 82);
 }
 
 .botones {
     display: flex;
-    flex-flow: row wrap;
-    margin: 0 auto;
+    justify-content: space-between;
+    margin: 20 auto;
     justify-content: space-around;
     align-items: center;
+    color:rgb(97, 112, 82);
 }
 
-
-/* Temporal */
-.footer-basic {
-    padding:20px 0;
-    background-color:rgb(97, 112, 82);
-    color:#ffffff;
-    position: relative;
-    font-family: Poppins;
-    font-weight: bold;
-    bottom: 0;
-    width: 100%;
+.botones input {
+    height: 35px;
+    color:white;
+    padding: 10px;
+    background-color:rgb(97, 112, 82) ;
+    border-radius: 10px;
 }
