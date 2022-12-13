@@ -12,7 +12,7 @@ Green Mobility es una propuesta desarrollada por Antonio Maroto y Amin Mustafa c
 - [Desarrollo](#desarrollo)
 - [Descripción técnica](#descripción-técnica)
   - [Arquitectura de la aplicación](#arquitectura-de-la-aplicación)
-  - [Tecnologías usadas](#tecnlogías-usadas)
+  - [Tecnologías usadas](#tecnlogias-usadas)
 - [Diseño](#diseño)
   - [Componentes](#componentes)
 - [Metodología](#metodología)
@@ -208,8 +208,6 @@ Podemos observar como el programa pasa exitosamente todos los casos test.
 ### Coverage
 
 ![coverage](/images/coverage.png)
-
-Podemos observar como nuestros test tienen una cobertura del 81% de líneas de código. Con algunos casos test más se podría ampliar hasta un 95%.
 
 ---
 
