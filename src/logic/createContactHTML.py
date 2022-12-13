@@ -54,9 +54,7 @@ def createContentContact():
 
             <div class="formulario">
                     
-                <fieldset class="DatosPersonales">
-                    <legend>Datos personales </legend>
-                    
+                <div class="DatosPersonales">
                     <label for="NombreYApellidos">Nombre y apellidos:</label>
                     <input type="text" name="Nombre y apellidos" id="NombreYApellidos" required> <br>
                 
@@ -66,19 +64,12 @@ def createContentContact():
                     <label for="email">Email:</label>
                     <input type="tel" name="Email" id="email" required> <br>
                 
-                </fieldset>
-                
-                <fieldset class="InformacionAdicional">
-                    
-                    <legend class="legend">Información</legend>      
-                
-                <label for="descripcion"> Descripción </label> <br>
-                <textarea id="descripcion" name="Descripción" maxlength="200"> Escribe aquí </textarea>
-                
-                </fieldset>
-                <div class="botones">
-                    <input type="submit" value="Enviar formulario">
-                    <input type="reset" value="Restablecer formulario">
+                    <label for="descripcion"> Escribe aquí tu consulta: </label> <br>
+                    <textarea id="descripcion" name="Descripción" maxlength="200" placeholder="Me gustaría contactar con vosotros para..." ></textarea>
+                    <div class="botones">
+                        <input type="submit" value="Enviar formulario">
+                        <input type="reset" value="Restablecer formulario">
+                    </div>
                 </div>
             </div>
         

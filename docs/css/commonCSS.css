@@ -1,6 +1,16 @@
 /* Import de la fuente del banner */
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
+@media screen and (max-width: 820px) {
+    nav ul {
+      background-color: brown;
+  }
+  nav {
+      background-color: brown;
+
+  }
+}
+
 /* Estilo aplicado a toda la hoja */
 * {
     box-sizing: border-box;
@@ -186,60 +196,3 @@ nav li:hover::after {
   color:#aaa;
   margin-bottom:0;
 }
-
-/* ----- END FOOTER -----  */
-  
-
-
-/* .menu_bar {
-  display:none;
-} */
-
-/* media query para tablets y móviles
-@media screen and (max-width: 800px) {
-  header nav {
-    width: 80%;
-    height: 100%;
-    margin:0;
-    position: fixed;
-  }
-  header nav ul li {
-    display:block;
-    float:none;
-    border-bottom:1px;
-  }
-  .menu_bar {
-    display:block;
-    width:100%;
-    background:rgb(115, 203, 52);
-    top: 0;
-  
-  }
-  .menu_bar .botton-menu {
-    display:block;
-    padding:50px;
-    background:rgb(115, 203, 52);
-    color:#fff;
-    text-decoration: none;
-    font-size: 25px;
-  }
-  .menu_bar span {
-    display: block;
-    position:relative;
-    float:right;
-    font-size:40px;
-  }
-  nav ul li {
-    display:none;
-  }
-  
-  .nav:hover nav ul li {
-    display:flex;
-    position:sticky;
-    flex-direction:column;
-    padding:20px;
-    float:right;
-
-  }
-} 
-*/
