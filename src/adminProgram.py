@@ -14,18 +14,18 @@ def adminProgram():
 
     os.system("clear")
 
-    print("\n""------------ADMIN CRUD PROGRAM ------------""\n")
-    print("1: Insert the data of a bicycle")
-    print("2: Update the data of a bicycle")
-    print("3: Read data from a bicycle")
-    print("4: Delete the data of a bicycle")
+    print("\n""------------PROGRAMA CRUD ADMINISTRADOR ------------""\n")
+    print("1: Inserta los datos de una bicicleta")
+    print("2: Actualiza los datos de una bicicleta")
+    print("3: Ver los datos de una bicicleta")
+    print("4: Borrar los datos de una bicicleta")
     print("5: Exit")
     print("\n""-------------------------------------------""\n")
 
-    option = input("Type the number of the operation you want to perform: ")
+    option = input("Escribe el número de la operación que quieres realizar: ")
     
     if option == "5":
-        print("End of program")
+        print("\n""------------ Fin del programa ------------")
     else:
         crudProgram(option)
     
